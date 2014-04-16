@@ -43,15 +43,15 @@ Template Name: Category Page
                             </div>
                         <? endif; ?>
 
-                    <? // Gets sibling pages
-
-                        // TODO: Figure this shit out
+                        <? // Gets sibling pages
+                        global $post;
+                        $post_parent = $post->ID;
+                        $post_parent = $post->post_parent;
                         $args = array(
-                            'post_type' => 'page',
-                            'child_of' => $post->page_parent,
-                            'parent' => $post->page_parent,
+                            'posts_per_page' => -1,
+                            'post_parent' =>$post_parent,
+                            'post_type'=> 'page'
                         );
-
                         $siblings = get_posts( $args );
                         if ($siblings): ?>
                             <hr>
@@ -68,11 +68,10 @@ Template Name: Category Page
                                     <? the_excerpt(); ?>
                                     <a class="btn alt" href="<? the_permalink(); ?>">Explore &rarr;</a>
                                 </div>
-                            <? endforeach;
-                            wp_reset_postdata(); ?>
-                            </div>
-                        <? endif;
-                    ?>
+                            <?php endforeach;
+                            echo '</div>';
+                        endif;
+                        wp_reset_postdata(); ?>
                 </div>
                 <footer>
                     <p class="byline">Posted on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> by <?= get_the_author(); ?></p>
