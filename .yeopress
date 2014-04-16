@@ -1,0 +1,21 @@
+{
+	"wpVer": "3.8.3",
+	"url": "http://localhost:8888/caocpress",
+	"tablePrefix": "wp_",
+	"dbHost": "localhost",
+	"dbName": "caocpress",
+	"dbUser": "root",
+	"dbPass": "root",
+	"git": true,
+	"submodule": false,
+	"customDirs": false,
+	"installTheme": true,
+	"themeDir": "caocpress",
+	"themeType": "git",
+	"themeUser": "viewportindustries",
+	"themeRepo": "starkers",
+	"themeBranch": "master",
+	"wpDir": ".",
+	"contentDir": "wp-content",
+	"saltKeys": "define('AUTH_KEY',         'r0mOjW-.V?=)0ycRHm-?P!3h8Q9/V&T<vcqEFbRhGmU+^:#,A OquPiR-15MD/t%');\ndefine('SECURE_AUTH_KEY',  ' |}P CM2+Ab>Qw8C,}/Oz^X^>X3*{gb+@g*3(ao eVNi=H`xys&U^w6rof,W++]O');\ndefine('LOGGED_IN_KEY',    'MPnXsJ5-OPpm(M}QF0@i^E-#[H5&8wzh49cjGAQ0$e]sQ%<0i,`PpQRal)*R:n4r');\ndefine('NONCE_KEY',        'iKwK N:*}7GuQ|l42;_^f{Qw8+Q5y@dHc{NcYzC9 btuPbd+/n(13flWVW/{(@Pb');\ndefine('AUTH_SALT',        'P};bA:Y9Xi6M%++fA=O*4^KM4_5$L{(fK(U*jnKmS+vJkgzQfhq*WW7]?(r`3P^+');\ndefine('SECURE_AUTH_SALT', 'sGQYNk1wp1)pbs=3iA@p#eOXgOXN_v0|}L%(&p!R_@_w#(86qen1q=8iG}~GL}[ ');\ndefine('LOGGED_IN_SALT',   'IUy44k; oPCfg#,Ht8CHss;#I?o!Pb#*-[$z;~b sjIRQw[4hVovK@Di9)kPN{?v');\ndefine('NONCE_SALT',       'B?~54/NM@9-w:+l#)^t^ni {pi19zly/2d^`LXUNBmz$GVEK=gMFz;_XU<8Q+t87');\n"
+}

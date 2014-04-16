@@ -1,0 +1,181 @@
+// Tables
+table {
+	width: 100%;
+	font-size: 0.8em;
+	thead {
+		background: $purple;
+		color: $white;
+		th {
+			border-right: 1px dotted $purple-light;
+			&:last-child { border-right: none; }
+		}
+	}
+	tfoot {
+		background: lighten($midgray, 20%);
+		border-top: 1px solid $midgray;
+	}
+	tr:nth-child(even){
+		background: $lightgray;
+	}
+	td, th {
+		padding: 1em 1%;
+		text-align: left;
+	}
+}
+
+// Buttons
+.btn {
+	@include inline-block;
+	@include border-radius($round-radius);
+	@include transition(all 0.2s ease);
+	background: $orange;
+	line-height: 1;
+	padding: 1em 1.5em;
+	text-transform: uppercase;
+	color: $white;
+	text-align: center;
+	&:hover {
+		background: $purple;
+		color: $white;
+	}
+	&.alt {
+		background: $purple;
+		&:hover { background: $purple-light; }
+	}
+	&.alt-2 {
+		background: $teal;
+		&:hover { background: $red-light; }
+	}
+	&.disabled {
+		background: $midgray;
+		cursor: not-allowed;
+	}
+	&.inline {
+		font-size: 0.8em;
+	}
+	.field-container & {
+		display: block;
+		margin: 0.5em auto;
+		@media (min-width: $small){
+			@include inline-block;
+		}
+	}
+}
+
+.text-btn {
+	@include inline-block;
+	@include border-radius($round-radius);
+	@include transition(all 0.2s ease);
+	background: $lightgray;
+	color: $purple;
+	padding: 0 0.5em;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	&:hover {
+		color: $white;
+		background: $purple;
+	}
+}
+
+// Address Card
+.vcard {
+	line-height: 1.5em;
+	.org { font-weight: bold; }
+	.adr {
+		.region { border-bottom: 0; }
+	}
+	.tel { @extend a }
+}
+
+// Block Elements
+
+// Media Thumbnail Block
+.block-thumb {
+	@extend .row;
+	max-width: $medium;
+	.b-thumb {
+		@extend .col-xs-12;
+		@extend .col-sm-6;
+	}
+	.b-text {
+		@extend .col-xs-12;
+		@extend .col-sm-6;
+	}
+	.b-inner p { color: $black; }
+}
+
+// Hero block
+.block-hero {
+	position: relative;
+	.b-text {
+		@media (min-width: $small){
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+			left: 0;
+			padding: 1em;
+			@include background(linear-gradient(top, transparent, $black));
+			// TODO: include modernizr and fall back to solid color
+			// background-color: rgba(0,0,0,0.5);
+			// .cssgradients & {
+			// 	background-color: none;
+			// 	@include background(linear-gradient(top, transparent, $black));
+			// }
+		}
+		.headline {
+			font-size: 1em;
+			@media (min-width: $small) {
+				font-size: 1.2em;
+				color: $white;
+				text-shadow: 0.15em 0.15em 0.15em $black;
+			}
+			&:hover { color: $orange; }
+		}
+	}
+}
+
+// Inset block, which is basically just .block-hero without the media query
+.block-inset {
+	position: relative;
+	.b-text {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		padding: 1em;
+		@include background(linear-gradient(top, transparent, $black));
+		.headline {
+			font-size: 1em;
+			color: $white;
+			text-shadow: 0.15em 0.15em 0.15em $black;
+			@media (min-width: $small) {
+				font-size: 1.2em;
+			}
+			&:hover { color: $orange; }
+		}
+	}
+}
+
+// Figure with caption
+figure {
+	background: $lightgray;
+	padding: 1em;
+	max-width: $medium;
+	margin-bottom: 1em;
+	figcaption {
+		@extend .smallcaps;
+		padding: 1em 1em 0;
+		line-height: 1.6em;
+	}
+}
+
+.news-teaser {
+	@extend hr;
+	font-size: 0.9em;
+	h4, p {
+		color: $darkgray;
+	}
+	&:hover h4,
+	&:hover p { color: $purple; }
+	&:last-child { border: 0}
+}

@@ -1,0 +1,245 @@
+@import "compass/reset";
+@import "compass";
+@import "breakpoint";
+@import "vars";
+@import "type";
+@import "mixins";
+@import "grid";
+@import "forms";
+@import "objects";
+@import "navigation";
+
+body {
+	background: $lightgray;
+	font-family: $primary-font;
+	color: $black;
+}
+
+.hero-wrapper {
+	@include background-image(linear-gradient($white, $lightgray));
+}
+
+.home-hero {
+	background: $white;
+	position: relative;
+	max-height: 716px;
+	overflow: hidden;
+	video {
+		width: 100%;
+		opacity: 0.8;
+	}
+	.big-background {
+		background: $black;
+		position: relative;
+		margin-bottom: -0.25em;
+	}
+	h1 {
+		position: absolute;
+		width: 33%;
+		top: 50%;
+		left: 50%;
+		z-index: 100;
+		@include transform(translate(-50%, -50%));
+	}
+}
+
+.home-intro {
+	padding: 2em 0 1em;
+	p {
+		font-family: $secondary-font;
+		font-size: 1.5em;
+		line-height: 1.6em;
+	}
+	@include breakpoint($medium){
+		font-size: 1.25em;
+		.container-fluid {
+			max-width: 685px;
+			width: 66%;
+		}
+	}
+	@include breakpoint($large){
+		font-size: 1.5em;
+	}
+}
+
+.home-section {
+	@extend .row;
+	position: relative;
+	margin: 6em 0;
+	@include breakpoint($large){
+		margin: 12em 0
+	}
+	h2 { margin-bottom: 0; }
+	hr { margin-bottom: 1em; }
+	.symbol {
+		position: absolute;
+		img { width: 100% }
+	}
+	.text {
+		@extend .col-md-4;
+	}
+	.image {
+		@extend .col-md-7;
+		@extend .col-md-offset-1;
+	}
+	&:nth-child(1){
+		.symbol {
+			top: -4em; left: -3em;
+			width: 40%;
+			@include breakpoint($medium){
+				width: 40%;
+				top: -6em; left: -7em;
+			}
+			@include breakpoint($large){
+				width: 40%;
+				top: -12em; left: -9em;
+			}
+		}
+	}
+	&:nth-child(2){
+		.symbol {
+			width: 50%;
+			top: -4em;
+			right: 0;
+			// right: -10%;
+			@include breakpoint($medium){
+				width: 40%;
+				top: -12em;
+				// right: -9%;
+			}
+			@include breakpoint(70em){
+				top: -8em;
+			}
+			@include breakpoint($large){
+				top: -11em;
+				// right: -12%;
+			}
+		}
+		.text {
+			@extend .col-md-push-8;
+		}
+		.image {
+			@extend .col-md-pull-5;
+		}
+	}
+	&:nth-child(3){
+		.symbol {
+			width: 70%; top: -3em;
+			@include breakpoint($medium){
+				width: 50%;
+				left: -2%;
+				top: -6em;
+			}
+		}
+	}
+}
+
+
+.main {
+	article {
+		@extend .col-md-9;
+		@extend .col-md-push-3;
+		@extend .col-lg-7;
+		@extend .col-lg-push-4;
+		background: $white;
+		padding: 2em 0 0;
+		.content { padding: 0 2em; }
+		.feature {
+			width: 100%;
+		}
+		.lede { 
+			font-family: $secondary-font;
+			font-size: 1.8em;
+			line-height: 1.4em;
+		}
+		footer {
+			@include background-image(linear-gradient($white, $lightgray));
+			padding: 2em;
+			@include breakpoint($medium){ padding: 2em 2em 6em; }
+			color: $darkgray;
+		}
+	}
+	aside {
+		@extend .col-md-3;
+		@extend .col-md-pull-9;
+		@extend .col-lg-3;
+		@extend .col-lg-pull-7;
+		@include breakpoint($medium){ padding-top: 4em;}
+		.section {
+			@extend .col-xs-12;
+			@extend .col-sm-6;
+			@extend .col-md-12;
+			padding: 0.25em 1em;
+			font-size: 0.7em;
+			margin-bottom: 1em;
+			h3, h4 { border-bottom: 1px solid $midgray; }
+			.btn { padding: 0.5em 1.5em; }
+			&.navigation { background: $white; }
+			@include breakpoint($medium){
+				margin-bottom: 4em;
+			}
+		}
+	}
+}
+
+
+.category-navigation {
+	@extend .row;
+	margin-bottom: 2em;
+	.section-link { 
+		@extend .col-xs-6;
+		@extend .col-md-4;
+		@include transition(all 0.2s ease);
+		background: $lightgray;
+		border: 1px solid $white;
+		&:hover { background: $white; }
+		@include breakpoint($medium){
+			&:nth-child(3n),
+			&:last-child{ border-right: 1px solid $white; }
+		}
+		font-size: 0.8em;
+		padding-bottom: 1em; 
+		.btn { padding: 0.5em 1em; }
+	}
+}
+
+footer[role=banner] {
+	background: $white;
+	border-top: 1px solid $midgray;
+	padding-bottom: 4em;
+	@include breakpoint($medium){
+		background: url(../images/bg-footer.png) top center repeat-y;
+		background-size: contain;
+	}
+	@include breakpoint($large){
+		// background-position: 70% 0%;
+	}
+	.section {
+		&:nth-child(1),
+		&:nth-child(2){
+			@extend .col-md-3;
+		}
+		&:nth-child(1){
+			@extend .col-md-push-5;
+		}
+		&:nth-child(2){
+			@extend .col-md-push-6;
+		}
+		&:nth-child(3){
+			@extend .col-md-4;
+			@extend .col-md-pull-6;
+		}
+		font-size: 0.8em;
+		padding-top: 3em;
+		h3 {
+			font-size: 2em;
+			display: flex;
+			align-items: center;
+			color: $black;
+			img { margin-right: 0.5em; }
+			@include breakpoint(85.625em){
+				@include transform(translate(-3em,0));
+			}
+		}
+	}
+}
