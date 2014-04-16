@@ -21,6 +21,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<article>
+				<? the_post_thumbnail('full'); ?>
 				<div class="content">
 					<header>
 						<h2 class="subheading"><?php the_title(); ?></h2>
