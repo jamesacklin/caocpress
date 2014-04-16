@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico"/>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 		<script src="<?= get_template_directory_uri().'/js/vendor/modernizr.custom.71207.js' ?>"></script>
 		<script type="text/javascript" src="//use.typekit.net/pzy2tsu.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
