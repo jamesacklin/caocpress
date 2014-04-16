@@ -50,7 +50,6 @@
 					<?php endwhile; ?>
 				<?php endif; ?>
 			</aside>
-
 		</div>
 	</div>
 </div>

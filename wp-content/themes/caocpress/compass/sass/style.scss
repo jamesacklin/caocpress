@@ -147,7 +147,8 @@ body {
 		.feature {
 			width: 100%;
 		}
-		.lede { 
+		.lede,
+		.content > p:first-of-type {
 			font-family: $secondary-font;
 			font-size: 1.8em;
 			line-height: 1.4em;
@@ -186,7 +187,7 @@ body {
 .category-navigation {
 	@extend .row;
 	margin-bottom: 2em;
-	.section-link { 
+	.section-link {
 		@extend .col-xs-6;
 		@extend .col-md-4;
 		@include transition(all 0.2s ease);
@@ -198,7 +199,7 @@ body {
 			&:last-child{ border-right: 1px solid $white; }
 		}
 		font-size: 0.8em;
-		padding-bottom: 1em; 
+		padding-bottom: 1em;
 		.btn { padding: 0.5em 1em; }
 	}
 }

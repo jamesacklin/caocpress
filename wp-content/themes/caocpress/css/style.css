@@ -2251,7 +2251,8 @@ body {
   width: 100%;
 }
 /* line 150, ../compass/sass/style.scss */
-.main article .lede {
+.main article .lede,
+.main article .content > p:first-of-type {
   font-family: "sorts-mill-goudy-1", "sorts-mill-goudy-2", "Garamond", serif;
   font-size: 1.8em;
   line-height: 1.4em;
