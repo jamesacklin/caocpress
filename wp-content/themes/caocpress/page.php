@@ -40,6 +40,17 @@
 					</div>
 				</footer>
 			</article>
+			<aside>
+				<?php if(get_field('content_areas')): ?>
+					<?php while(has_sub_field('content_areas')) :?>
+						<div class="section">
+								<h4 class="subheading"><?php the_sub_field('header') ?></h4>
+								<?php the_sub_field('content'); ?>
+						</div>
+					<?php endwhile; ?>
+				<?php endif; ?>
+			</aside>
+
 		</div>
 	</div>
 </div>
