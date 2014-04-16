@@ -15,6 +15,7 @@
 <div class="main">
 	<div class="container-fluid">
 		<div class="row">
+			<div class="col-xs-12"><?php the_breadcrumb(); ?></div>
 			<article>
 				<? the_post_thumbnail('full'); ?>
 				<div class="content">

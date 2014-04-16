@@ -10,6 +10,7 @@ Template Name: Category Page
     <div class="container-fluid">
         <div class="row">
             <article>
+                <div class="col-xs-12"><?php the_breadcrumb(); ?></div>
                 <? the_post_thumbnail('full'); ?>
                 <div class="content">
                     <header>
@@ -36,7 +37,7 @@ Template Name: Category Page
                                         echo "</p>";
                                     } ?>
                                     <? the_excerpt(); ?>
-                                    <a class="btn" href="<? the_permalink(); ?>">Read Article &rarr;</a>
+                                    <!-- <a class="btn" href="<? the_permalink(); ?>">Read Article &rarr;</a> -->
                                 </div>
                             <? endforeach;
                             wp_reset_postdata(); ?>
@@ -66,7 +67,7 @@ Template Name: Category Page
                                         echo "</p>";
                                     } ?>
                                     <? the_excerpt(); ?>
-                                    <a class="btn alt" href="<? the_permalink(); ?>">Explore &rarr;</a>
+                                    <!-- <a class="btn alt" href="<? the_permalink(); ?>">Explore &rarr;</a> -->
                                 </div>
                             <?php endforeach;
                             echo '</div>';

@@ -2046,6 +2046,12 @@ header[role="banner"] li a:hover, header[role="banner"] li .vcard .tel:hover, .v
   }
 }
 
+.breadcrumbs {
+	font-size: 0.8em;
+	padding-bottom: 2.5em;
+	padding-left: 1.5em;
+}
+
 /* line 87, ../compass/sass/_navigation.scss */
 .breadcrumbs li {
   display: inline;
