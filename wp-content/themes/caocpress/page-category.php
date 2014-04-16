@@ -17,34 +17,30 @@ Template Name: Category Page
                     </header>
                     <?php the_content(); ?>
 
-                    <hr>
-                    <h3 class="subheading">Articles</h3>
-                    <div class="category-navigation">
-                        <?
-                            $args = array(
-                                'post_type' => 'page',
-                                'post_parent' => $post->ID
-                            );
-                            $myposts = get_posts( $args );
-                            foreach ( $myposts as $post ) : setup_postdata( $post );
-                        ?>
-                            <div class="section-link">
-                                <h4><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h4>
-                                <? if ( has_post_thumbnail() ){
-                                    echo "<p>";
-                                    the_post_thumbnail('full');
-                                    echo "</p>";
-                                } ?>
-                                <? the_excerpt(); ?>
-                                <a class="btn alt" href="<? the_permalink(); ?>">Read Article &rarr;</a>
+                    <? $args = array(
+                            'post_type' => 'page',
+                            'post_parent' => $post->ID
+                        );
+                        $children = get_posts( $args );
+                        if ($children): ?>
+                            <hr>
+                            <h3 class="subheading">Articles</h3>
+                            <div class="category-navigation">
+                            <? foreach ( $children as $post ) : setup_postdata( $post ); ?>
+                                <div class="section-link">
+                                    <h4><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h4>
+                                    <? if ( has_post_thumbnail() ){
+                                        echo "<p>";
+                                        the_post_thumbnail('full');
+                                        echo "</p>";
+                                    } ?>
+                                    <? the_excerpt(); ?>
+                                    <a class="btn alt" href="<? the_permalink(); ?>">Read Article &rarr;</a>
+                                </div>
+                            <? endforeach;
+                            wp_reset_postdata(); ?>
                             </div>
-                        <?php endforeach; wp_reset_postdata();?>
-                    </div>
-
-
-
-
-
+                        <? endif; ?>
 
 
                 </div>
