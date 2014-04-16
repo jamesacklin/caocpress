@@ -7,24 +7,16 @@
 				</div>
 				<div class="section">
 					<h3><img src="<?= get_template_directory_uri().'/images/symbol-news.svg' ?>" alt=""> News</h3>
-					<div class="news-teaser">
-						<a href="#">
-							<h4>News Headline #001</h4>
-							<p>A quick sample of article content. Lorem ipsum dolor sit amet, consectetur elit.</p>
-						</a>
-					</div>
-					<div class="news-teaser">
-						<a href="#">
-							<h4>News Headline #001</h4>
-							<p>A quick sample of article content. Lorem ipsum dolor sit amet, consectetur elit.</p>
-						</a>
-					</div>
-					<div class="news-teaser">
-						<a href="#">
-							<h4>News Headline #001</h4>
-							<p>A quick sample of article content. Lorem ipsum dolor sit amet, consectetur elit.</p>
-						</a>
-					</div>
+					<? $args = array( 'posts_per_page' => 3 );
+					$myposts = get_posts( $args );
+					foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+						<div class="news-teaser">
+							<a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark">
+								<h4><?php the_title(); ?></h4>
+								<p><?php the_excerpt(); ?></p>
+							</a>
+						</div>
+					<?php endforeach; wp_reset_postdata();?>
 				</div>
 				<div class="section">
 					<h3><img src="<?= get_template_directory_uri().'/images/symbol-contact.svg' ?>" alt=""> Contact</h3>
