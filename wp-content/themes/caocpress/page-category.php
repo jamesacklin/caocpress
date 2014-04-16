@@ -17,7 +17,8 @@ Template Name: Category Page
                     </header>
                     <?php the_content(); ?>
 
-                    <? $args = array(
+                    <? // Gets child pages
+                        $args = array(
                             'post_type' => 'page',
                             'post_parent' => $post->ID
                         );
@@ -35,14 +36,43 @@ Template Name: Category Page
                                         echo "</p>";
                                     } ?>
                                     <? the_excerpt(); ?>
-                                    <a class="btn alt" href="<? the_permalink(); ?>">Read Article &rarr;</a>
+                                    <a class="btn" href="<? the_permalink(); ?>">Read Article &rarr;</a>
                                 </div>
                             <? endforeach;
                             wp_reset_postdata(); ?>
                             </div>
                         <? endif; ?>
 
+                    <? // Gets sibling pages
 
+                        // TODO: Figure this shit out
+                        $args = array(
+                            'post_type' => 'page',
+                            'child_of' => $post->page_parent,
+                            'parent' => $post->page_parent,
+                        );
+
+                        $siblings = get_posts( $args );
+                        if ($siblings): ?>
+                            <hr>
+                            <h3 class="subheading">Other Categories</h3>
+                            <div class="category-navigation">
+                            <? foreach ( $siblings as $post ) : setup_postdata( $post ); ?>
+                                <div class="section-link">
+                                    <h4><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h4>
+                                    <? if ( has_post_thumbnail() ){
+                                        echo "<p>";
+                                        the_post_thumbnail('full');
+                                        echo "</p>";
+                                    } ?>
+                                    <? the_excerpt(); ?>
+                                    <a class="btn alt" href="<? the_permalink(); ?>">Explore &rarr;</a>
+                                </div>
+                            <? endforeach;
+                            wp_reset_postdata(); ?>
+                            </div>
+                        <? endif;
+                    ?>
                 </div>
                 <footer>
                     <p class="byline">Posted on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> by <?= get_the_author(); ?></p>
