@@ -2321,10 +2321,6 @@ body {
 }
 /* line 189, ../compass/sass/style.scss */
 .category-navigation .section-link {
-  -moz-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
   background: whitesmoke;
   border: 1px solid white;
   font-size: 0.8em;
@@ -2332,6 +2328,10 @@ body {
 }
 /* line 195, ../compass/sass/style.scss */
 .category-navigation .section-link:hover {
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   background: white;
 }
 @media (min-width: 50em) {
