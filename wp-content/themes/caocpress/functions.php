@@ -116,21 +116,8 @@ function my_custom_excerpt($text, $raw_excerpt) {
 function the_breadcrumb() {
     global $post;
     echo '<ul class="breadcrumbs">';
-    if (!is_home()) {
-        echo '<li><a href="';
-        echo get_option('home');
-        echo '">';
-        echo 'Home';
-        echo '</a></li>';
-        if (is_category() || is_single()) {
-            echo '<li>';
-            the_category(' </li><li> ');
-            if (is_single()) {
-                echo '</li><li>';
-                the_title();
-                echo '</li>';
-            }
-        } elseif (is_page()) {
+    echo '<li><a href="/">Home</a></li>';
+   if (is_page()) {
             if($post->post_parent){
                 $anc = get_post_ancestors( $post->ID );
                 $title = get_the_title();
@@ -142,7 +129,7 @@ function the_breadcrumb() {
             } else {
                 echo '<li><strong> '.get_the_title().'</strong></li>';
             }
-        }
+
     }
     elseif (is_tag()) {single_tag_title();}
     elseif (is_day()) {echo"<li>Archive for "; the_time('F jS, Y'); echo'</li>';}

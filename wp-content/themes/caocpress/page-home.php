@@ -29,7 +29,7 @@ Template Name: Home Page
 			<img src="<?= get_template_directory_uri().'/images/symbol-network.svg' ?>">
 		</div>
 		<div class="text">
-			<h2 class="subheading">CAOC in Action</h2>
+			<h2 class="subheading"><a href="/action">CAOC in Action</a></h2>
 			<hr />
 			<p>What does <strong>community-based learning</strong> look like at Winchester Thurston School? How do teachers integrate field visits partnerships into their courses? Watch videos that answer these questions. Be inspired to take learning into your community and share ways in which you implemented these or similar projects at your schools.</p>
 		</div>
@@ -42,7 +42,7 @@ Template Name: Home Page
 			<img src="<?= get_template_directory_uri().'/images/symbol-volunteer.svg' ?>">
 		</div>
 		<div class="text">
-			<h2 class="subheading">Impact</h2>
+			<h2 class="subheading"><a href="/impact">Impact</a></h2>
 			<hr />
 			<p>Discover the impact of City as Our Campus on student learning and the city of Pittsburgh. Consider different ways to assess student learning. Listen to students describe their growth and community partners discuss the positive impact the students have on the ground. Imagine the ways your school can contribute to the vitality of your city.</p>
 		</div>
@@ -55,7 +55,7 @@ Template Name: Home Page
 			<img src="<?= get_template_directory_uri().'/images/symbol-book.svg' ?>" alt="">
 		</div>
 		<div class="text">
-			<h2 class="subheading">Portfolio</h2>
+			<h2 class="subheading"><a href="/portfolio">Portfolio</a></h2>
 			<hr />
 			<p>Explore student work and reflections from the Lower, Middle and Upper School, including student designed windmills that produce clean energy in urban environments, development plans for Pittsburgh's largest remaining brownfield, urban systems thinking with second graders, animation with local filmmakers, and much more.</p>
 		</div>

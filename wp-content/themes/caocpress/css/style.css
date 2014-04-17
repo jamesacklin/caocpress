@@ -2263,6 +2263,12 @@ body {
   font-size: 1.8em;
   line-height: 1.4em;
 }
+
+.main article .lede strong,
+.main article .content > p:first-of-type strong {
+	font-weight: normal;
+}
+
 /* line 155, ../compass/sass/style.scss */
 .main article footer {
   background-image: -moz-linear-gradient(#ffffff, #f5f5f5);
