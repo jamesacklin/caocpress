@@ -116,7 +116,6 @@ function my_custom_excerpt($text, $raw_excerpt) {
 function the_breadcrumb() {
     global $post;
     echo '<ul class="breadcrumbs">';
-    echo '<li><a href="/">Home</a></li>';
    if (is_page()) {
             if($post->post_parent){
                 $anc = get_post_ancestors( $post->ID );
@@ -127,6 +126,7 @@ function the_breadcrumb() {
                 echo $output;
                 echo '<li><strong title="'.$title.'"> '.$title.'</strong></li>';
             } else {
+            		echo '<li><a href="/">Home</a></li>';
                 echo '<li><strong> '.get_the_title().'</strong></li>';
             }
 
