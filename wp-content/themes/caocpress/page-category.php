@@ -17,7 +17,7 @@ Template Name: Category Page
                         <h2 class="subheading"><?php the_title(); ?></h2>
                     </header>
                     <?php the_content(); ?>
-
+                    <div class="related-pages">
                     <? // Gets child pages
                         $args = array(
                             'post_type' => 'page',
@@ -43,6 +43,7 @@ Template Name: Category Page
                             wp_reset_postdata(); ?>
                             </div>
                         <? endif; ?>
+                    </div>
                 </div>
                 <footer>
                     <p class="byline">Posted on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> by <?= get_the_author(); ?></p>

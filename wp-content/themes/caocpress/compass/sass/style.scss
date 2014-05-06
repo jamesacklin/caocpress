@@ -153,6 +153,9 @@ body {
 			font-size: 1.8em;
 			line-height: 1.4em;
 		}
+		.related-pages {
+			margin-top: 3em;
+		}
 		footer {
 			@include background-image(linear-gradient($white, $lightgray));
 			padding: 2em;
