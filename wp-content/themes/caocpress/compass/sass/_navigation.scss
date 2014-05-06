@@ -84,6 +84,7 @@ header[role="banner"] {
 
 // Breadcrumbs
 .breadcrumbs {
+  padding-bottom: 2em;
   li {
     @extend .smallcaps;
     display: inline;
