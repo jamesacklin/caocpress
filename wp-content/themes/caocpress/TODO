@@ -1,4 +1,3 @@
-- make the footer editable
-
-- sort out tag pages / category pages for posts
-- provision for children of children (children everywhere)
+- Global, editable footer
+- Develop tag / category pages for posts
+- Provision for children of article pages (children everywhere)
