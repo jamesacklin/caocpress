@@ -1,2 +1,0 @@
-- Global, editable footer
-- Provision for children of article pages (children everywhere)
