@@ -30,7 +30,6 @@
           <?php the_content(); ?>
         </div>
         <footer>
-          <p class="byline">Posted on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> by <?= get_the_author(); ?></p>
           <div class="share">
             <p><span class="smallcaps">Share:</span>
               <a href="#" class="text-btn">Facebook</a>
@@ -42,6 +41,8 @@
         </footer>
       </article>
       <aside>
+        <? // Tag list ?>
+        <?php the_tags('<div class="section"><h4 class="subheading">Tags</h4><ul class="tag-list"><li>','</li><li>','</li></ul></div>'); ?>
         <? // Gets sibling pages
         global $post;
         $post_parent = $post->ID;

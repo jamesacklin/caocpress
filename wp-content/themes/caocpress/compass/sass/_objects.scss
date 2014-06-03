@@ -179,3 +179,28 @@ figure {
 	&:hover p { color: $purple; }
 	&:last-child { border: 0}
 }
+
+// Tags
+.tag-list {
+	li {
+		font-size: 1.25em;
+		display: inline-block;
+		margin-bottom: 0.5em;
+	}
+	a {
+		@extend .text-btn;
+		background: $purple;
+		color: $white;
+		padding: 0.5em;
+		margin-right: 1em;
+		&:before {
+			content: "\f02b ";
+			font-family: 'FontAwesome';
+			margin-right: 0.5em;
+		}
+		&:hover {
+			background: transparent;
+			color: $purple;
+		}
+	}
+}
