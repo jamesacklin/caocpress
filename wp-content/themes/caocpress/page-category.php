@@ -58,6 +58,8 @@ Template Name: Category Page
                 </footer>
             </article>
             <aside>
+                <? // Tag list ?>
+                <?php the_tags('<div class="section"><h4 class="subheading">Tags</h4><ul class="tag-list"><li>','</li><li>','</li></ul></div>'); ?>
                 <? // Gets sibling pages
                 global $post;
                 $post_parent = $post->ID;
