@@ -11,21 +11,51 @@
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-<?php if ( have_posts() ): ?>
-<h2>Tag Archive: <?php echo single_tag_title( '', false ); ?></h2>
-<ol>
-<?php while ( have_posts() ) : the_post(); ?>
-	<li>
-		<article>
-			<h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-			<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
-			<?php the_content(); ?>
-		</article>
-	</li>
-<?php endwhile; ?>
-</ol>
-<?php else: ?>
-<h2>No posts to display in <?php echo single_tag_title( '', false ); ?></h2>
-<?php endif; ?>
+<div class="main">
+  <div class="container-fluid">
+    <div class="row">
+      <?php if ( have_posts() ): ?>
+        <article>
+          <? the_post_thumbnail('full'); ?>
+          <div class="content">
+            <div class="header">
+              <h2 class="subheading"><?php echo single_tag_title( '', false ); ?></h2>
+            </div>
+            <? echo tag_description(); ?>
+            <div class="related-pages">
+              <div class="category-navigation">
+                <?php while ( have_posts() ) : the_post(); ?>
+                  <div class="section-link">
+                    <h4><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h4>
+                    <? if ( has_post_thumbnail() ){
+                        echo "<p>";
+                        the_post_thumbnail('full');
+                        echo "</p>";
+                    } ?>
+                    <? the_excerpt(); ?>
+                  </div>
+                <?php endwhile; ?>
+              </div>
+            </div>
+          </div>
+          <footer>
+              <div class="share">
+                  <p><span class="smallcaps">Share:</span>
+                      <a href="#" class="text-btn">Facebook</a>
+                      <a href="#" class="text-btn">Twitter</a>
+                      <a href="#" class="text-btn">G+</a>
+                      <a href="#" class="text-btn">LinkedIn</a>
+                  </p>
+              </div>
+          </footer>
+        </article>
+      <?php else: ?>
+        <article>
+          <h2>No posts to display in <?php echo single_tag_title( '', false ); ?></h2>
+        </article>
+      <?php endif; ?>
+    </div>
+  </div>
+</div>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

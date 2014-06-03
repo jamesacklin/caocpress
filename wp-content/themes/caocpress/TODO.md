@@ -1,3 +1,2 @@
 - Global, editable footer
-- Develop tag / category pages for posts
 - Provision for children of article pages (children everywhere)
