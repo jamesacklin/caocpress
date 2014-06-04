@@ -25,16 +25,17 @@ Template Name: Category Page
                         );
                         $children = get_posts( $args );
                         if ($children): ?>
-                            <hr>
-                            <h3 class="subheading">Articles</h3>
                             <div class="category-navigation">
                             <? foreach ( $children as $post ) : setup_postdata( $post ); ?>
                                 <div class="section-link">
                                     <h4><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h4>
                                     <? if ( has_post_thumbnail() ){
-                                        echo "<p>";
+                                        echo "<div class='image'>";
+                                        echo "<a href='";
+                                        the_permalink();
+                                        echo "''>";
                                         the_post_thumbnail('full');
-                                        echo "</p>";
+                                        echo "</a></div>";
                                     } ?>
                                     <? the_excerpt(); ?>
                                     <!-- <a class="btn" href="<? the_permalink(); ?>">Read Article &rarr;</a> -->
@@ -46,15 +47,14 @@ Template Name: Category Page
                     </div>
                 </div>
                 <footer>
-                    <p class="byline">Posted on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> by <?= get_the_author(); ?></p>
-                    <div class="share">
-                        <p><span class="smallcaps">Share:</span>
-                            <a href="#" class="text-btn">Facebook</a>
-                            <a href="#" class="text-btn">Twitter</a>
-                            <a href="#" class="text-btn">G+</a>
-                            <a href="#" class="text-btn">LinkedIn</a>
-                        </p>
-                    </div>
+                  <div class="share">
+                      <p><span class="smallcaps">Share:</span>
+                          <a href="#" class="text-btn">Facebook</a>
+                          <a href="#" class="text-btn">Twitter</a>
+                          <a href="#" class="text-btn">G+</a>
+                          <a href="#" class="text-btn">LinkedIn</a>
+                      </p>
+                  </div>
                 </footer>
             </article>
             <aside>
@@ -78,7 +78,7 @@ Template Name: Category Page
                         <div class="section-link">
                             <h5><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h5>
                             <? if ( has_post_thumbnail() ){ ?>
-                                <p><a href="<? the_permalink(); ?>"><? the_post_thumbnail('full') ?></a></p>
+                                <div class="image"><a href="<? the_permalink(); ?>"><? the_post_thumbnail('full') ?></a></div>
                                 <?
                             }
                             the_excerpt(); ?>

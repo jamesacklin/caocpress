@@ -186,38 +186,46 @@ body {
 	}
 }
 
+.section-link {
+	padding: 0.5em 1em;
+	width: 100%;
+	.image {
+		height: 0;
+		padding-bottom: 56.25%;
+		overflow: hidden;
+		position: relative;
+		margin-bottom: 1em;
+		img {
+			position: absolute;
+			left: 50%; top: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	&:last-child {
+		hr { display: none; }
+	}
+}
 
 .category-navigation {
-	@extend .row;
-	margin-bottom: 2em;
+	display: flex;
+	flex-wrap: wrap;
 	.section-link {
-		@extend .col-xs-6;
-		@extend .col-md-4;
-		@include transition(all 0.2s ease);
-		background: $lightgray;
-		border: 1px solid $white;
-		&:hover { background: $white; }
-		@include breakpoint($medium){
-			&:nth-child(3n),
-			&:last-child{ border-right: 1px solid $white; }
+		font-size: 0.7em;
+		h4 {
+			border-top: 1px solid $midgray;
+			margin-top: 0;
+			padding-top: 0.6em;
 		}
-		font-size: 0.8em;
-		padding-bottom: 1em;
-		.btn { padding: 0.5em 1em; }
+		@include breakpoint($medium){ width: 50%; }
+
+
 	}
 }
 
 footer[role=banner] {
-	background: $white;
-	border-top: 1px solid $midgray;
+	background: $black;
 	padding-bottom: 4em;
-	@include breakpoint($medium){
-		background: url(../images/bg-footer.png) top center repeat-y;
-		background-size: contain;
-	}
-	@include breakpoint($large){
-		// background-position: 70% 0%;
-	}
+	color: $white;
 	.section {
 		&:nth-child(1),
 		&:nth-child(2){
@@ -239,7 +247,7 @@ footer[role=banner] {
 			font-size: 2em;
 			display: flex;
 			align-items: center;
-			color: $black;
+			color: $white;
 			img { margin-right: 0.5em; }
 			@include breakpoint(85.625em){
 				@include transform(translate(-3em,0));

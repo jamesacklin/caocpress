@@ -173,10 +173,10 @@ figure {
 	@extend hr;
 	font-size: 0.9em;
 	h4, p {
-		color: $darkgray;
+		color: $midgray;
 	}
 	&:hover h4,
-	&:hover p { color: $purple; }
+	&:hover p { color: $orange; }
 	&:last-child { border: 0}
 }
 
