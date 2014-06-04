@@ -217,31 +217,40 @@ footer[role=banner] {
 	background: $black;
 	padding-bottom: 4em;
 	color: $white;
+	.container-fluid {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
 	.section {
-		&:nth-child(1),
-		&:nth-child(2){
-			@extend .col-md-3;
-		}
-		&:nth-child(1){
-			@extend .col-md-push-5;
-		}
-		&:nth-child(2){
-			@extend .col-md-push-6;
-		}
-		&:nth-child(3){
-			@extend .col-md-4;
-			@extend .col-md-pull-6;
-		}
 		font-size: 0.8em;
 		padding-top: 3em;
-		h3 {
-			font-size: 2em;
+		width: 100%;
+		&:nth-child(1){
+			order: 3;
+			@include breakpoint($medium){ order: 1; }
+		}
+		&:nth-child(2){
+			order: 1;
+			@include breakpoint($medium){ order: 2; }
+		}
+		&:nth-child(3){
+			order: 2;
+			@include breakpoint($medium){ order: 3; }
+		}
+		@include breakpoint($medium){
+			width: 33.333%;
+			padding:	3em 5% 0;
+		}
+		h3 a {
+			font-size: 1.33em;
 			display: flex;
 			align-items: center;
 			color: $white;
+			&:hover { color: $orange; }
 			img { margin-right: 0.5em; }
 			@include breakpoint(85.625em){
-				@include transform(translate(-3em,0));
+				@include transform(translate(-2.55em,0));
 			}
 		}
 	}

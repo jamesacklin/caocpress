@@ -140,3 +140,21 @@ function the_breadcrumb() {
     elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
     echo '</ul>';
 }
+
+
+/**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+function arphabet_widgets_init() {
+
+	register_sidebar( array(
+		'name' => 'Global Footer',
+		'id' => 'global-footer',
+		'before_widget' => '<div class="section">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	) );
+}
+add_action( 'widgets_init', 'arphabet_widgets_init' );
