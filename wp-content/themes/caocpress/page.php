@@ -22,7 +22,9 @@
     <div class="row">
       <article>
         <div class="col-xs-12"><?php the_breadcrumb(); ?></div>
-        <? the_post_thumbnail('full'); ?>
+        <div class="crop">
+          <? the_post_thumbnail('full') ?>
+        </div>
         <div class="content">
           <header>
             <h2 class="subheading"><?php the_title(); ?></h2>
