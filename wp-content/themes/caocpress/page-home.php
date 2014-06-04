@@ -36,7 +36,9 @@ Template Name: Home Page
 						<?php the_sub_field('content') ?>
 					</div>
 					<div class="image">
-						<a href="<?php the_sub_field('link') ?>"><img src="<?php the_sub_field('image'); ?>" alt=""></a>
+						<div class="crop">
+							<a href="<?php the_sub_field('link') ?>"><img src="<?php the_sub_field('image'); ?>" alt=""></a>
+						</div>
 					</div>
 				</div>
 			<?php endwhile; ?>
