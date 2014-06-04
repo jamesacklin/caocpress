@@ -28,6 +28,35 @@
             <h2 class="subheading"><?php the_title(); ?></h2>
           </header>
           <?php the_content(); ?>
+          <div class="related-pages">
+          <? // Gets child pages
+              $args = array(
+                  'post_type' => 'page',
+                  'post_parent' => $post->ID
+              );
+              $children = get_posts( $args );
+              if ($children): ?>
+                  <div class="category-navigation">
+                    <h3 class="subheading">More in This Section</h3>
+                    <? foreach ( $children as $post ) : setup_postdata( $post ); ?>
+                        <div class="section-link">
+                            <h4><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h4>
+                            <? if ( has_post_thumbnail() ){
+                                echo "<div class='image'>";
+                                echo "<a href='";
+                                the_permalink();
+                                echo "''>";
+                                the_post_thumbnail('full');
+                                echo "</a></div>";
+                            } ?>
+                            <? the_excerpt(); ?>
+                            <!-- <a class="btn" href="<? the_permalink(); ?>">Read Article &rarr;</a> -->
+                        </div>
+                    <? endforeach;
+                    wp_reset_postdata(); ?>
+                  </div>
+              <? endif; ?>
+          </div>
         </div>
         <footer>
           <div class="share">
@@ -56,23 +85,24 @@
         $siblings = get_posts( $args );
         if ($siblings): ?>
             <div class="section navigation">
-            <h4 class="subheading" style="color: #5b4472">More in this section</h4>
+            <h4 class="subheading" style="color: #5b4472">Learn More</h4>
             <? foreach ( $siblings as $post ) : setup_postdata( $post ); ?>
                 <div class="section-link">
                     <h5><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h5>
-                    <? if ( has_post_thumbnail() ){
-                        echo "<p>";
-                        the_post_thumbnail('full');
-                        echo "</p>";
-                    } ?>
-                    <? the_excerpt(); ?>
+                    <? if ( has_post_thumbnail() ){ ?>
+                        <div class="image"><a href="<? the_permalink(); ?>"><? the_post_thumbnail('full') ?></a></div>
+                        <?
+                    }
+                    the_excerpt(); ?>
+                    <p><a class="btn alt" href="<? the_permalink(); ?>">Explore &rarr;</a></p>
                     <hr />
                 </div>
             <?php endforeach;
             echo '</div>';
         endif;
         wp_reset_postdata(); ?>
-        <?php if(get_field('content_areas')): ?>
+        <? // Gets content areas
+          if(get_field('content_areas')): ?>
           <?php while(has_sub_field('content_areas')) :?>
             <div class="section">
                 <h4 class="subheading"><?php the_sub_field('header') ?></h4>

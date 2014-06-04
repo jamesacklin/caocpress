@@ -1,5 +1,5 @@
 // Fluid images rule
-img { max-width: 100%; }
+img, video { max-width: 100%; }
 
 // A better clearfix than the default Compass method
 @mixin clearfix {

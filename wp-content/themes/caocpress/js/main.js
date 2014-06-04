@@ -15,6 +15,8 @@ jQuery(document).ready(function($){
 	  $(target + ' li:not(:first)').toggleClass('hidden');
 	});
 
+	$('article').fitVids();
+
 });
 
 if (!Modernizr.touch){
