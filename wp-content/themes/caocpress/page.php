@@ -22,9 +22,11 @@
     <div class="row">
       <article>
         <div class="col-xs-12"><?php the_breadcrumb(); ?></div>
-        <div class="crop">
-          <? the_post_thumbnail('full') ?>
-        </div>
+        <? if(has_post_thumbnail()): ?>
+          <div class="crop">
+            <? the_post_thumbnail('full') ?>
+          </div>
+        <? endif; ?>
         <div class="content">
           <header>
             <h2 class="subheading"><?php the_title(); ?></h2>

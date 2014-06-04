@@ -10,7 +10,7 @@
 @import "navigation";
 
 body {
-	background: $lightgray;
+	background: $black;
 	font-family: $primary-font;
 	color: $black;
 }
@@ -65,9 +65,9 @@ body {
 .home-section {
 	@extend .row;
 	position: relative;
-	margin: 6em 0;
+	padding: 6em 0;
 	@include breakpoint($large){
-		margin: 12em 0
+		padding: 12em 0
 	}
 	h2 { margin-bottom: 0; }
 	hr { margin-bottom: 1em; }
@@ -136,6 +136,7 @@ body {
 
 
 .main {
+	background: $lightgray;
 	article {
 		@extend .col-md-9;
 		@extend .col-md-push-3;
@@ -214,14 +215,12 @@ body {
 }
 
 footer[role=banner] {
-	background: $black;
 	padding-bottom: 4em;
 	color: $white;
 	.container-fluid {
 		display: flex;
 		flex-wrap: wrap;
 	}
-
 	.section {
 		font-size: 0.8em;
 		padding-top: 3em;
