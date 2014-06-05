@@ -18,9 +18,9 @@
 
 <div class="main">
 	<div class="container-fluid">
-		<div class="row">
 			<?php if ( have_posts() ): ?>
 				<?php while ( have_posts() ) : the_post(); ?>
+					<div class="row">
 					<article>
 						<div class="content">
 							<div class="header">
@@ -40,13 +40,29 @@
 							</div>
 						</footer>
 					</article>
+					<aside>
+						<? // Tag list ?>
+						<?php the_tags('<div class="section"><h4 class="subheading">Tags</h4><ul class="tag-list"><li>','</li><li>','</li></ul></div>'); ?>
+						<? // Content areas (from custom fields) ?>
+						<?php if(get_field('content_areas')): ?>
+							<?php while(has_sub_field('content_areas')) :?>
+								<div class="section">
+										<h4 class="subheading"><?php the_sub_field('header') ?></h4>
+										<?php the_sub_field('content'); ?>
+								</div>
+							<?php endwhile; ?>
+						<?php endif; ?>
+					</aside>
+				</div>
 				<?php endwhile; ?>
 			<?php else: ?>
+				<div class="row">
 				<article>
 					<div class="content">
 						<h2>No posts to display</h2>
 					</div>
 				</article>
+			</div>
 			<?php endif; ?>
 		</div>
 	</div>

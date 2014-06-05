@@ -73,6 +73,7 @@ body {
 	hr { margin-bottom: 1em; }
 	.symbol {
 		position: absolute;
+		z-index: 0;
 		img { width: 100% }
 	}
 	.text {
@@ -84,7 +85,7 @@ body {
 	}
 	&:nth-child(1){
 		.symbol {
-			top: -4em; left: -3em;
+			top: -1em; left: -3em;
 			width: 40%;
 			@include breakpoint($medium){
 				width: 40%;
@@ -92,7 +93,7 @@ body {
 			}
 			@include breakpoint($large){
 				width: 40%;
-				top: -12em; left: -9em;
+				top: -8em; left: -9em;
 			}
 		}
 	}
@@ -164,7 +165,6 @@ body {
 			}
 		}
 		footer {
-			@include background-image(linear-gradient($white, $lightgray));
 			padding: 2em;
 			@include breakpoint($medium){ padding: 2em 2em 6em; }
 			color: $darkgray;
