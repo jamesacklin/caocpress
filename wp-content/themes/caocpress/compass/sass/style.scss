@@ -158,6 +158,9 @@ body {
 		}
 		.related-pages {
 			margin-top: 3em;
+			.section-link:nth-child(odd) {
+					@include breakpoint($medium){ padding-right: 3%; }
+			}
 		}
 		footer {
 			@include background-image(linear-gradient($white, $lightgray));
@@ -167,15 +170,13 @@ body {
 		}
 	}
 	aside {
+		@extend .col-sm-12;
 		@extend .col-md-3;
 		@extend .col-md-pull-9;
 		@extend .col-lg-3;
 		@extend .col-lg-pull-7;
 		@include breakpoint($medium){ padding-top: 4em;}
 		.section {
-			@extend .col-xs-12;
-			@extend .col-sm-6;
-			@extend .col-md-12;
 			padding: 0.25em 1em;
 			font-size: 0.7em;
 			margin-bottom: 1em;
@@ -189,8 +190,21 @@ body {
 	}
 }
 
+.category-navigation {
+	display: flex;
+	flex-wrap: wrap;
+	.section-link {
+		font-size: 0.75em;
+		h4 {
+			border-top: 1px solid $midgray;
+			margin-top: 0;
+			padding-top: 0.6em;
+		}
+		@include breakpoint($medium){ width: 50%; }
+	}
+}
+
 .section-link {
-	padding: 0.5em 1em;
 	width: 100%;
 	.image {
 		@extend .crop;
@@ -200,19 +214,7 @@ body {
 	}
 }
 
-.category-navigation {
-	display: flex;
-	flex-wrap: wrap;
-	.section-link {
-		font-size: 0.7em;
-		h4 {
-			border-top: 1px solid $midgray;
-			margin-top: 0;
-			padding-top: 0.6em;
-		}
-		@include breakpoint($medium){ width: 50%; }
-	}
-}
+
 
 footer[role=banner] {
 	padding-bottom: 4em;

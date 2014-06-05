@@ -40,8 +40,8 @@
               );
               $children = get_posts( $args );
               if ($children): ?>
+                  <h3 class="subheading">More in This Section</h3>
                   <div class="category-navigation">
-                    <h3 class="subheading">More in This Section</h3>
                     <? foreach ( $children as $post ) : setup_postdata( $post ); ?>
                         <div class="section-link">
                             <h4><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h4>
