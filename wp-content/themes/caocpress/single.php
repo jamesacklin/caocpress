@@ -16,16 +16,19 @@
 	<div class="container-fluid">
 		<div class="row">
 			<article>
-				<div class="col-xs-12"><?php the_breadcrumb(); ?></div>
-				<? the_post_thumbnail('full'); ?>
+				<? if(has_post_thumbnail()): ?>
+					<div class="crop">
+						<? the_post_thumbnail('full') ?>
+					</div>
+				<? endif; ?>
 				<div class="content">
 					<header>
+						<p class="byline">Posted on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time></p>
 						<h2 class="subheading"><?php the_title(); ?></h2>
 					</header>
 					<?php the_content(); ?>
 				</div>
 				<footer>
-					<p class="byline">Posted on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time></p>
 					<div class="share">
 						<p><span class="smallcaps">Share:</span>
 							<a href="#" class="text-btn">Facebook</a>

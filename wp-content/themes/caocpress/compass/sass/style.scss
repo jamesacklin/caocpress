@@ -148,6 +148,7 @@ body {
 		.feature {
 			@extend .crop;
 		}
+		.byline { color: $darkgray; }
 		.lede,
 		.content > p:first-of-type {
 			font-family: $secondary-font;
