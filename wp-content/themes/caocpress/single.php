@@ -29,14 +29,7 @@
 					<?php the_content(); ?>
 				</div>
 				<footer>
-					<div class="share">
-						<p><span class="smallcaps">Share:</span>
-							<a href="#" class="text-btn">Facebook</a>
-							<a href="#" class="text-btn">Twitter</a>
-							<a href="#" class="text-btn">G+</a>
-							<a href="#" class="text-btn">LinkedIn</a>
-						</p>
-					</div>
+					<?php Starkers_Utilities::get_template_parts( array( 'parts/share-article' ) ); ?>
 				</footer>
 			</article>
 			<aside>
