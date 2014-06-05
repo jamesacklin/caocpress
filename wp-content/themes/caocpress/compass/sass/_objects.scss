@@ -170,14 +170,16 @@ figure {
 }
 
 .news-teaser {
-	@extend hr;
+	border-bottom: 1px solid $darkgray;
+	padding: 1em 0;
 	font-size: 0.9em;
 	h4, p {
 		color: $midgray;
 	}
 	&:hover h4,
 	&:hover p { color: $orange; }
-	&:last-child { border: 0}
+	&:first-of-type { padding-top: 0; }
+	&:last-child { border: 0 }
 }
 
 // Tags
