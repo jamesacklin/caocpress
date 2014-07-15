@@ -8,12 +8,10 @@ Template Name: Home Page
 <div class="main">
 	<div class="hero-wrapper">
 		<div class="home-hero">
-			<div class="big-background">
-				<video autoplay="1" loop="1">
-					<!-- <source src="<?= get_template_directory_uri().'/images/video.mp4' ?>">
-					<source src="<?= get_template_directory_uri().'/images/video.webm' ?>"> -->
-				</video>
-			</div>
+			<video poster="<?= get_template_directory_uri().'/images/video-poster.jpg' ?>" preload="auto" autoplay="1" loop="1">
+				<source src="<?= get_template_directory_uri().'/video/wt.webm' ?>" type='video/webm;codecs="vp8, vorbis"'>
+				<source src="<?= get_template_directory_uri().'/video/wt.mp4' ?>" type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"'>
+			</video>
 			<h1><img src="<?= get_template_directory_uri().'/images/logo-caoc-white.svg' ?>" alt="City As Our Campus"></h1>
 		</div>
 		<div class="home-intro">

@@ -20,28 +20,42 @@ body {
 }
 
 .home-hero {
-	background: $white;
-	position: relative;
-	max-height: 716px;
-	overflow: hidden;
-	video {
-		width: 100%;
-		opacity: 0.8;
-	}
-	.big-background {
-		background: $black;
-		position: relative;
-		margin-bottom: -0.25em;
-	}
-	h1 {
-		position: absolute;
-		width: 33%;
-		top: 50%;
-		left: 50%;
-		z-index: 100;
-		@include transform(translate(-50%, -50%));
-	}
+    @extend .crop;
+    backgound: $black;
+    video { opacity: 0.9; }
+    h1 {
+        position: absolute;
+        width: 33%;
+        top: 45%;
+        left: 50%;
+        z-index: 100;
+        @include transform(translate(-50%, -50%));
+    }
 }
+
+// .home-hero {
+// 	background: $white;
+// 	position: relative;
+// 	max-height: 716px;
+// 	overflow: hidden;
+// 	video {
+// 		width: 100%;
+// 		opacity: 0.8;
+// 	}
+// 	.big-background {
+// 		background: $black;
+// 		position: relative;
+// 		margin-bottom: -0.25em;
+// 	}
+// 	h1 {
+// 		position: absolute;
+// 		width: 33%;
+// 		top: 50%;
+// 		left: 50%;
+// 		z-index: 100;
+// 		@include transform(translate(-50%, -50%));
+// 	}
+// }
 
 .home-intro {
 	padding: 2em 0 1em;
@@ -217,7 +231,7 @@ body {
 }
 
 .share {
-	text-align: right;	
+	text-align: right;
 }
 
 footer[role=banner] {
