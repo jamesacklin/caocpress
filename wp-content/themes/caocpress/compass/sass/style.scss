@@ -59,6 +59,8 @@ body {
 
 .home-intro {
 	padding: 2em 0 1em;
+    position: relative;
+    z-index: 1;
 	p {
 		font-family: $secondary-font;
 		font-size: 1.5em;
