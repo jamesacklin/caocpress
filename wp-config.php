@@ -24,10 +24,10 @@ if (!defined('DB_NAME')) {
 	define('DB_NAME', 'caocpress');
 }
 if (!defined('DB_USER')) {
-	define('DB_USER', 'root');
+	define('DB_USER', 'wordpress');
 }
 if (!defined('DB_PASSWORD')) {
-	define('DB_PASSWORD', 'root');
+	define('DB_PASSWORD', '');
 }
 if (!defined('DB_HOST')) {
 	define('DB_HOST', 'localhost');

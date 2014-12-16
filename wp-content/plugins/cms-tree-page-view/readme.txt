@@ -4,7 +4,7 @@ Donate link: http://eskapism.se/sida/donate/
 Tags: page, pages, posts, custom posts, tree, cms, dashboard, overview, drag-and-drop, rearrange, management, manage, admin
 Requires at least: 3.8
 Tested up to: 3.9
-Stable tag: 1.2.27
+Stable tag: 1.2.30
 
 Adds a tree view of all pages & custom posts. Get a great overview + options to drag & drop to reorder & option to add multiple pages.
 
@@ -83,6 +83,8 @@ This plugin is available in the following languages:
 * Estonian
 * Finnish
 * Japanese
+* Ukrainian, by [getvoip.com](http://getvoip.com)
+* Slovak
 
 #### Always show your pages in the admin area
 If you want to always have a list of your pages available in your WordPress admin area, please check out the plugin
@@ -113,49 +115,74 @@ Now the tree with the pages will be visible both on the dashboard and in the men
 
 == Changelog ==
 
+= 1.2.30 =
+
+- Updated German translation. Thank you translator!
+
+= 1.2.29 =
+
+- Added Slovak translation. Thank you translator!
+
+= 1.2.28 =
+
+- Added Ukranian translation by [getvoip.com](http://getvoip.com).
+
 = 1.2.27 =
 
 - Add new filter "cms_tree_page_view_post_title". Use this filter to change to title being used to build the tree.
 
 = 1.2.26 =
+
 - Roll back the feature with permissions to move pages. Too many people had problems with it.
 
 = 1.2.25 =
+
 - Just a version bump because wordpress.org did not show version 1.2.24.
 
 = 1.2.24 =
+
 - Fix problems with users not getting permissions to move pages.
 
 = 1.2.23 =
+
 - Now only users with permission may move pages and custom posts and publish new posts. By default administrator and editors have these rights. Is checked using capability "move_cms_tree_view_page", so add that to any user you want to allow this for. Props mateuszdw, who made [the very first pull request for this plugin](https://github.com/bonny/WordPress-CMS-Tree-Page-View/pull/1)! Thanks a lot!
 
 = 1.2.22 =
+
 - Fixed top links being squashed in dashboard. Fixes http://wordpress.org/support/topic/bug-top-links-on-dashboard-widget-misaligned-in-wp-38. Props tim.wakeling.
 - Fixed: Now prevents long titles from overflowing the dashboard widget area. Prop tim.wakeling.
 
 = 1.2.21 =
+
 - Fixed incompatibility issue with plugin Advanced Custom Fields.
 
 = 1.2.20 =
+
 - Removed part of a comment beacuse it mentionened a file on another domain and therefore violated the repository guidelines. Also moved some sprites in CSS from loading external to loading internal.
 
 = 1.2.19 =
+
 - Added action "cms_tree_page_view_node_move_finish" that is called after a page is moved with drag and drop. Useful to for example clear caches.
 
 = 1.2.18 =
+
 - Added Japanese translation
 
 = 1.2.17 =
+
 - Removed references to, and files for, FirePHP, since it was not used anyway.
 
 = 1.2.16 =
+
 - Just a version bump to make wordpress.org see my changes...
 
 = 1.2.15 =
+
 - Fixed a PHP shortcode.
 - Fixed arguments passed to filter get_pages.
 
 = 1.2.14 =
+
 - Now the tree view is enabled by default for hiearchical post types. Should make it easier for new users to get started.
 - Removed some annoying calls to console.log().
 - Fixed bulk edit and quick edit not working for posts. Fixes http://wordpress.org/support/topic/breaks-bulk-edit-feature.
@@ -164,6 +191,7 @@ Now the tree with the pages will be visible both on the dashboard and in the men
 - Updated norwegian translation.
 
 = 1.2.13 =
+
 - Added Serbo-Croatian translation by Andrijana Nikolic from [webhostinggeeks](http://webhostinggeeks.com/)
 
 = 1.2.12 =
@@ -175,7 +203,7 @@ Now the tree with the pages will be visible both on the dashboard and in the men
 - Updated POT file for translators
 
 = 1.2.10 =
-- New fix for wp-Typography. Thanks to eceleste for digging into the problem and fixing it. 
+- New fix for wp-Typography. Thanks to eceleste for digging into the problem and fixing it.
 
 = 1.2.9 =
 - Fixed an incompatibility with wp-Typography (http://wordpress.org/extend/plugins/wp-typography/). Fixes http://wordpress.org/support/topic/html-in-titles.
@@ -187,7 +215,7 @@ Now the tree with the pages will be visible both on the dashboard and in the men
 - Fix some notice errors/warning. Props damienwhaley. Fixes http://wordpress.org/support/topic/fix-for-three-non-fatal-errors.
 
 = 1.2.6 =
-- Fixed loading CSS over HTTPS. 
+- Fixed loading CSS over HTTPS.
 Fixes http://wordpress.org/support/topic/update-noticonscss-reference-in-stylescss-for-https-sites-too.
 - Fixed some styling issues in IE 8.
 
@@ -312,7 +340,7 @@ Fixes http://wordpress.org/support/topic/update-noticonscss-reference-in-stylesc
 - Polish translation added.
 
 = 0.8 =
-- Added: You can now show the tree for regular posts. Appearently there are som plugins that use the hierarchy on posts. 
+- Added: You can now show the tree for regular posts. Appearently there are som plugins that use the hierarchy on posts.
 - Fixed: The capability required to show the tree for a post type should now be correct. Previously it was hard-coded to "edit_pages". Thanks to Kevin Behrens, author of plugin Role Scoper, for solving this.
 
 = 0.7.20 =
@@ -419,7 +447,7 @@ http://wordpress.org/support/topic/plugin-cms-tree-page-view-broken-for-language
 = 0.6.2 =
 - Was released only as a public beta together with wpml.org, to test the wpml-integration
 - Now supports custom post types.
-- Now compatible with WPML Multilangual CMS (wpml.org). 
+- Now compatible with WPML Multilangual CMS (wpml.org).
 - Uses WordPress own functions at some more places.
 - When searching and no posts found you now get a message so you know that there were no matches.
 - German translation added, by Thomas Dullnig (www.sevenspire.com). Thank you!
@@ -434,7 +462,7 @@ http://wordpress.org/support/topic/plugin-cms-tree-page-view-broken-for-language
 = 0.6 =
 - updated french translation
 - new box for mouse-over/pop-up - please let me know what you think about it
-- new box: it's bigger so it's less likely that you slide out of it with your mouse (happend to me all the time! very annoying...) . 
+- new box: it's bigger so it's less likely that you slide out of it with your mouse (happend to me all the time! very annoying...) .
 - new box: more information can be fitted there. let me know if there is any information you would like to see in the popup (right now it will show you the last modified date + the id of the page)
 - new box: edit and view links are real links now, so you can edit or view pages in for example a new tab
 - new box: oh.. and it's much better looking! :)
@@ -527,5 +555,3 @@ http://wordpress.org/support/topic/plugin-cms-tree-page-view-broken-for-language
 
 = 0.1a =
 - First public version.
-
-
