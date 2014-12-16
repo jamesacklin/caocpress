@@ -12,7 +12,6 @@
           );
           wp_nav_menu( $menuargs );
         ?>
-
       </ul>
     </div>
   </header>
