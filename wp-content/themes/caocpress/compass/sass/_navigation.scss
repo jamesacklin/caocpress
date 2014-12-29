@@ -1,111 +1,122 @@
 header[role="banner"] {
-  margin: 0;
-  padding: 0;
-  background: $white;
-  position: relative;
-  width: 100%;
-  z-index: 400;
-  border-bottom: 1px solid $midgray;
-  li {
-    text-align: center;
-    font-family: $secondary-font;
-    font-weight: bold;
-    padding: 1em 0.5em;
-    display: block;
-    text-transform: uppercase;
-    a {
-      color: $black;
-      &:hover { color: $purple; }
-    }
-  }
-  .js & {
-    .nav {
-      li:nth-child(1){
-        text-align: left;
-      }
-      .hidden {
-        display: none;
-        @include breakpoint($medium){ display: block; }
-      }
-    }
-    .nav-button {
-      position: fixed;
-      top: 1em; right: 5%;
-      padding: 0.75em 1.25em;
-      z-index: 200;
-      @include breakpoint($medium){ display: none; }
-    }
-  }
-  @include breakpoint($medium){
-    .nav {
-      display: flex;
-      align-items: stretch;
-      li {
-        padding: 1em 0;
-        display: inline-block;
-        margin: auto;
-        &:nth-child(1){ margin-left: 0; }
-        &:nth-child(5){ margin-right: 0; }
-      }
-    }
-    @include transition(all 0.2s ease);
-    &.fixed {
-      font-size: 80%;
-      position: fixed;
-      .logo img { height: 40px; }
-    }
-  }
-  @include breakpoint($large){
-    .nav {
-      li {
-        align-self: center;
-        &:nth-child(1){
-          margin-left: auto;
-          order: 2;
-        }
-        &:nth-child(2){
-          order: 0;
-          margin-left: 0;
-        }
-        &:nth-child(3){
-          order: 1;
-        }
-        &:nth-child(4){
-          order: 3;
-        }
-        &:nth-child(5){
-          order: 4;
-        }
-      }
-    }
-  }
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+	z-index: 400;
+	background: $white;
+	border-bottom: 1px solid $midgray;
+	.home & {
+		background: transparent;
+		border-bottom: 0;
+	}
+	li {
+		text-align: center;
+		font-family: $secondary-font;
+		font-weight: bold;
+		padding: 1em 0.5em;
+		display: block;
+		text-transform: uppercase;
+		a {
+			color: $black;
+			.home & { color: $white; }
+			&:hover { color: $orange; }
+		}
+	}
+	.js & {
+		.nav {
+			li:nth-child(1){
+				text-align: left;
+			}
+			.hidden {
+				display: none;
+				@include breakpoint($medium){ display: block; }
+			}
+		}
+		.nav-button {
+			position: fixed;
+			top: 1em; right: 5%;
+			padding: 0.75em 1.25em;
+			z-index: 200;
+			@include breakpoint($medium){ display: none; }
+		}
+	}
+	&.show {
+		background: $white;
+		li a { color: $black !important; }
+	}
+	@include breakpoint($medium){
+		.nav {
+			display: flex;
+			align-items: stretch;
+			li {
+				padding: 1em 0;
+				display: inline-block;
+				margin: auto;
+				&:nth-child(1){ margin-left: 0; }
+				&:nth-child(5){ margin-right: 0; }
+			}
+		}
+		&.fixed {
+			font-size: 80%;
+			position: fixed;
+			background: $white;
+			border-bottom: 1px solid $midgray;
+			a { color: $black !important; }
+			.logo img { height: 40px; }
+		}
+	}
+	@include breakpoint($large){
+		.nav {
+			li {
+				align-self: center;
+				&:nth-child(1){
+					margin-left: auto;
+					order: 2;
+				}
+				&:nth-child(2){
+					order: 0;
+					margin-left: 0;
+				}
+				&:nth-child(3){
+					order: 1;
+				}
+				&:nth-child(4){
+					order: 3;
+				}
+				&:nth-child(5){
+					order: 4;
+				}
+			}
+		}
+	}
 }
 
 
 // Breadcrumbs
 .breadcrumbs {
-  padding-bottom: 2em;
-  li {
-    @extend .smallcaps;
-    display: inline;
-    margin: 0;
-    a {
-      color: $darkgray;
-      &:hover { color: $orange; }
-    }
-    &:before {
-      content: ">";
-      color: $darkgray;
-      margin: 0 0.5em
-    }
-    &:nth-child(1){
-      &:before {
-        content: "";
-        margin: 0;
-      }
-    }
-    &:last-child{
-      a { color: $purple; }
-    }
-  }
+	padding-bottom: 2em;
+	li {
+		@extend .smallcaps;
+		display: inline;
+		margin: 0;
+		a {
+			color: $darkgray;
+			&:hover { color: $orange; }
+		}
+		&:before {
+			content: ">";
+			color: $darkgray;
+			margin: 0 0.5em
+		}
+		&:nth-child(1){
+			&:before {
+				content: "";
+				margin: 0;
+			}
+		}
+		&:last-child{
+			a { color: $purple; }
+		}
+	}
 }

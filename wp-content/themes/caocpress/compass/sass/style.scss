@@ -10,264 +10,288 @@
 @import "navigation";
 
 body {
-	background: $black;
-	font-family: $primary-font;
-	color: $black;
+  background: $black;
+  font-family: $primary-font;
+  color: $black;
 }
 
 .hero-wrapper {
-	@include background-image(linear-gradient($white, $lightgray));
+  @include background-image(linear-gradient($white, $lightgray));
 }
 
 .home-hero {
-    @extend .crop;
-    backgound: $black;
-    video { opacity: 0.9; }
-    h1 {
-        position: absolute;
-        width: 33%;
-        top: 45%;
-        left: 50%;
-        z-index: 100;
-        @include transform(translate(-50%, -50%));
-    }
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  background: $black;
+  video { opacity: 0.8; }
+  h1 {
+    position: absolute;
+    width: 33%;
+    top: 45%;
+    left: 50%;
+    z-index: 100;
+    @include transform(translate(-50%, -50%));
+  }
 }
 
 // .home-hero {
-// 	background: $white;
-// 	position: relative;
-// 	max-height: 716px;
-// 	overflow: hidden;
-// 	video {
-// 		width: 100%;
-// 		opacity: 0.8;
-// 	}
-// 	.big-background {
-// 		background: $black;
-// 		position: relative;
-// 		margin-bottom: -0.25em;
-// 	}
-// 	h1 {
-// 		position: absolute;
-// 		width: 33%;
-// 		top: 50%;
-// 		left: 50%;
-// 		z-index: 100;
-// 		@include transform(translate(-50%, -50%));
-// 	}
+//  background: $white;
+//  position: relative;
+//  max-height: 716px;
+//  overflow: hidden;
+//  video {
+//    width: 100%;
+//    opacity: 0.8;
+//  }
+//  .big-background {
+//    background: $black;
+//    position: relative;
+//    margin-bottom: -0.25em;
+//  }
+//  h1 {
+//    position: absolute;
+//    width: 33%;
+//    top: 50%;
+//    left: 50%;
+//    z-index: 100;
+//    @include transform(translate(-50%, -50%));
+//  }
 // }
 
 .home-intro {
-	padding: 2em 0 1em;
+  padding: 2em 0 1em;
     position: relative;
     z-index: 1;
-	p {
-		font-family: $secondary-font;
-		font-size: 1.5em;
-		line-height: 1.6em;
-	}
-	@include breakpoint($medium){
-		font-size: 1.25em;
-		.container-fluid {
-			max-width: 685px;
-			width: 66%;
-		}
-	}
-	@include breakpoint($large){
-		font-size: 1.5em;
-	}
+  p {
+    font-family: $secondary-font;
+    font-size: 1.5em;
+    line-height: 1.6em;
+  }
+  @include breakpoint($medium){
+    font-size: 1.25em;
+    .container-fluid {
+      max-width: 685px;
+      width: 66%;
+    }
+  }
+  @include breakpoint($large){
+    font-size: 1.5em;
+  }
 }
 
 .home-section {
-	@extend .row;
-	position: relative;
-	padding: 6em 0;
-	@include breakpoint($large){
-		padding: 12em 0
-	}
-	h2 { margin-bottom: 0; }
-	hr { margin-bottom: 1em; }
-	.symbol {
-		position: absolute;
-		z-index: 0;
-		img { width: 100% }
-	}
-	.text {
-		@extend .col-md-4;
-	}
-	.image {
-		@extend .col-md-7;
-		@extend .col-md-offset-1;
-	}
-	&:nth-child(1){
-		.symbol {
-			top: -1em; left: -3em;
-			width: 40%;
-			@include breakpoint($medium){
-				width: 40%;
-				top: -6em; left: -7em;
-			}
-			@include breakpoint($large){
-				width: 40%;
-				top: -8em; left: -9em;
-			}
-		}
-	}
-	&:nth-child(2){
-		.symbol {
-			width: 50%;
-			top: -4em;
-			right: 0;
-			// right: -10%;
-			@include breakpoint($medium){
-				width: 40%;
-				top: -12em;
-				// right: -9%;
-			}
-			@include breakpoint(70em){
-				top: -8em;
-			}
-			@include breakpoint($large){
-				top: -11em;
-				// right: -12%;
-			}
-		}
-		.text {
-			@extend .col-md-push-8;
-		}
-		.image {
-			@extend .col-md-pull-5;
-		}
-	}
-	&:nth-child(3){
-		.symbol {
-			width: 70%; top: -3em;
-			@include breakpoint($medium){
-				width: 50%;
-				left: -2%;
-				top: -6em;
-			}
-		}
-	}
+  @extend .row;
+  position: relative;
+  padding: 6em 0;
+  @include breakpoint($large){
+    padding: 12em 0
+  }
+  h2 { margin-bottom: 0; }
+  hr { margin-bottom: 1em; }
+  .symbol {
+    position: absolute;
+    z-index: 0;
+    img { width: 100% }
+  }
+  .text {
+    @extend .col-md-4;
+  }
+  .image {
+    @extend .col-md-7;
+    @extend .col-md-offset-1;
+  }
+  &:nth-child(1){
+    .symbol {
+      top: -1em; left: -3em;
+      width: 40%;
+      @include breakpoint($medium){
+        width: 40%;
+        top: -6em; left: -7em;
+      }
+      @include breakpoint($large){
+        width: 40%;
+        top: -8em; left: -9em;
+      }
+    }
+  }
+  &:nth-child(2){
+    .symbol {
+      width: 50%;
+      top: -4em;
+      right: 0;
+      // right: -10%;
+      @include breakpoint($medium){
+        width: 40%;
+        top: -12em;
+        // right: -9%;
+      }
+      @include breakpoint(70em){
+        top: -8em;
+      }
+      @include breakpoint($large){
+        top: -11em;
+        // right: -12%;
+      }
+    }
+    .text {
+      @extend .col-md-push-8;
+    }
+    .image {
+      @extend .col-md-pull-5;
+    }
+  }
+  &:nth-child(3){
+    .symbol {
+      width: 70%; top: -3em;
+      @include breakpoint($medium){
+        width: 50%;
+        left: -2%;
+        top: -6em;
+      }
+    }
+  }
 }
 
 
 .main {
-	background: $lightgray;
-	article {
-		@extend .col-md-9;
-		@extend .col-md-push-3;
-		@extend .col-lg-7;
-		@extend .col-lg-push-4;
-		background: $white;
-		padding: 2em 0 0;
-		border-bottom: 1px solid $lightgray;
-		&:last-child { border-bottom: none; }
-		.content { padding: 0 2em; }
-		.feature {
-			@extend .crop;
-		}
-		.byline { color: $darkgray; }
-		.lede,
-		.content > p:first-of-type {
-			font-family: $secondary-font;
-			line-height: 1.4em;
-			font-size: 1.4em;
-			@include breakpoint($medium) { font-size: 1.6em; }
-			@include breakpoint($large) { font-size: 1.8em; }
-		}
-		.related-pages {
-			margin-top: 3em;
-			.section-link:nth-child(odd) {
-					@include breakpoint($medium){ padding-right: 3%; }
-			}
-		}
-		footer {
-			padding: 1em;
-			color: $midgray;
-		}
-	}
-	aside {
-		@extend .col-sm-12;
-		@extend .col-md-3;
-		@extend .col-md-pull-9;
-		@extend .col-lg-3;
-		@extend .col-lg-pull-7;
-		@include breakpoint($medium){ padding-top: 4em;}
-		.section {
-			padding: 0.25em 1em;
-			font-size: 0.7em;
-			margin-bottom: 1em;
-			h3, h4 { border-bottom: 1px solid $midgray; }
-			.btn { padding: 0.5em 1.5em; }
-			&.navigation { background: $white; }
-			@include breakpoint($medium){
-				margin-bottom: 4em;
-			}
-		}
-	}
+  background: $lightgray;
+  article {
+    @extend .col-md-9;
+    @extend .col-md-push-3;
+    @extend .col-lg-7;
+    @extend .col-lg-push-4;
+    background: $white;
+    padding: 2em 0 0;
+    border-bottom: 1px solid $lightgray;
+    &:last-child { border-bottom: none; }
+    .content { padding: 0 2em; }
+    .feature {
+      @extend .crop;
+    }
+    .byline { color: $darkgray; }
+    .lede,
+    .content > p:first-of-type {
+      font-family: $secondary-font;
+      line-height: 1.4em;
+      font-size: 1.4em;
+      @include breakpoint($medium) { font-size: 1.6em; }
+      @include breakpoint($large) { font-size: 1.8em; }
+    }
+    .related-pages {
+      margin-top: 3em;
+      .section-link:nth-child(odd) {
+          @include breakpoint($medium){ padding-right: 3%; }
+      }
+    }
+    footer {
+      padding: 1em;
+      color: $midgray;
+    }
+  }
+  aside {
+    @extend .col-sm-12;
+    @extend .col-md-3;
+    @extend .col-md-pull-9;
+    @extend .col-lg-3;
+    @extend .col-lg-pull-7;
+    @include breakpoint($medium){ padding-top: 4em;}
+    .section {
+      padding: 0.25em 1em;
+      font-size: 0.7em;
+      margin-bottom: 1em;
+      h3, h4 { border-bottom: 1px solid $midgray; }
+      .btn { padding: 0.5em 1.5em; }
+      &.navigation { background: $white; }
+      @include breakpoint($medium){
+        margin-bottom: 4em;
+      }
+    }
+  }
 }
 
 .category-navigation {
-	display: flex;
-	flex-wrap: wrap;
-	.section-link {
-		font-size: 0.75em;
-		h4 {
-			border-top: 1px solid $midgray;
-			margin-top: 0;
-			padding-top: 0.6em;
-		}
-		@include breakpoint($medium){ width: 50%; }
-	}
+  display: flex;
+  flex-wrap: wrap;
+  .section-link {
+    font-size: 0.75em;
+    h4 {
+      border-top: 1px solid $midgray;
+      margin-top: 0;
+      padding-top: 0.6em;
+    }
+    @include breakpoint($medium){ width: 50%; }
+  }
 }
 
 .section-link {
-	width: 100%;
-	.image {
-		@extend .crop;
-	}
-	&:last-child {
-		hr { display: none; }
-	}
+  width: 100%;
+  .image {
+    @extend .crop;
+  }
+  &:last-child {
+    hr { display: none; }
+  }
 }
 
 .share {
-	text-align: right;
+  text-align: right;
 }
 
 footer[role=banner] {
-	padding-bottom: 4em;
-	color: $white;
-	.container-fluid {
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: row-reverse;
-	}
-	.section {
-		font-size: 0.8em;
-		padding-top: 3em;
-		width: 100%;
-		@include breakpoint($medium){
-			width: 50%;
-			padding-top: 3em;
-		}
-		@include breakpoint($large){
-			width: 33.33333%;
-		}
-		h3 {
-			display: flex;
-			align-items: center;
-			color: $white;
-			&:hover { color: $orange; }
-			img { margin-right: 0.5em; }
-		}
-		p {
-			padding-left: 5.75em;
-		}
-	}
+  padding-bottom: 4em;
+  color: $white;
+  .container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+  }
+  .section {
+    font-size: 0.8em;
+    padding-top: 3em;
+    width: 100%;
+    @include breakpoint($medium){
+      width: 50%;
+      padding-top: 3em;
+    }
+    @include breakpoint($large){
+      width: 33.33333%;
+    }
+    h3 {
+      display: flex;
+      align-items: center;
+      color: $white;
+      &:hover { color: $orange; }
+      img { margin-right: 0.5em; }
+    }
+    p {
+      padding-left: 5.75em;
+    }
+  }
 }
 
 #turnkey-credit {
-	display: none;
+  display: none;
 }
+
+
+#big-video-wrap{overflow:hidden;position:absolute;height:100%;width:100%;top:0;left:0;}
+#big-video-vid,#big-video-image{position:absolute;}
+#big-video-control-container{position:fixed;bottom:0;padding:10px;width:100%;background:rgba(0,0,0,.25);
+  -webkit-transition-duration:0.6s;-moz-transition-duration:0.6s;-ms-transition-duration:0.6s;-o-transition-duration:0.6s;transition-duration:0.6s;}
+#big-video-control{width:100%;height:16px;position:relative;}
+#big-video-control-middle{margin: 0 56px 0 24px;}
+#big-video-control-bar{width:100%;height:16px;position:relative;cursor:pointer;}
+#big-video-control-progress{position:absolute;top:7px;height:3px;width:0%;background:#fff;}
+#big-video-control-track{position:absolute;top:8px;height:1px;width:100%;background:#fff;}
+#big-video-control-bound-left{left:0;}
+#big-video-control-bound-right{right:-1px}
+#big-video-control-track .ui-slider-handle {opacity:0;}
+#big-video-control-playhead{left:30%;}
+#big-video-control-play{position:absolute;top:0;left:0;height:16px;width:16px;background-image:url('bigvideo.png');}
+#big-video-control-timer{position:absolute;top:1px;right:0;color:#fff;font-size:11px;}
+#big-video-control-playhead,#big-video-control-bound-left,#big-video-control-bound-right{position:absolute;top:0;height:16px;width:1px;background:#fff;}
+#big-video-control .ui-slider-handle{border-left:solid 1px #fff; width:16px;height:16px;position:absolute;top:-8px;}
+.transparent{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0;}
+.vjs-big-play-button,
+.vjs-control-bar {display:none !important;}

@@ -12,10 +12,32 @@ jQuery(document).ready(function($){
 	// Toggle primary nav with menu button
 	$('.nav-button').on('click', function(){
 	  var target = $(this).attr('href');
+	  $('header[role=banner]').toggleClass('show');
 	  $(target + ' li:not(:first)').toggleClass('hidden');
 	});
 
-	$('article').fitVids();
+	// $('article').fitVids();
+
+	$(function() {
+		var BV = new $.BigVideo(
+			{ container: $('.home-hero') }
+		);
+		BV.init();
+		if (Modernizr.touch) {
+    	BV.show('http://localhost/~james/caocpress/wp-content/themes/caocpress/images/video-poster.jpg');
+		} else {
+			BV.show([
+			  { type: "video/mp4",  src: "http://localhost/~james/caocpress/wp-content/themes/caocpress/video/wt.mp4" },
+			  { type: "video/webm", src: "http://localhost/~james/caocpress/wp-content/themes/caocpress/video/wt.webm" },
+			  { ambient: true }
+			]);
+		}
+
+	});
+
+
+
+
 
 });
 
@@ -27,7 +49,5 @@ if (!Modernizr.touch){
 		} else {
 			$('header[role=banner]').removeClass('fixed');
 		}
-		$('.home-hero').css('transform','translateY(-' + (s/3) + 'px)');
-		$('.home-hero h1').css('-webkit-filter','blur(' + (s/100) + 'px)');
 	});
 };
