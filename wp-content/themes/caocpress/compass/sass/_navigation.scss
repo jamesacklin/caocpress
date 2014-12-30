@@ -9,6 +9,7 @@ header[role="banner"] {
 	.home & {
 		background: transparent;
 		border-bottom: 0;
+		.home-link svg .wordmark * { fill: $white; }
 	}
 	li {
 		text-align: center;
@@ -17,6 +18,7 @@ header[role="banner"] {
 		padding: 1em 0.5em;
 		display: block;
 		text-transform: uppercase;
+		&.home-link svg { height: 5em; }
 		a {
 			color: $black;
 			.home & { color: $white; }
@@ -44,6 +46,7 @@ header[role="banner"] {
 	&.show {
 		background: $white;
 		li a { color: $black !important; }
+		.home-link svg .wordmark * { fill: $black; }
 	}
 	@include breakpoint($medium){
 		.nav {
@@ -64,6 +67,7 @@ header[role="banner"] {
 			border-bottom: 1px solid $midgray;
 			a { color: $black !important; }
 			.logo img { height: 40px; }
+			.home-link svg .wordmark * { fill: $black; }
 		}
 	}
 	@include breakpoint($large){
