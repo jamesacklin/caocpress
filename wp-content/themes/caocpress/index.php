@@ -19,43 +19,22 @@
 <div class="main">
 	<div class="container-fluid">
 			<?php if ( have_posts() ): ?>
-				<?php while ( have_posts() ) : the_post(); ?>
-					<div class="row">
-					<article>
-						<div class="content">
-							<div class="header">
-								<p class="byline">Posted on <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time></p>
-								<h2 class="subheading"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+				<div class="article-list">
+					<?php while ( have_posts() ) : the_post(); ?>
+						<article>
+							<div class="content">
+								<h5><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h5>
+								<p class="meta"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?></time></p>
 							</div>
-							<?php the_content(); ?>
-						</div>
-						<footer>
-							<?php Starkers_Utilities::get_template_parts( array( 'parts/share-article' ) ); ?>
-						</footer>
-					</article>
-					<aside>
-						<? // Tag list ?>
-						<?php the_tags('<div class="section"><h4 class="subheading">Tags</h4><ul class="tag-list"><li>','</li><li>','</li></ul></div>'); ?>
-						<? // Content areas (from custom fields) ?>
-						<?php if(get_field('content_areas')): ?>
-							<?php while(has_sub_field('content_areas')) :?>
-								<div class="section">
-										<h4 class="subheading"><?php the_sub_field('header') ?></h4>
-										<?php the_sub_field('content'); ?>
-								</div>
-							<?php endwhile; ?>
-						<?php endif; ?>
-					</aside>
+						</article>
+					<?php endwhile; ?>
 				</div>
-				<?php endwhile; ?>
 			<?php else: ?>
-				<div class="row">
 				<article>
 					<div class="content">
 						<h2>No posts to display</h2>
 					</div>
 				</article>
-			</div>
 			<?php endif; ?>
 		</div>
 	</div>
