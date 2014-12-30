@@ -61,15 +61,15 @@ body {
 
 .home-intro {
   padding: 2em 0 1em;
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
+  font-size: 1.125em;
   p {
     font-family: $secondary-font;
     font-size: 1.5em;
     line-height: 1.6em;
   }
   @include breakpoint($medium){
-    font-size: 1.25em;
     .container-fluid {
       max-width: 685px;
       width: 66%;
@@ -80,76 +80,28 @@ body {
   }
 }
 
+.home-sections {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1em 0 4em;
+  @include breakpoint($medium){
+    justify-content: space-between;
+    padding: 2em 0 6em;
+  }
+}
+
 .home-section {
-  @extend .row;
-  position: relative;
-  padding: 6em 0;
-  @include breakpoint($large){
-    padding: 12em 0
+  width: 100%;
+  padding: 1em;
+  .subheading {
+    line-height: 1;
+    margin: 0;
   }
-  h2 { margin-bottom: 0; }
-  hr { margin-bottom: 1em; }
-  .symbol {
-    position: absolute;
-    z-index: 0;
-    img { width: 100% }
-  }
-  .text {
-    @extend .col-md-4;
-  }
-  .image {
-    @extend .col-md-7;
-    @extend .col-md-offset-1;
-  }
-  &:nth-child(1){
-    .symbol {
-      top: -1em; left: -3em;
-      width: 40%;
-      @include breakpoint($medium){
-        width: 40%;
-        top: -6em; left: -7em;
-      }
-      @include breakpoint($large){
-        width: 40%;
-        top: -8em; left: -9em;
-      }
-    }
-  }
-  &:nth-child(2){
-    .symbol {
-      width: 50%;
-      top: -4em;
-      right: 0;
-      // right: -10%;
-      @include breakpoint($medium){
-        width: 40%;
-        top: -12em;
-        // right: -9%;
-      }
-      @include breakpoint(70em){
-        top: -8em;
-      }
-      @include breakpoint($large){
-        top: -11em;
-        // right: -12%;
-      }
-    }
-    .text {
-      @extend .col-md-push-8;
-    }
-    .image {
-      @extend .col-md-pull-5;
-    }
-  }
-  &:nth-child(3){
-    .symbol {
-      width: 70%; top: -3em;
-      @include breakpoint($medium){
-        width: 50%;
-        left: -2%;
-        top: -6em;
-      }
-    }
+  .image { padding-top: 1em; }
+  @include breakpoint($medium){
+    padding: 0;
+    width: 31%;
   }
 }
 
@@ -265,7 +217,6 @@ footer[role=banner] {
       display: flex;
       align-items: center;
       color: $white;
-      &:hover { color: $orange; }
       img { margin-right: 0.5em; }
     }
     p {
