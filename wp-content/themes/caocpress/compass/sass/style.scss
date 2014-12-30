@@ -9,6 +9,15 @@
 @import "objects";
 @import "navigation";
 
+* {
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+  -webkit-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern=1";
+  box-sizing: border-box;
+}
+
 body {
   background: $black;
   font-family: $primary-font;
@@ -94,7 +103,7 @@ body {
 .home-section {
   width: 100%;
   padding: 1em;
-  .subheading {
+  h2 {
     line-height: 1;
     margin: 0;
   }

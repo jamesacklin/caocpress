@@ -26,7 +26,7 @@ Template Name: Home Page
 								<img src="<?php the_sub_field('symbol') ?>" alt="">
 							</div>
 							<div class="text">
-								<h2 class="subheading"><a href="<?php the_sub_field('link') ?>"><?php the_sub_field('title'); ?></a></h2>
+								<h2><a href="<?php the_sub_field('link') ?>"><?php the_sub_field('title'); ?></a></h2>
 								<hr>
 							</div>
 							<div class="image">
