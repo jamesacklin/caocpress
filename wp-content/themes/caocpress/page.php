@@ -32,35 +32,37 @@
             <h2 class="subheading"><?php the_title(); ?></h2>
           </header>
           <?php the_content(); ?>
-          <div class="related-pages">
-          <? // Gets child pages
-              $args = array(
-                  'post_type' => 'page',
-                  'post_parent' => $post->ID
-              );
-              $children = get_posts( $args );
-              if ($children): ?>
-                  <h3 class="subheading">More in This Section</h3>
-                  <div class="category-navigation">
-                    <? foreach ( $children as $post ) : setup_postdata( $post ); ?>
-                        <div class="section-link">
-                            <h4><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h4>
-                            <? if ( has_post_thumbnail() ){
-                                echo "<div class='image'>";
-                                echo "<a href='";
-                                the_permalink();
-                                echo "''>";
-                                the_post_thumbnail('full');
-                                echo "</a></div>";
-                            } ?>
-                            <? the_excerpt(); ?>
-                            <!-- <a class="btn" href="<? the_permalink(); ?>">Read Article &rarr;</a> -->
-                        </div>
-                    <? endforeach;
-                    wp_reset_postdata(); ?>
-                  </div>
-              <? endif; ?>
-          </div>
+          <?// Go get the sub-page group repeater ?>
+          <?php if(have_rows('sub_page_group')): ?>
+            <?// Loop over the sub-page groups in the larger set ?>
+            <?php while(have_rows('sub_page_group')): the_row(); ?>
+              <div class="related-pages">
+                <h3><?php the_sub_field('sub_page_group_name'); ?></h3>
+                <div class="category-navigation">
+                  <?// Now get all the pages we want in each sub-group ?>
+                  <?php while(have_rows('sub_page_contents')): the_row(); ?>
+                    <?// Loop over all the related pages chosen ?>
+                    <div class="section-link">
+                      <?php $post = get_sub_field('sub_page'); setup_postdata($post); ?>
+                      <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+                      <?// Show post thumbnail, if present ?>
+                      <? if ( has_post_thumbnail() ){
+                        echo "<div class='image'>";
+                        echo "<a href='";
+                        the_permalink();
+                        echo "''>";
+                        the_post_thumbnail('full');
+                        echo "</a></div>";
+                      }?>
+                      <? the_excerpt(); ?>
+                      <?// Reset postdata so everything else works ?>
+                      <?php wp_reset_postdata();?>
+                    </div>
+                <?php endwhile; // while(have_rows('sub_page_contents')): the_row(); ?>
+                </div>
+              </div>
+            <?php endwhile; // while(have_rows('sub_page_group')): the_row(); ?>
+          <?php endif; // if(have_rows('sub_page_group')): ?>
         </div>
         <footer>
           <?php Starkers_Utilities::get_template_parts( array( 'parts/share-article' ) ); ?>
@@ -69,35 +71,6 @@
       <aside>
         <? // Tag list ?>
         <?php the_tags('<div class="section"><h4 class="subheading">Tags</h4><ul class="tag-list"><li>','</li><li>','</li></ul></div>'); ?>
-        <? // Gets sibling pages
-        global $post;
-        $post_parent = $post->ID;
-        $post_parent = $post->post_parent;
-        $args = array(
-            'posts_per_page' => -1,
-            'post_parent' =>$post_parent,
-            'post_type'=> 'page',
-            'exclude' => '7, '.$post->ID,
-        );
-        $siblings = get_posts( $args );
-        if ($siblings): ?>
-            <div class="section navigation">
-            <h4 class="subheading" style="color: #5b4472">Learn More</h4>
-            <? foreach ( $siblings as $post ) : setup_postdata( $post ); ?>
-                <div class="section-link">
-                    <h5><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h5>
-                    <? if ( has_post_thumbnail() ){ ?>
-                        <div class="image"><a href="<? the_permalink(); ?>"><? the_post_thumbnail('full') ?></a></div>
-                        <?
-                    }
-                    the_excerpt(); ?>
-                    <p><a class="btn alt" href="<? the_permalink(); ?>">Explore &rarr;</a></p>
-                    <hr />
-                </div>
-            <?php endforeach;
-            echo '</div>';
-        endif;
-        wp_reset_postdata(); ?>
         <? // Gets content areas
           if(get_field('content_areas')): ?>
           <?php while(has_sub_field('content_areas')) :?>
