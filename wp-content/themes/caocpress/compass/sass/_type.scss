@@ -9,91 +9,91 @@ $secondary-font: "sorts-mill-goudy-1","sorts-mill-goudy-2", "Garamond", serif;
 ::-moz-selection { background: $orange; color: $lightgray; }
 
 p {
-	font-size: 1em;
-	line-height: 1.75em;
-	margin-bottom: 0.75em;
+  font-size: 1em;
+  line-height: 1.75em;
+  margin-bottom: 0.75em;
 }
 
 a {
-	color: $purple;
-	text-decoration: none;
-	&:hover {
-		color: $orange;
-	}
+  color: $purple;
+  text-decoration: none;
+  &:hover {
+    color: $orange;
+  }
 }
 
 em { font-style: italic; }
 strong, b { font-weight: bold; }
 
 .font-secondary {
-	font-family: $secondary-font;
+  font-family: $secondary-font;
 }
 
 .smallcaps {
-	text-transform: uppercase;
-	font-size: 0.8em;
+  text-transform: uppercase;
+  font-size: 0.8em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	@extend %font-weight-bold;
-	margin: 0.5em 0;
-	line-height: 1.4;
-	&.subheading {
-		font-family: $secondary-font;
-		font-weight: normal;
-		text-transform: uppercase;
-	}
-	a {
-		@include transition(color 0.2s ease);
-		color: inherit;
-		text-decoration: none;
-		&:hover { color: $orange; }
-	}
+  @extend %font-weight-bold;
+  margin: 0.5em 0;
+  line-height: 1.4;
+  &.subheading {
+    font-family: $secondary-font;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+  a {
+    @include transition(color 0.2s ease);
+    color: inherit;
+    text-decoration: none;
+    &:hover { color: $orange; }
+  }
 }
 
 h1 {
-	font-size: 3em;
-	color: $purple;
+  font-size: 3em;
+  color: $purple;
 }
 
 h2 {
-	font-size: 2.25em;
-	color: $purple;
+  font-size: 2.25em;
+  color: $purple;
 }
 
 h3 {
-	font-size: 1.755em;
-	color: $teal;
+  font-size: 1.755em;
+  color: $teal;
 }
 
 h4 {
-	font-size: 1.5em;
-	color: $red;
+  font-size: 1.5em;
+  color: $red;
 }
 
 h5 {
-	font-size: 1.245em;
-	color: $red-light;
+  font-size: 1.245em;
+  color: $red-light;
 }
 
 h6 {
-	font-size: 1.125em;
-	color: $orange-light;
+  font-size: 1.125em;
+  color: $orange-light;
 }
 
 blockquote {
-	margin-bottom: 2em;
-	padding-left: 25%;
-	p {
-		@extend %font-weight-bold;
-		color: $purple;
-		font-style: italic;
-		font-size: 1.275em;
-		margin-bottom: 0.5em;
-	}
-	cite {
-		color: $purple-light;
-	}
+  margin-bottom: 2em;
+  padding-left: 25%;
+  p {
+    @extend %font-weight-bold;
+    color: $purple;
+    font-style: italic;
+    font-size: 1.275em;
+    margin-bottom: 0.5em;
+  }
+  cite {
+    color: $purple-light;
+  }
 }
 
 del { opacity: 0.5; }
@@ -111,8 +111,8 @@ small { font-size: 80%; }
 abbr { border-bottom: 1px dotted $black; }
 
 cite, time, .caption {
-	@extend .smallcaps;
-	text-transform: uppercase;
+  @extend .smallcaps;
+  text-transform: uppercase;
 }
 
 q, dfn, var { font-style: italic; }
@@ -120,19 +120,19 @@ q, dfn, var { font-style: italic; }
 mark { background: $orange-light; padding: 0 0.25em; }
 
 kbd, code, samp {
-	font-family: monospace;
-	font-size: 1.25em;
+  font-family: monospace;
+  font-size: 1.25em;
 }
 
 pre {
-	font-family: monospace;
-	line-height: 1.6;
+  font-family: monospace;
+  line-height: 1.6;
 }
 
 p.error, p.valid, p.warning, p.information {
-	@include border-radius($round-radius);
-	color: $white;
-	text-align: center;
+  @include border-radius($round-radius);
+  color: $white;
+  text-align: center;
 }
 
 p.error { background: $red; }
@@ -141,48 +141,48 @@ p.warning { background: $orange-light; }
 p.information { background: $purple-light; }
 
 hr {
-	border-top: 0;
-	border-left: 0;
-	border-right: 0;
-	border-bottom: 1px solid $midgray;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid $midgray;
 }
 
 
 ul, ol {
-	line-height: 1.4em;
-	li {
-		margin-left: 5%;
-		margin-bottom: 0.5em;
-		ul, ol {
-			margin-top: 0.5em;
-			li { margin-left: 5%; }
-		}
-	}
+  line-height: 1.4em;
+  li {
+    margin-left: 5%;
+    margin-bottom: 0.5em;
+    ul, ol {
+      margin-top: 0.5em;
+      li { margin-left: 5%; }
+    }
+  }
 }
 ul li { list-style-type: disc; }
 ol li { list-style-type: decimal; }
 
 
 dl {
-	line-height: 1.4em;
-	dt { }
-	dd {
-		font-style: italic;
-		margin-bottom: 0.5em;
-		margin-left: 5%;
-	}
+  line-height: 1.4em;
+  dt { }
+  dd {
+    font-style: italic;
+    margin-bottom: 0.5em;
+    margin-left: 5%;
+  }
 }
 
 .headline {
-	// line-height: 1.2em;
+  // line-height: 1.2em;
 }
 
 .byline {
-	@extend .smallcaps;
-	time { font-size: 1em; }
+  @extend .smallcaps;
+  time { font-size: 1em; }
 }
 
 .intro {
-	@extend %font-weight-bold;
-	font-size: 1.4em;
+  @extend %font-weight-bold;
+  font-size: 1.4em;
 }

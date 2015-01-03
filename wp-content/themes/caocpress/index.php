@@ -8,38 +8,37 @@
  *
  * Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
  *
- * @package 	WordPress
- * @subpackage 	Starkers
- * @since 		Starkers 4.0
+ * @package   WordPress
+ * @subpackage  Starkers
+ * @since     Starkers 4.0
  */
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
-
 <div class="main">
-	<div class="container-fluid">
-			<?php if ( have_posts() ): ?>
-				<div class="article-list">
-					<?php while ( have_posts() ) : the_post(); ?>
-						<article>
-							<div class="content">
-								<h4><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h4>
-								<p><? the_excerpt(); ?></p>
-								<p class="meta"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?></time></p>
-							</div>
-						</article>
-					<?php endwhile; ?>
-				</div>
-			<?php else: ?>
-				<article>
-					<div class="content">
-						<h2>No posts to display</h2>
-					</div>
-				</article>
-			<?php endif; ?>
-		</div>
-	</div>
+  <div class="container-fluid">
+    <?php if ( have_posts() ): ?>
+      <div class="article-list">
+      <?php while ( have_posts() ) : the_post(); ?>
+        <article>
+          <div class="content">
+            <h4><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h4>
+            <p><? the_excerpt(); ?></p>
+            <p class="meta"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?></time></p>
+          </div>
+        </article>
+      <?php endwhile; ?>
+      </div>
+    <?php else: ?>
+      <article>
+        <div class="content">
+          <h2>No posts to display</h2>
+        </div>
+      </article>
+    <?php endif; ?>
+    <? wp_reset_postdata(); ?>
+    </div>
+  </div>
 </div>
-
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') ); ?>

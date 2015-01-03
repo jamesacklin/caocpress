@@ -1,20 +1,20 @@
 %form-field {
-	@include box-sizing(border-box);
-	display: block;
-	width: 100%;
-	max-width: $medium;
-	font-family: $primary-font;
-	font-size: 0.8em;
-	padding: 0.5em;
-	background: $lightgray;
-	border: 1px solid $midgray;
-	&:focus, &:active {
-		@include box-shadow(0 0 0.5em $midgray);
-		background: $white;
-		border: 1px solid $darkgray;
-		outline: none;
-	}
-	@media (max-width: $small){ font-size: 16px; }
+  @include box-sizing(border-box);
+  display: block;
+  width: 100%;
+  max-width: $medium;
+  font-family: $primary-font;
+  font-size: 0.8em;
+  padding: 0.5em;
+  background: $lightgray;
+  border: 1px solid $midgray;
+  &:focus, &:active {
+    @include box-shadow(0 0 0.5em $midgray);
+    background: $white;
+    border: 1px solid $darkgray;
+    outline: none;
+  }
+  @media (max-width: $small){ font-size: 16px; }
 }
 
 input[type="text"],
@@ -24,8 +24,8 @@ input[type="email"],
 input[type="search"],
 input[type="number"],
 textarea {
-	@extend %form-field;
-	-webkit-appearance: none;
+  @extend %form-field;
+  -webkit-appearance: none;
 }
 
 input[type="range"],
@@ -34,72 +34,72 @@ input[type="month"],
 input[type="week"],
 input[type="datetime"],
 input[type="datetime-local"] {
-	@extend %form-field;
+  @extend %form-field;
 }
 
 textarea { resize: vertical; }
 
 select {
-	@include box-sizing(border-box);
-	display: block;
-	width: 100%;
-	max-width: $medium;
+  @include box-sizing(border-box);
+  display: block;
+  width: 100%;
+  max-width: $medium;
 }
 
 label {
-	color: $darkgray;
-	cursor: pointer;
-	&.error { color: $red; }
-	&.valid { color: $teal; }
+  color: $darkgray;
+  cursor: pointer;
+  &.error { color: $red; }
+  &.valid { color: $teal; }
 }
 
 input.is-error { border: 1px solid $red; }
 input.is-valid { border: 1px solid $teal; }
 
 .field-container {
-	@include clearfix;
-	margin-bottom: 1em;
-	label {
-		@extend .smallcaps;
-		display: block;
-		margin-bottom: 0.5em;
-		abbr { color: $red; border-bottom: 0; }
-	}
-	&.inline {
-		@media (min-width: $small){
-			input {
-				display: inline;
-				width: auto;
-				margin-right: 1em;
-			}
-		}
-	}
+  @include clearfix;
+  margin-bottom: 1em;
+  label {
+    @extend .smallcaps;
+    display: block;
+    margin-bottom: 0.5em;
+    abbr { color: $red; border-bottom: 0; }
+  }
+  &.inline {
+    @media (min-width: $small){
+      input {
+        display: inline;
+        width: auto;
+        margin-right: 1em;
+      }
+    }
+  }
 }
 
 .options {
-	legend {
-		@extend .smallcaps;
-		abbr { color: $red; border-bottom: 0; }
-	}
-	li {
-		padding: 0.5em 0 0;
-	}
-	label { @extend .smallcaps; }
+  legend {
+    @extend .smallcaps;
+    abbr { color: $red; border-bottom: 0; }
+  }
+  li {
+    padding: 0.5em 0 0;
+  }
+  label { @extend .smallcaps; }
 }
 
 .search-field {
-	position: relative;
-	#search-field {
-		padding-left: 1.75em;
-		&:focus, &:active {
-			& + .search-icon { color: $midgray; }
-		}
-	}
-	.search-icon {
-		position: absolute;
-		left: 0.5em;
-		top: 0.75em;
-		color: $darkgray;
-		@media (min-width: $small){ top: 0.525em; }
-	}
+  position: relative;
+  #search-field {
+    padding-left: 1.75em;
+    &:focus, &:active {
+      & + .search-icon { color: $midgray; }
+    }
+  }
+  .search-icon {
+    position: absolute;
+    left: 0.5em;
+    top: 0.75em;
+    color: $darkgray;
+    @media (min-width: $small){ top: 0.525em; }
+  }
 }
