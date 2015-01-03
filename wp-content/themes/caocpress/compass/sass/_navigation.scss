@@ -68,6 +68,7 @@ header[role="banner"] {
 			a { color: $black !important; }
 			.logo img { height: 40px; }
 			.home-link svg .wordmark * { fill: $black; }
+			.home-link svg { height: 3.5em; }
 		}
 	}
 	@include breakpoint($large){
