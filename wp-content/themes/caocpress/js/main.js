@@ -16,7 +16,7 @@ jQuery(document).ready(function($){
     $(target + ' li:not(:first)').toggleClass('hidden');
   });
 
-  // $('article').fitVids();
+  $('article').fitVids();
 
   $(function() {
     var BV = new $.BigVideo({
@@ -36,9 +36,6 @@ jQuery(document).ready(function($){
     }
 
   });
-
-
-
 
 
 });
