@@ -6,6 +6,11 @@ header[role="banner"] {
   z-index: 400;
   background: $white;
   border-bottom: 1px solid $midgray;
+  ul {
+    margin-bottom: 0;
+    line-height: 1;
+    margin-top: 0;
+  }
   .home & {
     background: transparent;
     border-bottom: 0;
@@ -100,6 +105,9 @@ header[role="banner"] {
 
 // Breadcrumbs
 .breadcrumbs {
+  margin-bottom: 0;
+  line-height: 1;
+  margin-top: 0;
   padding-bottom: 2em;
   li {
     @extend .smallcaps;

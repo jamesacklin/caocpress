@@ -27,11 +27,11 @@
                 <?php while ( have_posts() ) : the_post(); ?>
                   <div class="section-link">
                     <h4><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h4>
-                    <? if ( has_post_thumbnail() ){
-                        echo "<p>";
-                        the_post_thumbnail('full');
-                        echo "</p>";
-                    } ?>
+                    <? if ( has_post_thumbnail()): ?>
+                        <div class="image">
+                          <a href="<? the_permalink(); ?>"><? the_post_thumbnail('full'); ?></a>
+                        </div>
+                    <? endif; ?>
                     <? the_excerpt(); ?>
                   </div>
                 <?php endwhile; ?>

@@ -149,10 +149,11 @@ hr {
 
 
 ul, ol {
-  line-height: 1.4em;
+  margin-bottom: 1.75em;
   li {
+    line-height: 1.75em;
     margin-left: 5%;
-    margin-bottom: 0.5em;
+    margin-top: 0.5em;
     ul, ol {
       margin-top: 0.5em;
       li { margin-left: 5%; }

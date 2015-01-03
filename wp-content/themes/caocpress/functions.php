@@ -125,11 +125,10 @@ function the_breadcrumb() {
         }
         echo $output;
         echo '<li><strong title="'.$title.'"> '.$title.'</strong></li>';
+      } else {
+          echo '<li><a href="/">Home</a></li>';
+          echo '<li><strong> '.get_the_title().'</strong></li>';
       }
-      // } else {
-      //     echo '<li><a href="/">Home</a></li>';
-      //     echo '<li><strong> '.get_the_title().'</strong></li>';
-      // }
     }
     elseif (is_tag()) {single_tag_title();}
     elseif (is_day()) {echo"<li>Archive for "; the_time('F jS, Y'); echo'</li>';}

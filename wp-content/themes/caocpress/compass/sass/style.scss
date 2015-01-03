@@ -171,6 +171,7 @@ body {
   flex-wrap: wrap;
   .section-link {
     font-size: 0.75em;
+    margin-bottom: 1em;
     h4 {
       border-top: 1px solid $midgray;
       margin-top: 0;
@@ -184,6 +185,12 @@ body {
   width: 100%;
   .image {
     @extend .crop;
+    img { @include transition(all 0.2s ease); }
+    &:hover {
+      img {
+        @include transform(scale(1.125));
+      }
+    }
   }
   &:last-child {
     hr { display: none; }
