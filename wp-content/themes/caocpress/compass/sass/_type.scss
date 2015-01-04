@@ -1,4 +1,5 @@
-$primary-font: "jaf-facitweb-1","jaf-facitweb-2", "Trebuchet MS", sans-serif;
+// $primary-font: "jaf-facitweb-1","jaf-facitweb-2", "Trebuchet MS", sans-serif;
+$primary-font: "brandon-grotesque-1","brandon-grotesque-2", sans-serif;
 $secondary-font: "sorts-mill-goudy-1","sorts-mill-goudy-2", "Garamond", serif;
 
 
@@ -9,8 +10,8 @@ $secondary-font: "sorts-mill-goudy-1","sorts-mill-goudy-2", "Garamond", serif;
 ::-moz-selection { background: $orange; color: $lightgray; }
 
 p {
-  font-size: 1em;
-  line-height: 1.75em;
+  font-size: 1.25em;
+  line-height: 1.5em;
   margin-bottom: 0.75em;
 }
 
@@ -32,16 +33,20 @@ strong, b { font-weight: bold; }
 .smallcaps {
   text-transform: uppercase;
   font-size: 0.8em;
+  letter-spacing: 0.1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @extend %font-weight-bold;
+  font-family: $secondary-font;
+  font-weight: normal;
+  font-style: italic;
   margin: 0.5em 0;
   line-height: 1.4;
   &.subheading {
-    font-family: $secondary-font;
-    font-weight: normal;
+    font-family: $primary-font;
     text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-style: normal;
   }
   a {
     @include transition(color 0.2s ease);
@@ -67,18 +72,18 @@ h3 {
 }
 
 h4 {
-  font-size: 1.5em;
-  color: $red;
+  font-size: 1.666em;
+  color: $purple;
 }
 
 h5 {
   font-size: 1.245em;
-  color: $red-light;
+  color: $purple;
 }
 
 h6 {
   font-size: 1.125em;
-  color: $orange-light;
+  color: $red;
 }
 
 blockquote {

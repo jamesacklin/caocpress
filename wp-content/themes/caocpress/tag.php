@@ -29,12 +29,12 @@
               <div class="category-navigation">
                 <?php while ( have_posts() ) : the_post(); ?>
                   <div class="section-link">
-                    <h4><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h4>
                     <? if ( has_post_thumbnail()): ?>
                         <div class="image">
                           <a href="<? the_permalink(); ?>"><? the_post_thumbnail('full'); ?></a>
                         </div>
                     <? endif; ?>
+                    <h4><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h4>
                     <? the_excerpt(); ?>
                   </div>
                 <?php endwhile; ?>

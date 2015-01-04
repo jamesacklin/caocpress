@@ -23,7 +23,7 @@
         <?php while ( have_posts() ) : the_post(); ?>
           <article>
             <div class="content">
-              <h4><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h4>
+              <h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
               <p><? the_excerpt(); ?></p>
               <p class="meta"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?></time></p>
             </div>

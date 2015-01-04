@@ -18,31 +18,23 @@ Template Name: Home Page
     </div>
   </div>
   <div class="home-wrapper">
-    <div class="container-fluid">
-    <?php if(get_field('homepage_section')): ?>
-      <div class="home-sections">
-      <?php while(has_sub_field('homepage_section')) :?>
-        <div class="home-section">
-          <div class="symbol">
-            <img src="<?php the_sub_field('symbol') ?>" alt="">
-          </div>
-          <div class="text">
-            <h2 class="subheading"><a href="<?php the_sub_field('link') ?>"><?php the_sub_field('title'); ?></a></h2>
-            <hr>
-          </div>
-          <div class="image">
-            <div class="crop">
-              <a href="<?php the_sub_field('link') ?>"><img src="<?php the_sub_field('image'); ?>" alt=""></a>
-            </div>
-          </div>
-          <div class="text">
-            <?php the_sub_field('content') ?>
+  <?php if(get_field('homepage_section')): ?>
+    <div class="home-sections">
+    <?php while(has_sub_field('homepage_section')) :?>
+      <div class="home-section">
+        <div class="image">
+          <div class="crop">
+            <a href="<?php the_sub_field('link') ?>"><img src="<?php the_sub_field('image'); ?>" alt=""></a>
           </div>
         </div>
-      <?php endwhile; ?>
+        <div class="text">
+          <h2 class="subheading"><a href="<?php the_sub_field('link') ?>"><?php the_sub_field('title'); ?></a></h2>
+          <?php the_sub_field('content') ?>
+        </div>
       </div>
-    <?php endif; ?>
+    <?php endwhile; ?>
     </div>
+  <?php endif; ?>
   </div>
 </div>
 <?php endwhile; ?>

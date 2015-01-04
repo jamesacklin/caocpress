@@ -37,14 +37,13 @@
             <?// Loop over the sub-page groups in the larger set ?>
             <?php while(have_rows('sub_page_group')): the_row(); ?>
               <div class="related-pages">
-                <h3><?php the_sub_field('sub_page_group_name'); ?></h3>
+                <h3 class="subheading"><?php the_sub_field('sub_page_group_name'); ?></h3>
                 <div class="category-navigation">
                   <?// Now get all the pages we want in each sub-group ?>
                   <?php while(have_rows('sub_page_contents')): the_row(); ?>
                     <?// Loop over all the related pages chosen ?>
                     <div class="section-link">
                       <?php $post = get_sub_field('sub_page'); setup_postdata($post); ?>
-                      <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                       <?// Show post thumbnail, if present ?>
                       <? if ( has_post_thumbnail() ){
                         echo "<div class='image'>";
@@ -54,6 +53,7 @@
                         the_post_thumbnail('full');
                         echo "</a></div>";
                       }?>
+                      <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                       <? the_excerpt(); ?>
                       <?// Reset postdata so everything else works ?>
                       <?php wp_reset_postdata();?>

@@ -182,7 +182,7 @@ figure {
   padding-bottom: 0;
   li {
     line-height: 1;
-    font-size: 1.25em;
+    font-size: 1.125em;
     display: inline-block;
     margin-left: 0;
     margin-bottom: 0.5em;
@@ -193,6 +193,7 @@ figure {
     color: $white;
     padding: 0.5em;
     margin-right: 1em;
+    font-weight: bold;
     &:before {
       content: "\f02b ";
       font-family: 'FontAwesome';

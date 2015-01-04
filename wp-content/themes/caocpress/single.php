@@ -29,7 +29,6 @@
           <?php the_content(); ?>
         </div>
         <footer>
-          <?php Starkers_Utilities::get_template_parts( array( 'parts/share-article' ) ); ?>
         </footer>
       </article>
       <aside>
@@ -44,6 +43,7 @@
             </div>
           <?php endwhile; ?>
         <?php endif; ?>
+        <?php Starkers_Utilities::get_template_parts( array( 'parts/share-article' ) ); ?>
       </aside>
     </div>
   </div>
