@@ -175,7 +175,9 @@ body {
   }
   .related {
     background: $white;
-    .section { margin-bottom: 0; }
+    .section {
+      margin-bottom: 0;
+    }
     .section:last-child {
       margin-bottom: 3em;
       @include breakpoint($medium){ margin-bottom: 4em; }

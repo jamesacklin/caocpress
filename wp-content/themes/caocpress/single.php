@@ -32,18 +32,23 @@
         </footer>
       </article>
       <aside>
-        <? // Tag list ?>
-        <?php the_tags('<div class="section"><h4 class="subheading">Tags</h4><ul class="tag-list"><li>','</li><li>','</li></ul></div>'); ?>
-        <? // Content areas (from custom fields) ?>
-        <?php if(get_field('content_areas')): ?>
-          <?php while(has_sub_field('content_areas')) :?>
-            <div class="section">
-                <h4 class="subheading"><?php the_sub_field('header') ?></h4>
-                <?php the_sub_field('content'); ?>
-            </div>
-          <?php endwhile; ?>
-        <?php endif; ?>
-        <?php Starkers_Utilities::get_template_parts( array( 'parts/share-article' ) ); ?>
+        <div class="related">
+          <? // Content areas (from custom fields) ?>
+          <?php if(get_field('content_areas')): ?>
+            <?php while(has_sub_field('content_areas')) :?>
+              <div class="section">
+                  <h4 class="subheading"><?php the_sub_field('header') ?></h4>
+                  <?php the_sub_field('content'); ?>
+              </div>
+            <?php endwhile; ?>
+          <?php endif; ?>
+          <? // Tag list ?>
+          <?php the_tags('<div class="section"><h4 class="subheading">Tags</h4><ul class="tag-list"><li>','</li><li>','</li></ul></div>'); ?>
+        </div>
+        <?php Starkers_Utilities::get_template_parts(array('parts/tags-posts')); ?>
+        <div class="section">
+          <?php Starkers_Utilities::get_template_parts( array( 'parts/share-article' ) ); ?>
+        </div>
       </aside>
     </div>
   </div>

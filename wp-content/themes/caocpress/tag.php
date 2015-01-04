@@ -50,6 +50,8 @@
         </article>
       <?php endif; ?>
       <aside>
+        <?php Starkers_Utilities::get_template_parts(array('parts/tags-pages')); ?>
+        <?php Starkers_Utilities::get_template_parts(array('parts/tags-posts')); ?>
         <div class="section">
           <?php Starkers_Utilities::get_template_parts( array( 'parts/share-article' ) ); ?>
         </div>
