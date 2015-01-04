@@ -55,8 +55,8 @@ header[role="banner"] {
   }
   @include breakpoint($medium){
     .nav {
-      display: flex;
-      align-items: stretch;
+      @include display-flex;
+      @include align-items(stretch);
       li {
         padding: 1em 0;
         display: inline-block;
