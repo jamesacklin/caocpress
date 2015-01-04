@@ -16,13 +16,16 @@
     <div class="row">
       <?php if ( have_posts() ): ?>
         <article>
-          <? the_post_thumbnail('full'); ?>
+          <?php if(has_post_thumbnail()): ?>
+            <div class="crop">
+              <? the_post_thumbnail('full'); ?>
+            </div>
+          <?php endif; ?>
           <div class="content">
             <div class="header">
-              <h2 class="subheading"><?php echo single_tag_title( '', false ); ?></h2>
+              <h2 class="subheading">Tagged: <?php echo single_tag_title( '', false ); ?></h2>
             </div>
-            <? echo tag_description(); ?>
-            <div class="related-pages">
+            <div class="related-pages" style="margin-top: 0;">
               <div class="category-navigation">
                 <?php while ( have_posts() ) : the_post(); ?>
                   <div class="section-link">
@@ -39,7 +42,6 @@
             </div>
           </div>
           <footer>
-            <?php Starkers_Utilities::get_template_parts( array( 'parts/share-article' ) ); ?>
           </footer>
         </article>
       <?php else: ?>
@@ -47,6 +49,9 @@
           <h2>No posts to display in <?php echo single_tag_title( '', false ); ?></h2>
         </article>
       <?php endif; ?>
+      <aside>
+        <?php Starkers_Utilities::get_template_parts( array( 'parts/share-article' ) ); ?>
+      </aside>
     </div>
   </div>
 </div>

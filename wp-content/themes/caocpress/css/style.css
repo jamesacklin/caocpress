@@ -98,8 +98,15 @@ h1.subheading, h2.subheading, h3.subheading, h4.subheading, h5.subheading, h6.su
   text-transform: uppercase; }
 /* line 46, ../compass/sass/_type.scss */
 h1 a, h1 .vcard .tel, .vcard h1 .tel, h2 a, h2 .vcard .tel, .vcard h2 .tel, h3 a, h3 .vcard .tel, .vcard h3 .tel, h4 a, h4 .vcard .tel, .vcard h4 .tel, h5 a, h5 .vcard .tel, .vcard h5 .tel, h6 a, h6 .vcard .tel, .vcard h6 .tel {
+  /* Capability css-transitions is prefixed with -moz because 0.88124% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
   -moz-transition: color 0.2s ease;
+  /* Capability css-transitions is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-transitions is prefixed with -o because 0.1165% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -o context. */
   -o-transition: color 0.2s ease;
+  /* Capability css-transitions is prefixed with -webkit because 11.22399% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
   -webkit-transition: color 0.2s ease;
   transition: color 0.2s ease;
   color: inherit;
@@ -199,7 +206,13 @@ pre {
 
 /* line 132, ../compass/sass/_type.scss */
 p.error, p.valid, p.warning, p.information {
+  /* Capability border-radius is prefixed with -moz because 0.36154% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
   -moz-border-radius: 0.25em;
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability border-radius is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability border-radius is prefixed with -webkit because 0.14767% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
   -webkit-border-radius: 0.25em;
   border-radius: 0.25em;
   color: white;
@@ -300,7 +313,13 @@ img, video {
 
 /* line 1, ../compass/sass/_grid.scss */
 *, *:before, *:after {
+  /* Capability css3-boxsizing is prefixed with -moz because 15.69008% of users need it which is more than the threshold of 0.0001%. */
+  /* Creating new -moz context. */
   -moz-box-sizing: border-box;
+  /* Capability css3-boxsizing is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability css3-boxsizing is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability css3-boxsizing is prefixed with -webkit because 2.07723% of users need it which is more than the threshold of 0.0001%. */
+  /* Creating new -webkit context. */
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
@@ -1200,7 +1219,13 @@ img, video {
     margin-left: 100%; } }
 /* line 1, ../compass/sass/_forms.scss */
 input[type="text"], input[type="password"], input[type="url"], input[type="email"], input[type="search"], input[type="number"], textarea, input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="datetime"], input[type="datetime-local"] {
+  /* Capability css3-boxsizing is prefixed with -moz because 15.69008% of users need it which is more than the threshold of 0.0001%. */
+  /* Creating new -moz context. */
   -moz-box-sizing: border-box;
+  /* Capability css3-boxsizing is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability css3-boxsizing is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability css3-boxsizing is prefixed with -webkit because 2.07723% of users need it which is more than the threshold of 0.0001%. */
+  /* Creating new -webkit context. */
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
@@ -1213,7 +1238,13 @@ input[type="text"], input[type="password"], input[type="url"], input[type="email
   border: 1px solid #e1e1e1; }
 /* line 11, ../compass/sass/_forms.scss */
 input[type="text"]:focus, input[type="password"]:focus, input[type="url"]:focus, input[type="email"]:focus, input[type="search"]:focus, input[type="number"]:focus, textarea:focus, input[type="range"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="text"]:active, input[type="password"]:active, input[type="url"]:active, input[type="email"]:active, input[type="search"]:active, input[type="number"]:active, textarea:active, input[type="range"]:active, input[type="date"]:active, input[type="month"]:active, input[type="week"]:active, input[type="datetime"]:active, input[type="datetime-local"]:active {
+  /* Capability css-boxshadow is prefixed with -moz because 0.27115% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
   -moz-box-shadow: 0 0 0.5em #e1e1e1;
+  /* Capability css-boxshadow is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-boxshadow is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-boxshadow is prefixed with -webkit because 2.07723% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
   -webkit-box-shadow: 0 0 0.5em #e1e1e1;
   box-shadow: 0 0 0.5em #e1e1e1;
   background: white;
@@ -1234,7 +1265,13 @@ textarea {
 
 /* line 42, ../compass/sass/_forms.scss */
 select {
+  /* Capability css3-boxsizing is prefixed with -moz because 15.69008% of users need it which is more than the threshold of 0.0001%. */
+  /* Creating new -moz context. */
   -moz-box-sizing: border-box;
+  /* Capability css3-boxsizing is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability css3-boxsizing is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability css3-boxsizing is prefixed with -webkit because 2.07723% of users need it which is more than the threshold of 0.0001%. */
+  /* Creating new -webkit context. */
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
@@ -1347,11 +1384,24 @@ table td, table th {
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
+  /* Capability border-radius is prefixed with -moz because 0.36154% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
   -moz-border-radius: 0.25em;
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability border-radius is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability border-radius is prefixed with -webkit because 0.14767% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
   -webkit-border-radius: 0.25em;
   border-radius: 0.25em;
+  /* Capability css-transitions is prefixed with -moz because 0.88124% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
   -moz-transition: all 0.2s ease;
+  /* Capability css-transitions is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-transitions is prefixed with -o because 0.1165% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -o context. */
   -o-transition: all 0.2s ease;
+  /* Capability css-transitions is prefixed with -webkit because 11.22399% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   background: #ffa300;
@@ -1403,11 +1453,24 @@ table td, table th {
   *vertical-align: auto;
   *zoom: 1;
   *display: inline;
+  /* Capability border-radius is prefixed with -moz because 0.36154% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
   -moz-border-radius: 0.25em;
+  /* Capability border-radius is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability border-radius is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability border-radius is prefixed with -webkit because 0.14767% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
   -webkit-border-radius: 0.25em;
   border-radius: 0.25em;
+  /* Capability css-transitions is prefixed with -moz because 0.88124% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
   -moz-transition: all 0.2s ease;
+  /* Capability css-transitions is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-transitions is prefixed with -o because 0.1165% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -o context. */
   -o-transition: all 0.2s ease;
+  /* Capability css-transitions is prefixed with -webkit because 11.22399% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   background: whitesmoke;
@@ -1443,102 +1506,130 @@ table td, table th {
 @media (min-width: 31.25em) {
   /* line 110, ../compass/sass/_objects.scss */
   .block-hero .b-text {
+    /* Content for ie 9.
+    Min version: 9.
+    User threshold to keep: 10%. If ie 9 are omitted: 2.98874%. */
+    /* Creating new -svg context. */
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyMjIyMjIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+    /* Capability css-gradients is prefixed with -moz because 1.11474% of users need it which is more than the threshold of 0.1%. */
+    /* Creating new -moz context. */
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0), #222222);
+    /* Capability css-gradients is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+    /* Capability css-gradients is not prefixed with -o because 0.09236% of users are affected which is less than the threshold of 0.1. */
+    /* Capability css-gradients is prefixed with -webkit because 11.2153% of users need it which is more than the threshold of 0.1%. */
+    /* Creating new -webkit context. */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), #222222);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #222222);
     position: absolute;
     width: 100%;
     bottom: 0;
     left: 0;
-    padding: 1em;
-    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0), #222222);
-    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), #222222);
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #222222); } }
-/* line 125, ../compass/sass/_objects.scss */
+    padding: 1em; } }
+/* line 119, ../compass/sass/_objects.scss */
 .block-hero .b-text .headline {
   font-size: 1em; }
 @media (min-width: 31.25em) {
-  /* line 125, ../compass/sass/_objects.scss */
+  /* line 119, ../compass/sass/_objects.scss */
   .block-hero .b-text .headline {
     font-size: 1.2em;
     color: white;
     text-shadow: 0.15em 0.15em 0.15em #222222; } }
-/* line 132, ../compass/sass/_objects.scss */
+/* line 126, ../compass/sass/_objects.scss */
 .block-hero .b-text .headline:hover {
   color: #ffa300; }
 
-/* line 138, ../compass/sass/_objects.scss */
+/* line 132, ../compass/sass/_objects.scss */
 .block-inset {
   position: relative; }
-/* line 140, ../compass/sass/_objects.scss */
+/* line 134, ../compass/sass/_objects.scss */
 .block-inset .b-text {
   position: absolute;
   width: 100%;
   bottom: 0;
   left: 0;
   padding: 1em;
+  /* Content for ie 9.
+  Min version: 9.
+  User threshold to keep: 10%. If ie 9 are omitted: 2.98874%. */
+  /* Creating new -svg context. */
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyMjIyMjIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  /* Capability css-gradients is prefixed with -moz because 1.11474% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
   background: -moz-linear-gradient(top, rgba(0, 0, 0, 0), #222222);
+  /* Capability css-gradients is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-gradients is not prefixed with -o because 0.09236% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-gradients is prefixed with -webkit because 11.2153% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
   background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), #222222);
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #222222); }
-/* line 147, ../compass/sass/_objects.scss */
+/* line 141, ../compass/sass/_objects.scss */
 .block-inset .b-text .headline {
   font-size: 1em;
   color: white;
   text-shadow: 0.15em 0.15em 0.15em #222222; }
 @media (min-width: 31.25em) {
-  /* line 147, ../compass/sass/_objects.scss */
+  /* line 141, ../compass/sass/_objects.scss */
   .block-inset .b-text .headline {
     font-size: 1.2em; } }
-/* line 154, ../compass/sass/_objects.scss */
+/* line 148, ../compass/sass/_objects.scss */
 .block-inset .b-text .headline:hover {
   color: #ffa300; }
 
-/* line 160, ../compass/sass/_objects.scss */
+/* line 154, ../compass/sass/_objects.scss */
 figure {
   background: whitesmoke;
   padding: 1em;
   max-width: 50em;
   margin-bottom: 1em; }
-/* line 165, ../compass/sass/_objects.scss */
+/* line 159, ../compass/sass/_objects.scss */
 figure figcaption {
   padding: 1em 1em 0;
   line-height: 1.6em; }
 
-/* line 172, ../compass/sass/_objects.scss */
+/* line 166, ../compass/sass/_objects.scss */
 .news-teaser {
   border-bottom: 1px solid #7d7d7d;
   padding: 1em 0;
   font-size: 0.9em; }
-/* line 176, ../compass/sass/_objects.scss */
+/* line 170, ../compass/sass/_objects.scss */
 .news-teaser h4, .news-teaser p {
   color: #e1e1e1; }
-/* line 179, ../compass/sass/_objects.scss */
+/* line 173, ../compass/sass/_objects.scss */
 .news-teaser:hover h4, .news-teaser:hover p {
   color: #ffa300; }
-/* line 181, ../compass/sass/_objects.scss */
+/* line 175, ../compass/sass/_objects.scss */
 .news-teaser:first-of-type {
   padding-top: 0; }
-/* line 182, ../compass/sass/_objects.scss */
+/* line 176, ../compass/sass/_objects.scss */
 .news-teaser:last-child {
   border: 0; }
 
-/* line 187, ../compass/sass/_objects.scss */
+/* line 180, ../compass/sass/_objects.scss */
+.tag-list {
+  margin-bottom: 0;
+  padding-bottom: 0; }
+/* line 183, ../compass/sass/_objects.scss */
 .tag-list li {
+  line-height: 1;
   font-size: 1.25em;
   display: inline-block;
+  margin-left: 0;
   margin-bottom: 0.5em; }
-/* line 192, ../compass/sass/_objects.scss */
+/* line 190, ../compass/sass/_objects.scss */
 .tag-list a, .tag-list .vcard .tel, .vcard .tag-list .tel {
   background: #5b4472;
   color: white;
   padding: 0.5em;
   margin-right: 1em; }
-/* line 198, ../compass/sass/_objects.scss */
+/* line 196, ../compass/sass/_objects.scss */
 .tag-list a:before, .tag-list .vcard .tel:before, .vcard .tag-list .tel:before {
   content: "\f02b ";
   font-family: 'FontAwesome';
   margin-right: 0.5em; }
-/* line 203, ../compass/sass/_objects.scss */
+/* line 201, ../compass/sass/_objects.scss */
 .tag-list a:hover, .tag-list .vcard .tel:hover, .vcard .tag-list .tel:hover {
-  background: transparent;
-  color: #5b4472; }
+  background: #ffa300;
+  color: white; }
 
 /* line 1, ../compass/sass/_navigation.scss */
 header[role="banner"] {
@@ -1614,8 +1705,18 @@ header[role="banner"].show .home-link svg .wordmark * {
 @media (min-width: 50em) {
   /* line 57, ../compass/sass/_navigation.scss */
   header[role="banner"] .nav {
+    /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.0001. */
+    /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.0001. */
+    /* Capability flexbox is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.0001. */
+    /* Capability flexbox is prefixed with -webkit because 8.01782% of users need it which is more than the threshold of 0.0001%. */
+    /* Creating new -webkit context. */
     display: -webkit-flex;
     display: flex;
+    /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.0001. */
+    /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.0001. */
+    /* Capability flexbox is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.0001. */
+    /* Capability flexbox is prefixed with -webkit because 8.01782% of users need it which is more than the threshold of 0.0001%. */
+    /* Creating new -webkit context. */
     -webkit-align-items: stretch;
     align-items: stretch; }
   /* line 60, ../compass/sass/_navigation.scss */
@@ -1698,7 +1799,7 @@ header[role="banner"].show .home-link svg .wordmark * {
 .breadcrumbs li:last-child a, .breadcrumbs li:last-child .vcard .tel, .vcard .breadcrumbs li:last-child .tel {
   color: #5b4472; }
 
-/* line 17, ../compass/sass/style.scss */
+/* line 20, ../compass/sass/style.scss */
 * {
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern";
@@ -1707,308 +1808,404 @@ header[role="banner"].show .home-link svg .wordmark * {
   -moz-font-feature-settings: "kern=1";
   box-sizing: border-box; }
 
-/* line 26, ../compass/sass/style.scss */
+/* line 29, ../compass/sass/style.scss */
 body {
   background: #222222;
   font-family: "jaf-facitweb-1", "jaf-facitweb-2", "Trebuchet MS", sans-serif;
   color: #222222; }
 
-/* line 32, ../compass/sass/style.scss */
+/* line 35, ../compass/sass/style.scss */
 .hero-wrapper {
+  /* Content for ie 9.
+  Min version: 9.
+  User threshold to keep: 10%. If ie 9 are omitted: 2.98874%. */
+  /* Creating new -svg context. */
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y1ZjVmNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  /* Capability css-gradients is prefixed with -moz because 1.11474% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
   background-image: -moz-linear-gradient(#ffffff, #f5f5f5);
+  /* Capability css-gradients is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-gradients is not prefixed with -o because 0.09236% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-gradients is prefixed with -webkit because 11.2153% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
   background-image: -webkit-linear-gradient(#ffffff, #f5f5f5);
   background-image: linear-gradient(#ffffff, #f5f5f5); }
 
-/* line 36, ../compass/sass/style.scss */
+/* line 39, ../compass/sass/style.scss */
 .home-hero {
   width: 100%;
   overflow: hidden;
   height: 100vh;
   background: #222222; }
-/* line 41, ../compass/sass/style.scss */
+/* line 44, ../compass/sass/style.scss */
 .home-hero video {
   opacity: 0.6; }
-/* line 42, ../compass/sass/style.scss */
+/* line 45, ../compass/sass/style.scss */
 .home-hero h1 {
   position: absolute;
   width: 33%;
   top: 45%;
   left: 50%;
   z-index: 100;
+  /* Capability transforms2d is prefixed with -moz because 1.1524% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
   -moz-transform: translate(-50%, -50%);
+  /* Capability transforms2d is prefixed with -ms because 2.98874% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -ms context. */
   -ms-transform: translate(-50%, -50%);
+  /* Capability transforms2d is not prefixed with -o because 0.09262% of users are affected which is less than the threshold of 0.1. */
+  /* Capability transforms2d is prefixed with -webkit because 54.09306% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
-/* line 52, ../compass/sass/style.scss */
+/* line 55, ../compass/sass/style.scss */
 .home-intro {
   padding: 2em 0 1em;
   position: relative;
   z-index: 1;
   font-size: 1.125em; }
-/* line 57, ../compass/sass/style.scss */
+/* line 60, ../compass/sass/style.scss */
 .home-intro p {
   font-family: "sorts-mill-goudy-1", "sorts-mill-goudy-2", "Garamond", serif;
   font-size: 1.5em;
   line-height: 1.6em; }
 @media (min-width: 50em) {
-  /* line 63, ../compass/sass/style.scss */
+  /* line 66, ../compass/sass/style.scss */
   .home-intro .container-fluid {
     max-width: 685px;
     width: 66%; } }
 @media (min-width: 75em) {
-  /* line 52, ../compass/sass/style.scss */
+  /* line 55, ../compass/sass/style.scss */
   .home-intro {
     font-size: 1.5em; } }
 
-/* line 73, ../compass/sass/style.scss */
+/* line 76, ../compass/sass/style.scss */
 .home-sections {
+  /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is prefixed with -webkit because 8.01782% of users need it which is more than the threshold of 0.0001%. */
+  /* Creating new -webkit context. */
   display: -webkit-flex;
   display: flex;
+  /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is prefixed with -webkit because 8.01782% of users need it which is more than the threshold of 0.0001%. */
+  /* Creating new -webkit context. */
   -webkit-flex-direction: row;
   flex-direction: row;
+  /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is prefixed with -webkit because 8.01782% of users need it which is more than the threshold of 0.0001%. */
+  /* Creating new -webkit context. */
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 1em 0 4em; }
 @media (min-width: 50em) {
-  /* line 73, ../compass/sass/style.scss */
+  /* line 76, ../compass/sass/style.scss */
   .home-sections {
+    /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.0001. */
+    /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.0001. */
+    /* Capability flexbox is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.0001. */
+    /* Capability flexbox is prefixed with -webkit because 8.01782% of users need it which is more than the threshold of 0.0001%. */
+    /* Creating new -webkit context. */
     -webkit-justify-content: space-between;
     justify-content: space-between;
     padding: 2em 0 6em; } }
 
-/* line 84, ../compass/sass/style.scss */
+/* line 87, ../compass/sass/style.scss */
 .home-section {
   width: 100%;
   padding: 1em; }
-/* line 87, ../compass/sass/style.scss */
+/* line 90, ../compass/sass/style.scss */
 .home-section h2 {
   line-height: 1;
   margin: 0; }
-/* line 91, ../compass/sass/style.scss */
+/* line 94, ../compass/sass/style.scss */
 .home-section .image {
   padding-top: 1em; }
 @media (min-width: 50em) {
-  /* line 84, ../compass/sass/style.scss */
+  /* line 87, ../compass/sass/style.scss */
   .home-section {
     padding: 0;
     width: 31%; } }
 
-/* line 99, ../compass/sass/style.scss */
+/* line 102, ../compass/sass/style.scss */
 .main {
   background: whitesmoke; }
-/* line 101, ../compass/sass/style.scss */
+/* line 104, ../compass/sass/style.scss */
 .main > .container-fluid > .row, .main > .container-fluid > .block-thumb {
+  /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is prefixed with -webkit because 8.01782% of users need it which is more than the threshold of 0.0001%. */
+  /* Creating new -webkit context. */
   display: -webkit-flex;
   display: flex;
+  /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is prefixed with -webkit because 8.01782% of users need it which is more than the threshold of 0.0001%. */
+  /* Creating new -webkit context. */
   -webkit-flex-direction: column;
   flex-direction: column; }
 @media (min-width: 50em) {
-  /* line 101, ../compass/sass/style.scss */
+  /* line 104, ../compass/sass/style.scss */
   .main > .container-fluid > .row, .main > .container-fluid > .block-thumb {
+    /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.0001. */
+    /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.0001. */
+    /* Capability flexbox is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.0001. */
+    /* Capability flexbox is prefixed with -webkit because 8.01782% of users need it which is more than the threshold of 0.0001%. */
+    /* Creating new -webkit context. */
     -webkit-flex-direction: row;
     flex-direction: row; } }
-/* line 108, ../compass/sass/style.scss */
+/* line 111, ../compass/sass/style.scss */
 .main article {
   background: white;
   padding: 2em 0 0;
   border-bottom: 1px solid whitesmoke; }
 @media (min-width: 50em) {
-  /* line 108, ../compass/sass/style.scss */
+  /* line 111, ../compass/sass/style.scss */
   .main article {
     width: 75%; } }
-/* line 113, ../compass/sass/style.scss */
+/* line 116, ../compass/sass/style.scss */
 .main article:last-child {
   border-bottom: none; }
-/* line 114, ../compass/sass/style.scss */
+/* line 117, ../compass/sass/style.scss */
 .main article .content {
   padding: 0 2em; }
-/* line 118, ../compass/sass/style.scss */
+/* line 121, ../compass/sass/style.scss */
 .main article .byline {
   color: #7d7d7d; }
-/* line 119, ../compass/sass/style.scss */
+/* line 122, ../compass/sass/style.scss */
 .main article .lede, .main article .content > p:first-of-type {
   font-family: "sorts-mill-goudy-1", "sorts-mill-goudy-2", "Garamond", serif;
   line-height: 1.4em;
   font-size: 1.4em; }
 @media (min-width: 50em) {
-  /* line 119, ../compass/sass/style.scss */
+  /* line 122, ../compass/sass/style.scss */
   .main article .lede, .main article .content > p:first-of-type {
     font-size: 1.6em; } }
 @media (min-width: 75em) {
-  /* line 119, ../compass/sass/style.scss */
+  /* line 122, ../compass/sass/style.scss */
   .main article .lede, .main article .content > p:first-of-type {
     font-size: 1.8em; } }
-/* line 127, ../compass/sass/style.scss */
+/* line 130, ../compass/sass/style.scss */
 .main article .related-pages {
   margin-top: 3em; }
-/* line 130, ../compass/sass/style.scss */
+/* line 133, ../compass/sass/style.scss */
 .main article footer {
   padding: 1em;
-  color: #e1e1e1; }
-@media (min-width: 50em) {
-  /* line 130, ../compass/sass/style.scss */
-  .main article footer {
-    width: 75%; } }
-/* line 136, ../compass/sass/style.scss */
+  color: #7d7d7d; }
+/* line 138, ../compass/sass/style.scss */
 .main aside {
   padding: 2em 0;
   width: 90%;
   margin: 0 auto; }
 @media (min-width: 50em) {
-  /* line 136, ../compass/sass/style.scss */
+  /* line 138, ../compass/sass/style.scss */
   .main aside {
     width: 25%;
     padding: 5.375em 0 0 2.5%; } }
-/* line 144, ../compass/sass/style.scss */
+/* line 146, ../compass/sass/style.scss */
 .main aside .section {
   font-size: 0.7em;
-  margin-bottom: 1em; }
-/* line 147, ../compass/sass/style.scss */
+  margin-bottom: 3em; }
+/* line 149, ../compass/sass/style.scss */
 .main aside .section h3, .main aside .section h4 {
   border-bottom: 1px solid #e1e1e1; }
-/* line 148, ../compass/sass/style.scss */
+/* line 150, ../compass/sass/style.scss */
 .main aside .section .btn {
   padding: 0.5em 1.5em; }
-/* line 149, ../compass/sass/style.scss */
+/* line 151, ../compass/sass/style.scss */
 .main aside .section.navigation {
   background: white; }
 @media (min-width: 50em) {
-  /* line 144, ../compass/sass/style.scss */
+  /* line 146, ../compass/sass/style.scss */
   .main aside .section {
     margin-bottom: 4em; } }
 
-/* line 157, ../compass/sass/style.scss */
+/* line 159, ../compass/sass/style.scss */
 .article-list {
+  width: 75%;
   padding: 1em 0 0; }
-/* line 6, ../compass/sass/_mixins.scss */
-.article-list:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0; }
-/* line 160, ../compass/sass/style.scss */
+/* line 162, ../compass/sass/style.scss */
 .article-list article {
+  width: 100%;
   border-bottom: 0;
   margin: 0 0 1em;
   padding: 1em 0; }
-/* line 166, ../compass/sass/style.scss */
+/* line 167, ../compass/sass/style.scss */
 .article-list article .content > p:first-of-type {
   font-family: "jaf-facitweb-1", "jaf-facitweb-2", "Trebuchet MS", sans-serif;
   line-height: 1em;
   font-size: 1em; }
 @media (min-width: 50em) {
-  /* line 166, ../compass/sass/style.scss */
+  /* line 167, ../compass/sass/style.scss */
   .article-list article .content > p:first-of-type {
     font-size: 1em; } }
 @media (min-width: 75em) {
-  /* line 166, ../compass/sass/style.scss */
+  /* line 167, ../compass/sass/style.scss */
   .article-list article .content > p:first-of-type {
     font-size: 1em; } }
 
-/* line 176, ../compass/sass/style.scss */
+/* line 177, ../compass/sass/style.scss */
 .category-navigation {
+  /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is prefixed with -webkit because 8.01782% of users need it which is more than the threshold of 0.0001%. */
+  /* Creating new -webkit context. */
   display: -webkit-flex;
   display: flex;
+  /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is prefixed with -webkit because 8.01782% of users need it which is more than the threshold of 0.0001%. */
+  /* Creating new -webkit context. */
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap; }
-/* line 179, ../compass/sass/style.scss */
+/* line 180, ../compass/sass/style.scss */
 .category-navigation .section-link {
   font-size: 0.75em;
   margin-bottom: 1em; }
-/* line 182, ../compass/sass/style.scss */
+/* line 183, ../compass/sass/style.scss */
 .category-navigation .section-link h4 {
   border-top: 1px solid #e1e1e1;
   margin-top: 0;
   padding-top: 0.6em; }
 @media (min-width: 50em) {
-  /* line 179, ../compass/sass/style.scss */
+  /* line 180, ../compass/sass/style.scss */
   .category-navigation .section-link {
     width: 50%; } }
 
-/* line 191, ../compass/sass/style.scss */
+/* line 192, ../compass/sass/style.scss */
 .section-link {
   width: 100%; }
-/* line 195, ../compass/sass/style.scss */
+/* line 196, ../compass/sass/style.scss */
 .section-link .image img {
+  /* Capability css-transitions is prefixed with -moz because 0.88124% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
   -moz-transition: all 0.2s ease;
+  /* Capability css-transitions is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.1. */
+  /* Capability css-transitions is prefixed with -o because 0.1165% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -o context. */
   -o-transition: all 0.2s ease;
+  /* Capability css-transitions is prefixed with -webkit because 11.22399% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease; }
-/* line 197, ../compass/sass/style.scss */
+/* line 198, ../compass/sass/style.scss */
 .section-link .image:hover img {
+  /* Capability transforms2d is prefixed with -moz because 1.1524% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -moz context. */
   -moz-transform: scale(1.125);
+  /* Capability transforms2d is prefixed with -ms because 2.98874% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -ms context. */
   -ms-transform: scale(1.125);
+  /* Capability transforms2d is not prefixed with -o because 0.09262% of users are affected which is less than the threshold of 0.1. */
+  /* Capability transforms2d is prefixed with -webkit because 54.09306% of users need it which is more than the threshold of 0.1%. */
+  /* Creating new -webkit context. */
   -webkit-transform: scale(1.125);
   transform: scale(1.125); }
-/* line 203, ../compass/sass/style.scss */
+/* line 204, ../compass/sass/style.scss */
 .section-link:last-child hr {
   display: none; }
 @media (min-width: 50em) {
-  /* line 205, ../compass/sass/style.scss */
+  /* line 206, ../compass/sass/style.scss */
   .related-pages .section-link {
     padding: 1%; } }
 
-/* line 210, ../compass/sass/style.scss */
-.share {
-  text-align: right; }
+/* line 213, ../compass/sass/style.scss */
+aside .share .text-btn, aside .share .tag-list a, .tag-list aside .share a, aside .share .tag-list .vcard .tel, .tag-list .vcard aside .share .tel, aside .share .vcard .tag-list .tel, .vcard .tag-list aside .share .tel {
+  background: white; }
+/* line 215, ../compass/sass/style.scss */
+aside .share .text-btn:hover, aside .share .tag-list a:hover, .tag-list aside .share a:hover, aside .share .tag-list .vcard .tel:hover, .tag-list .vcard aside .share .tel:hover, aside .share .vcard .tag-list .tel:hover, .vcard .tag-list aside .share .tel:hover {
+  background: #ffa300; }
 
-/* line 214, ../compass/sass/style.scss */
+/* line 220, ../compass/sass/style.scss */
 footer[role=banner] {
   padding-bottom: 4em;
   color: white; }
-/* line 217, ../compass/sass/style.scss */
+/* line 223, ../compass/sass/style.scss */
 footer[role=banner] a, footer[role=banner] .vcard .tel, .vcard footer[role=banner] .tel {
   color: white; }
-/* line 219, ../compass/sass/style.scss */
+/* line 225, ../compass/sass/style.scss */
 footer[role=banner] a:hover, footer[role=banner] .vcard .tel:hover, .vcard footer[role=banner] .tel:hover {
   color: #ffa300; }
-/* line 221, ../compass/sass/style.scss */
+/* line 227, ../compass/sass/style.scss */
 footer[role=banner] .container-fluid {
+  /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is prefixed with -webkit because 8.01782% of users need it which is more than the threshold of 0.0001%. */
+  /* Creating new -webkit context. */
   display: -webkit-flex;
   display: flex;
+  /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is prefixed with -webkit because 8.01782% of users need it which is more than the threshold of 0.0001%. */
+  /* Creating new -webkit context. */
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+  /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is prefixed with -webkit because 8.01782% of users need it which is more than the threshold of 0.0001%. */
+  /* Creating new -webkit context. */
   -webkit-flex-direction: row-reverse;
   flex-direction: row-reverse; }
-/* line 226, ../compass/sass/style.scss */
+/* line 232, ../compass/sass/style.scss */
 footer[role=banner] .section {
   font-size: 0.8em;
   padding-top: 3em;
   width: 100%; }
 @media (min-width: 50em) {
-  /* line 226, ../compass/sass/style.scss */
+  /* line 232, ../compass/sass/style.scss */
   footer[role=banner] .section {
     width: 50%;
     padding-top: 3em; } }
 @media (min-width: 75em) {
-  /* line 226, ../compass/sass/style.scss */
+  /* line 232, ../compass/sass/style.scss */
   footer[role=banner] .section {
     width: 33.33333%; } }
-/* line 237, ../compass/sass/style.scss */
+/* line 243, ../compass/sass/style.scss */
 footer[role=banner] .section h3 {
+  /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is prefixed with -webkit because 8.01782% of users need it which is more than the threshold of 0.0001%. */
+  /* Creating new -webkit context. */
   display: -webkit-flex;
   display: flex;
+  /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is not prefixed with -o because 0% of users are affected which is less than the threshold of 0.0001. */
+  /* Capability flexbox is prefixed with -webkit because 8.01782% of users need it which is more than the threshold of 0.0001%. */
+  /* Creating new -webkit context. */
   -webkit-align-items: center;
   align-items: center;
   color: white; }
-/* line 241, ../compass/sass/style.scss */
+/* line 247, ../compass/sass/style.scss */
 footer[role=banner] .section h3 img {
   margin-right: 0.5em; }
-/* line 243, ../compass/sass/style.scss */
+/* line 249, ../compass/sass/style.scss */
 footer[role=banner] .section p {
   padding-left: 5.75em; }
-/* line 247, ../compass/sass/style.scss */
+/* line 253, ../compass/sass/style.scss */
 footer[role=banner] .logo-footer {
   height: 6.5em; }
 
-/* line 252, ../compass/sass/style.scss */
+/* line 258, ../compass/sass/style.scss */
 #turnkey-credit {
   display: none; }
 
-/* line 257, ../compass/sass/style.scss */
+/* line 263, ../compass/sass/style.scss */
 #big-video-wrap {
   overflow: hidden;
   position: absolute;
@@ -2017,11 +2214,11 @@ footer[role=banner] .logo-footer {
   top: 0;
   left: 0; }
 
-/* line 258, ../compass/sass/style.scss */
+/* line 264, ../compass/sass/style.scss */
 #big-video-vid, #big-video-image {
   position: absolute; }
 
-/* line 259, ../compass/sass/style.scss */
+/* line 265, ../compass/sass/style.scss */
 #big-video-control-container {
   position: fixed;
   bottom: 0;
@@ -2034,24 +2231,24 @@ footer[role=banner] .logo-footer {
   -o-transition-duration: 0.6s;
   transition-duration: 0.6s; }
 
-/* line 261, ../compass/sass/style.scss */
+/* line 267, ../compass/sass/style.scss */
 #big-video-control {
   width: 100%;
   height: 16px;
   position: relative; }
 
-/* line 262, ../compass/sass/style.scss */
+/* line 268, ../compass/sass/style.scss */
 #big-video-control-middle {
   margin: 0 56px 0 24px; }
 
-/* line 263, ../compass/sass/style.scss */
+/* line 269, ../compass/sass/style.scss */
 #big-video-control-bar {
   width: 100%;
   height: 16px;
   position: relative;
   cursor: pointer; }
 
-/* line 264, ../compass/sass/style.scss */
+/* line 270, ../compass/sass/style.scss */
 #big-video-control-progress {
   position: absolute;
   top: 7px;
@@ -2059,7 +2256,7 @@ footer[role=banner] .logo-footer {
   width: 0%;
   background: #fff; }
 
-/* line 265, ../compass/sass/style.scss */
+/* line 271, ../compass/sass/style.scss */
 #big-video-control-track {
   position: absolute;
   top: 8px;
@@ -2067,23 +2264,23 @@ footer[role=banner] .logo-footer {
   width: 100%;
   background: #fff; }
 
-/* line 266, ../compass/sass/style.scss */
+/* line 272, ../compass/sass/style.scss */
 #big-video-control-bound-left {
   left: 0; }
 
-/* line 267, ../compass/sass/style.scss */
+/* line 273, ../compass/sass/style.scss */
 #big-video-control-bound-right {
   right: -1px; }
 
-/* line 268, ../compass/sass/style.scss */
+/* line 274, ../compass/sass/style.scss */
 #big-video-control-track .ui-slider-handle {
   opacity: 0; }
 
-/* line 269, ../compass/sass/style.scss */
+/* line 275, ../compass/sass/style.scss */
 #big-video-control-playhead {
   left: 30%; }
 
-/* line 270, ../compass/sass/style.scss */
+/* line 276, ../compass/sass/style.scss */
 #big-video-control-play {
   position: absolute;
   top: 0;
@@ -2092,7 +2289,7 @@ footer[role=banner] .logo-footer {
   width: 16px;
   background-image: url("bigvideo.png"); }
 
-/* line 271, ../compass/sass/style.scss */
+/* line 277, ../compass/sass/style.scss */
 #big-video-control-timer {
   position: absolute;
   top: 1px;
@@ -2100,7 +2297,7 @@ footer[role=banner] .logo-footer {
   color: #fff;
   font-size: 11px; }
 
-/* line 272, ../compass/sass/style.scss */
+/* line 278, ../compass/sass/style.scss */
 #big-video-control-playhead, #big-video-control-bound-left, #big-video-control-bound-right {
   position: absolute;
   top: 0;
@@ -2108,7 +2305,7 @@ footer[role=banner] .logo-footer {
   width: 1px;
   background: #fff; }
 
-/* line 273, ../compass/sass/style.scss */
+/* line 279, ../compass/sass/style.scss */
 #big-video-control .ui-slider-handle {
   border-left: solid 1px #fff;
   width: 16px;
@@ -2116,7 +2313,7 @@ footer[role=banner] .logo-footer {
   position: absolute;
   top: -8px; }
 
-/* line 274, ../compass/sass/style.scss */
+/* line 280, ../compass/sass/style.scss */
 .transparent {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
@@ -2124,6 +2321,6 @@ footer[role=banner] .logo-footer {
   -khtml-opacity: 0;
   opacity: 0; }
 
-/* line 275, ../compass/sass/style.scss */
+/* line 281, ../compass/sass/style.scss */
 .vjs-big-play-button, .vjs-control-bar {
   display: none !important; }

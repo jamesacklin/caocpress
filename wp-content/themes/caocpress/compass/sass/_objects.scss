@@ -84,7 +84,7 @@ table {
   .adr {
     .region { border-bottom: 0; }
   }
-  .tel { @extend a }
+  .tel { @extend a; }
 }
 
 // Block Elements
@@ -108,23 +108,17 @@ table {
 .block-hero {
   position: relative;
   .b-text {
-    @media (min-width: $small){
+    @include breakpoint($small){
+      @include background(linear-gradient(top, transparent, $black));
       position: absolute;
       width: 100%;
       bottom: 0;
       left: 0;
       padding: 1em;
-      @include background(linear-gradient(top, transparent, $black));
-      // TODO: include modernizr and fall back to solid color
-      // background-color: rgba(0,0,0,0.5);
-      // .cssgradients & {
-      //  background-color: none;
-      //  @include background(linear-gradient(top, transparent, $black));
-      // }
     }
     .headline {
       font-size: 1em;
-      @media (min-width: $small) {
+      @include breakpoint($small){
         font-size: 1.2em;
         color: $white;
         text-shadow: 0.15em 0.15em 0.15em $black;
@@ -184,9 +178,13 @@ figure {
 
 // Tags
 .tag-list {
+  margin-bottom: 0;
+  padding-bottom: 0;
   li {
+    line-height: 1;
     font-size: 1.25em;
     display: inline-block;
+    margin-left: 0;
     margin-bottom: 0.5em;
   }
   a {
@@ -201,8 +199,8 @@ figure {
       margin-right: 0.5em;
     }
     &:hover {
-      background: transparent;
-      color: $purple;
+      background: $orange;
+      color: $white;
     }
   }
 }

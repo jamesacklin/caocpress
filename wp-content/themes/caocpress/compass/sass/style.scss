@@ -1,7 +1,10 @@
-$flex-legacy-enabled: true;
+$debug-browser-support: true;
+$critical-usage-threshold: 0.0001;
+$flexbox-support-threshold: 0.0001;
 $browser-minimum-versions: (
-  'ie': "10"
+  "ie": "9"
 );
+
 
 @import "compass/reset";
 @import "compass";
@@ -128,9 +131,8 @@ body {
       margin-top: 3em;
     }
     footer {
-      @include breakpoint($medium){ width: 75%; }
       padding: 1em;
-      color: $midgray;
+      color: $darkgray;
     }
   }
   aside {
@@ -143,7 +145,7 @@ body {
     }
     .section {
       font-size: 0.7em;
-      margin-bottom: 1em;
+      margin-bottom: 3em;
       h3, h4 { border-bottom: 1px solid $midgray; }
       .btn { padding: 0.5em 1.5em; }
       &.navigation { background: $white; }
@@ -155,14 +157,13 @@ body {
 }
 
 .article-list {
-  @include clearfix;
+  width: 75%;
   padding: 1em 0 0;
   article {
+    width: 100%;
     border-bottom: 0;
     margin: 0 0 1em;
     padding: 1em 0;
-    // &:first-child { padding: 2em 0 1em; }
-    // &:last-child { padding: 1em 0 2em; }
     .content > p:first-of-type {
       font-family: $primary-font;
       line-height: 1em;
@@ -208,7 +209,12 @@ body {
 }
 
 .share {
-  text-align: right;
+  aside & {
+    .text-btn {
+      background: $white;
+      &:hover { background: $orange; }
+    }
+  }
 }
 
 footer[role=banner] {
