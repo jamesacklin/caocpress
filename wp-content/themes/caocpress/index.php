@@ -22,11 +22,14 @@
         <div class="col-xs-12">
           <ul class="breadcrumbs"><li><a href="/">Home</a></li><li><strong> News</strong></li></ul>
         </div>
-        <? if(has_post_thumbnail()): ?>
-          <div class="crop">
-            <? the_post_thumbnail('full') ?>
-          </div>
-        <? endif; ?>
+        <div class="crop">
+        <?
+          $page_id = get_option('page_for_posts');
+          if (has_post_thumbnail($page_id)){
+          echo get_the_post_thumbnail($page_id);
+          }
+        ?>
+        </div>
         <div class="content">
           <h2 class="subheading">News</h2>
           <?php
@@ -61,7 +64,12 @@
       </article>
 
       <aside>
-        <?php Starkers_Utilities::get_template_parts(array('parts/tags-posts')); ?>
+        <div class="related">
+          <?php Starkers_Utilities::get_template_parts(array('parts/tags-posts')); ?>
+        </div>
+        <div class="section">
+          <?php Starkers_Utilities::get_template_parts(array('parts/share-article')); ?>
+        </div>
       </aside>
 
     </div>
