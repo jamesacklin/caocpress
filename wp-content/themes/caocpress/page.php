@@ -68,6 +68,17 @@
         </footer>
       </article>
       <aside>
+        <div class="related">
+          <? // Gets content areas
+            if(get_field('content_areas')): ?>
+            <?php while(has_sub_field('content_areas')) :?>
+              <div class="section">
+                  <h4 class="subheading"><?php the_sub_field('header') ?></h4>
+                  <?php the_sub_field('content'); ?>
+              </div>
+            <?php endwhile; ?>
+          <?php endif; ?>
+        </div>
         <? if(is_page(42)): ?>
           <?// A list of all page tags, but only on the portfolio page. ?>
           <div class="section">
@@ -106,16 +117,9 @@
             </ul>
           </div>
         <?php endif; ?>
-        <? // Gets content areas
-          if(get_field('content_areas')): ?>
-          <?php while(has_sub_field('content_areas')) :?>
-            <div class="section">
-                <h4 class="subheading"><?php the_sub_field('header') ?></h4>
-                <?php the_sub_field('content'); ?>
-            </div>
-          <?php endwhile; ?>
-        <?php endif; ?>
-        <?php Starkers_Utilities::get_template_parts( array( 'parts/share-article' ) ); ?>
+        <div class="section">
+          <?php Starkers_Utilities::get_template_parts( array( 'parts/share-article' ) ); ?>
+        </div>
       </aside>
     </div>
   </div>

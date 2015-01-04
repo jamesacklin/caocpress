@@ -2054,50 +2054,61 @@ body {
   /* line 157, ../compass/sass/style.scss */
   .main aside {
     width: 25%;
-    padding: 5.375em 0 0 2.5%; } }
-/* line 165, ../compass/sass/style.scss */
-.main aside .section {
+    padding: 5.375em 0 0 0; } }
+/* line 166, ../compass/sass/style.scss */
+.main .section {
   font-size: 0.8em;
   margin-bottom: 3em; }
-/* line 168, ../compass/sass/style.scss */
-.main aside .section h3, .main aside .section h4 {
-  border-bottom: 1px solid #e1e1e1; }
 /* line 169, ../compass/sass/style.scss */
-.main aside .section .btn {
-  padding: 0.5em 1.5em; }
+.main .section h3, .main .section h4 {
+  border-bottom: 1px solid #e1e1e1; }
 /* line 170, ../compass/sass/style.scss */
-.main aside .section.navigation {
-  background: white; }
+.main .section .btn {
+  padding: 0.5em 1.5em; }
 @media (min-width: 50em) {
-  /* line 165, ../compass/sass/style.scss */
-  .main aside .section {
+  /* line 166, ../compass/sass/style.scss */
+  .main .section {
+    margin-bottom: 4em;
+    padding: 0.5em 4% 0.5em 8%; } }
+/* line 176, ../compass/sass/style.scss */
+.main .related {
+  background: white; }
+/* line 178, ../compass/sass/style.scss */
+.main .related .section {
+  margin-bottom: 0; }
+/* line 179, ../compass/sass/style.scss */
+.main .related .section:last-child {
+  margin-bottom: 3em; }
+@media (min-width: 50em) {
+  /* line 179, ../compass/sass/style.scss */
+  .main .related .section:last-child {
     margin-bottom: 4em; } }
 
-/* line 178, ../compass/sass/style.scss */
+/* line 186, ../compass/sass/style.scss */
 .article-list {
   width: 75%;
   padding: 1em 0 0; }
-/* line 181, ../compass/sass/style.scss */
+/* line 189, ../compass/sass/style.scss */
 .article-list article {
   width: 100%;
   border-bottom: 0;
   margin: 0 0 1em;
   padding: 1em 0; }
-/* line 186, ../compass/sass/style.scss */
+/* line 194, ../compass/sass/style.scss */
 .article-list article .content > p:first-of-type {
   font-family: "brandon-grotesque-1", "brandon-grotesque-2", sans-serif;
   line-height: 1em;
   font-size: 1em; }
 @media (min-width: 50em) {
-  /* line 186, ../compass/sass/style.scss */
+  /* line 194, ../compass/sass/style.scss */
   .article-list article .content > p:first-of-type {
     font-size: 1em; } }
 @media (min-width: 75em) {
-  /* line 186, ../compass/sass/style.scss */
+  /* line 194, ../compass/sass/style.scss */
   .article-list article .content > p:first-of-type {
     font-size: 1em; } }
 
-/* line 196, ../compass/sass/style.scss */
+/* line 204, ../compass/sass/style.scss */
 .category-navigation {
   /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.0001. */
   /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.0001. */
@@ -2113,24 +2124,24 @@ body {
   /* Creating new -webkit context. */
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap; }
-/* line 199, ../compass/sass/style.scss */
+/* line 207, ../compass/sass/style.scss */
 .category-navigation .section-link {
   font-size: 0.8em;
   margin-bottom: 1em; }
-/* line 202, ../compass/sass/style.scss */
+/* line 210, ../compass/sass/style.scss */
 .category-navigation .section-link h4 {
   border-top: 1px solid #e1e1e1;
   padding-top: 0.6em;
   margin: 0 0 0.25em; }
 @media (min-width: 50em) {
-  /* line 199, ../compass/sass/style.scss */
+  /* line 207, ../compass/sass/style.scss */
   .category-navigation .section-link {
     width: 50%; } }
 
-/* line 211, ../compass/sass/style.scss */
+/* line 219, ../compass/sass/style.scss */
 .section-link {
   width: 100%; }
-/* line 215, ../compass/sass/style.scss */
+/* line 223, ../compass/sass/style.scss */
 .section-link .image img {
   /* Capability css-transitions is prefixed with -moz because 0.88124% of users need it which is more than the threshold of 0.1%. */
   /* Creating new -moz context. */
@@ -2143,7 +2154,7 @@ body {
   /* Creating new -webkit context. */
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease; }
-/* line 217, ../compass/sass/style.scss */
+/* line 225, ../compass/sass/style.scss */
 .section-link .image:hover img {
   /* Capability transforms2d is prefixed with -moz because 1.1524% of users need it which is more than the threshold of 0.1%. */
   /* Creating new -moz context. */
@@ -2156,32 +2167,32 @@ body {
   /* Creating new -webkit context. */
   -webkit-transform: scale(1.125);
   transform: scale(1.125); }
-/* line 223, ../compass/sass/style.scss */
+/* line 231, ../compass/sass/style.scss */
 .section-link:last-child hr {
   display: none; }
 @media (min-width: 50em) {
-  /* line 225, ../compass/sass/style.scss */
+  /* line 233, ../compass/sass/style.scss */
   .related-pages .section-link {
     padding: 1%; } }
 
-/* line 232, ../compass/sass/style.scss */
+/* line 240, ../compass/sass/style.scss */
 aside .share .text-btn, aside .share .tag-list a, .tag-list aside .share a, aside .share .tag-list .vcard .tel, .tag-list .vcard aside .share .tel, aside .share .vcard .tag-list .tel, .vcard .tag-list aside .share .tel {
   background: white; }
-/* line 234, ../compass/sass/style.scss */
+/* line 242, ../compass/sass/style.scss */
 aside .share .text-btn:hover, aside .share .tag-list a:hover, .tag-list aside .share a:hover, aside .share .tag-list .vcard .tel:hover, .tag-list .vcard aside .share .tel:hover, aside .share .vcard .tag-list .tel:hover, .vcard .tag-list aside .share .tel:hover {
   background: #ffa300; }
 
-/* line 239, ../compass/sass/style.scss */
+/* line 247, ../compass/sass/style.scss */
 footer[role=banner] {
   padding-bottom: 4em;
   color: white; }
-/* line 242, ../compass/sass/style.scss */
+/* line 250, ../compass/sass/style.scss */
 footer[role=banner] a, footer[role=banner] .vcard .tel, .vcard footer[role=banner] .tel {
   color: white; }
-/* line 244, ../compass/sass/style.scss */
+/* line 252, ../compass/sass/style.scss */
 footer[role=banner] a:hover, footer[role=banner] .vcard .tel:hover, .vcard footer[role=banner] .tel:hover {
   color: #ffa300; }
-/* line 246, ../compass/sass/style.scss */
+/* line 254, ../compass/sass/style.scss */
 footer[role=banner] .container-fluid {
   /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.0001. */
   /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.0001. */
@@ -2204,21 +2215,21 @@ footer[role=banner] .container-fluid {
   /* Creating new -webkit context. */
   -webkit-flex-direction: row-reverse;
   flex-direction: row-reverse; }
-/* line 251, ../compass/sass/style.scss */
+/* line 259, ../compass/sass/style.scss */
 footer[role=banner] .section {
   font-size: 0.8em;
   padding-top: 3em;
   width: 100%; }
 @media (min-width: 50em) {
-  /* line 251, ../compass/sass/style.scss */
+  /* line 259, ../compass/sass/style.scss */
   footer[role=banner] .section {
     width: 50%;
     padding-top: 3em; } }
 @media (min-width: 75em) {
-  /* line 251, ../compass/sass/style.scss */
+  /* line 259, ../compass/sass/style.scss */
   footer[role=banner] .section {
     width: 33.33333%; } }
-/* line 262, ../compass/sass/style.scss */
+/* line 270, ../compass/sass/style.scss */
 footer[role=banner] .section h3 {
   /* Capability flexbox is not prefixed with -moz because 0% of users are affected which is less than the threshold of 0.0001. */
   /* Capability flexbox is not prefixed with -ms because 0% of users are affected which is less than the threshold of 0.0001. */
@@ -2235,21 +2246,21 @@ footer[role=banner] .section h3 {
   -webkit-align-items: center;
   align-items: center;
   color: white; }
-/* line 266, ../compass/sass/style.scss */
+/* line 274, ../compass/sass/style.scss */
 footer[role=banner] .section h3 img {
   margin-right: 0.5em; }
-/* line 268, ../compass/sass/style.scss */
+/* line 276, ../compass/sass/style.scss */
 footer[role=banner] .section p {
   padding-left: 5.75em; }
-/* line 272, ../compass/sass/style.scss */
+/* line 280, ../compass/sass/style.scss */
 footer[role=banner] .logo-footer {
   height: 6.5em; }
 
-/* line 277, ../compass/sass/style.scss */
+/* line 285, ../compass/sass/style.scss */
 #turnkey-credit {
   display: none; }
 
-/* line 282, ../compass/sass/style.scss */
+/* line 290, ../compass/sass/style.scss */
 #big-video-wrap {
   overflow: hidden;
   position: absolute;
@@ -2258,11 +2269,11 @@ footer[role=banner] .logo-footer {
   top: 0;
   left: 0; }
 
-/* line 283, ../compass/sass/style.scss */
+/* line 291, ../compass/sass/style.scss */
 #big-video-vid, #big-video-image {
   position: absolute; }
 
-/* line 284, ../compass/sass/style.scss */
+/* line 292, ../compass/sass/style.scss */
 #big-video-control-container {
   position: fixed;
   bottom: 0;
@@ -2275,24 +2286,24 @@ footer[role=banner] .logo-footer {
   -o-transition-duration: 0.6s;
   transition-duration: 0.6s; }
 
-/* line 286, ../compass/sass/style.scss */
+/* line 294, ../compass/sass/style.scss */
 #big-video-control {
   width: 100%;
   height: 16px;
   position: relative; }
 
-/* line 287, ../compass/sass/style.scss */
+/* line 295, ../compass/sass/style.scss */
 #big-video-control-middle {
   margin: 0 56px 0 24px; }
 
-/* line 288, ../compass/sass/style.scss */
+/* line 296, ../compass/sass/style.scss */
 #big-video-control-bar {
   width: 100%;
   height: 16px;
   position: relative;
   cursor: pointer; }
 
-/* line 289, ../compass/sass/style.scss */
+/* line 297, ../compass/sass/style.scss */
 #big-video-control-progress {
   position: absolute;
   top: 7px;
@@ -2300,7 +2311,7 @@ footer[role=banner] .logo-footer {
   width: 0%;
   background: #fff; }
 
-/* line 290, ../compass/sass/style.scss */
+/* line 298, ../compass/sass/style.scss */
 #big-video-control-track {
   position: absolute;
   top: 8px;
@@ -2308,23 +2319,23 @@ footer[role=banner] .logo-footer {
   width: 100%;
   background: #fff; }
 
-/* line 291, ../compass/sass/style.scss */
+/* line 299, ../compass/sass/style.scss */
 #big-video-control-bound-left {
   left: 0; }
 
-/* line 292, ../compass/sass/style.scss */
+/* line 300, ../compass/sass/style.scss */
 #big-video-control-bound-right {
   right: -1px; }
 
-/* line 293, ../compass/sass/style.scss */
+/* line 301, ../compass/sass/style.scss */
 #big-video-control-track .ui-slider-handle {
   opacity: 0; }
 
-/* line 294, ../compass/sass/style.scss */
+/* line 302, ../compass/sass/style.scss */
 #big-video-control-playhead {
   left: 30%; }
 
-/* line 295, ../compass/sass/style.scss */
+/* line 303, ../compass/sass/style.scss */
 #big-video-control-play {
   position: absolute;
   top: 0;
@@ -2333,7 +2344,7 @@ footer[role=banner] .logo-footer {
   width: 16px;
   background-image: url("bigvideo.png"); }
 
-/* line 296, ../compass/sass/style.scss */
+/* line 304, ../compass/sass/style.scss */
 #big-video-control-timer {
   position: absolute;
   top: 1px;
@@ -2341,7 +2352,7 @@ footer[role=banner] .logo-footer {
   color: #fff;
   font-size: 11px; }
 
-/* line 297, ../compass/sass/style.scss */
+/* line 305, ../compass/sass/style.scss */
 #big-video-control-playhead, #big-video-control-bound-left, #big-video-control-bound-right {
   position: absolute;
   top: 0;
@@ -2349,7 +2360,7 @@ footer[role=banner] .logo-footer {
   width: 1px;
   background: #fff; }
 
-/* line 298, ../compass/sass/style.scss */
+/* line 306, ../compass/sass/style.scss */
 #big-video-control .ui-slider-handle {
   border-left: solid 1px #fff;
   width: 16px;
@@ -2357,7 +2368,7 @@ footer[role=banner] .logo-footer {
   position: absolute;
   top: -8px; }
 
-/* line 299, ../compass/sass/style.scss */
+/* line 307, ../compass/sass/style.scss */
 .transparent {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
@@ -2365,6 +2376,6 @@ footer[role=banner] .logo-footer {
   -khtml-opacity: 0;
   opacity: 0; }
 
-/* line 300, ../compass/sass/style.scss */
+/* line 308, ../compass/sass/style.scss */
 .vjs-big-play-button, .vjs-control-bar {
   display: none !important; }

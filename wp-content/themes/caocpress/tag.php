@@ -50,7 +50,9 @@
         </article>
       <?php endif; ?>
       <aside>
-        <?php Starkers_Utilities::get_template_parts( array( 'parts/share-article' ) ); ?>
+        <div class="section">
+          <?php Starkers_Utilities::get_template_parts( array( 'parts/share-article' ) ); ?>
+        </div>
       </aside>
     </div>
   </div>
