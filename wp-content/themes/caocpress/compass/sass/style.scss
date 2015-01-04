@@ -87,11 +87,23 @@ body {
 .home-section {
   width: 100%;
   padding: 1em;
+  @include breakpoint($medium){
+    text-align: center;
+  }
   h2 {
+    font-size: 2em;
     line-height: 1;
     margin: 0;
   }
-  .image { padding-top: 1em; }
+  .image {
+    padding-top: 1em;
+    img {
+      @include transition(all 0.2s ease);
+    }
+    &:hover img {
+      @include transform(scale(1.125));
+    }
+  }
   @include breakpoint($medium){
     padding: 0;
     width: 31%;
