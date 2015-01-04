@@ -18,26 +18,47 @@
 <div class="main">
   <div class="container-fluid">
     <div class="row">
-      <?php if ( have_posts() ): ?>
-        <div class="article-list">
-        <?php while ( have_posts() ) : the_post(); ?>
-          <article>
-            <div class="content">
-              <h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-              <p><? the_excerpt(); ?></p>
-              <p class="meta"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?></time></p>
-            </div>
-          </article>
-        <?php endwhile; ?>
-        <?php wp_reset_postdata(); ?>
+      <article>
+        <div class="col-xs-12">
+          <ul class="breadcrumbs"><li><a href="/">Home</a></li><li><strong> News</strong></li></ul>
         </div>
-      <?php else: ?>
-        <article>
-          <div class="content">
-            <h2>No posts to display</h2>
+        <? if(has_post_thumbnail()): ?>
+          <div class="crop">
+            <? the_post_thumbnail('full') ?>
           </div>
-        </article>
-      <?php endif; ?>
+        <? endif; ?>
+        <div class="content">
+          <h2 class="subheading">News</h2>
+          <?php
+            if ( 'page' == get_option('show_on_front') && get_option('page_for_posts') && is_home() ) : the_post();
+              $page_for_posts_id = get_option('page_for_posts');
+              setup_postdata(get_page($page_for_posts_id));
+              the_content();
+              rewind_posts();
+            endif;
+          ?>
+          <?php if ( have_posts() ): ?>
+            <div class="article-list">
+            <?php while ( have_posts() ) : the_post(); ?>
+              <article>
+                <div class="content">
+                  <h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+                  <p><? the_excerpt(); ?></p>
+                  <p class="meta"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?></time></p>
+                </div>
+              </article>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+            </div>
+          <?php else: ?>
+            <article>
+              <div class="content">
+                <h2>No posts to display</h2>
+              </div>
+            </article>
+          <?php endif; ?>
+        </div>
+      </article>
 
       <aside>
         <?php Starkers_Utilities::get_template_parts(array('parts/tags-posts')); ?>
