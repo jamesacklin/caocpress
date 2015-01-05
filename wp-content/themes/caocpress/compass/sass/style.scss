@@ -187,6 +187,9 @@ body {
     .section {
       padding: 0.5em;
       margin-bottom: 0;
+      @include breakpoint($medium){
+        padding: 0.5em 4% 0.5em 8%;
+      }
     }
     .section:last-child {
       margin-bottom: 3em;
