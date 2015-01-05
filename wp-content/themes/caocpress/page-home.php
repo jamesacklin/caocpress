@@ -24,7 +24,13 @@ Template Name: Home Page
       <div class="home-section">
         <div class="image">
           <div class="crop">
-            <a href="<?php the_sub_field('link') ?>"><img src="<?php the_sub_field('image'); ?>" alt=""></a>
+            <a href="<?php the_sub_field('link') ?>">
+              <?
+                $image = get_sub_field('image');
+                $src = wp_get_attachment_image_src($image,'large');
+                echo '<img src="'.$src[0].'">';
+              ?>
+            </a>
           </div>
         </div>
         <div class="text">
