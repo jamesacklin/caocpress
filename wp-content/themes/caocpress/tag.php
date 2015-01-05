@@ -18,7 +18,7 @@
         <article>
           <?php if(has_post_thumbnail()): ?>
             <div class="crop">
-              <? the_post_thumbnail('full'); ?>
+              <? the_post_thumbnail('large'); ?>
             </div>
           <?php endif; ?>
           <div class="content">
@@ -31,7 +31,7 @@
                   <div class="section-link">
                     <? if ( has_post_thumbnail()): ?>
                         <div class="image">
-                          <a href="<? the_permalink(); ?>"><? the_post_thumbnail('full'); ?></a>
+                          <a href="<? the_permalink(); ?>"><? the_post_thumbnail('large'); ?></a>
                         </div>
                     <? endif; ?>
                     <h4><a href="<? the_permalink(); ?>"><? the_title(); ?></a></h4>

@@ -18,7 +18,7 @@
       <article>
         <? if(has_post_thumbnail()): ?>
           <div class="crop">
-            <? the_post_thumbnail('full') ?>
+            <? the_post_thumbnail('large') ?>
           </div>
         <? endif; ?>
         <div class="content">
