@@ -249,40 +249,41 @@ hr {
 /* line 156, ../compass/sass/_type.scss */
 ul, ol {
   margin-bottom: 1.75em; }
-/* line 158, ../compass/sass/_type.scss */
-ul li, ol li {
-  line-height: 1.75em;
+/* line 159, ../compass/sass/_type.scss */
+article ul li, article ol li {
+  font-size: 1.25em;
+  line-height: 1.5em;
   margin-left: 5%;
   margin-top: 0.5em; }
-/* line 162, ../compass/sass/_type.scss */
+/* line 165, ../compass/sass/_type.scss */
 ul li ul, ul li ol, ol li ul, ol li ol {
   margin-top: 0.5em; }
-/* line 164, ../compass/sass/_type.scss */
+/* line 167, ../compass/sass/_type.scss */
 ul li ul li, ul li ol li, ol li ul li, ol li ol li {
   margin-left: 5%; }
 
-/* line 168, ../compass/sass/_type.scss */
+/* line 171, ../compass/sass/_type.scss */
 ul li {
   list-style-type: disc; }
 
-/* line 169, ../compass/sass/_type.scss */
+/* line 172, ../compass/sass/_type.scss */
 ol li {
   list-style-type: decimal; }
 
-/* line 172, ../compass/sass/_type.scss */
+/* line 175, ../compass/sass/_type.scss */
 dl {
   line-height: 1.4em; }
-/* line 175, ../compass/sass/_type.scss */
+/* line 178, ../compass/sass/_type.scss */
 dl dd {
   font-style: italic;
   margin-bottom: 0.5em;
   margin-left: 5%; }
 
-/* line 188, ../compass/sass/_type.scss */
+/* line 191, ../compass/sass/_type.scss */
 .byline time {
   font-size: 1em; }
 
-/* line 191, ../compass/sass/_type.scss */
+/* line 194, ../compass/sass/_type.scss */
 .intro {
   font-size: 1.4em; }
 
