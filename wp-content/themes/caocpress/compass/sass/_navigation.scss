@@ -83,20 +83,20 @@ header[role="banner"] {
         align-self: center;
         &:nth-child(1){
           margin-left: auto;
-          order: 2;
+          @include order(2);
         }
         &:nth-child(2){
-          order: 0;
+          @include order(0);
           margin-left: 0;
         }
         &:nth-child(3){
-          order: 1;
+          @include order(1);
         }
         &:nth-child(4){
-          order: 3;
+          @include order(3);
         }
         &:nth-child(5){
-          order: 4;
+          @include order(4);
         }
       }
     }
