@@ -1,6 +1,6 @@
 <?// A list of all page tags. ?>
 <div class="section">
-  <h4 class="subheading">Experience Tags</h4>
+  <h4 class="subheading">Explore Topics</h4>
   <ul class="tag-list">
     <?php
       // WOOOOOOF. Query all posts for a post type, get the tags,

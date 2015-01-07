@@ -93,12 +93,14 @@ body {
 }
 
 .home-section {
+  font-family: $secondary-font;
   width: 100%;
   padding: 1em;
   @include breakpoint($medium){
     text-align: center;
   }
   h2 {
+    font-family: $secondary-font;
     font-size: 2em;
     line-height: 1;
     margin: 0;
@@ -157,6 +159,7 @@ body {
     }
     .related-pages {
       margin-top: 3em;
+      .subheading { font-size: 1.5em; }
     }
     footer {
       padding: 1em;
