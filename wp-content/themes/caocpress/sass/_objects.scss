@@ -108,7 +108,7 @@ table {
 .block-hero {
   position: relative;
   .b-text {
-    @include breakpoint($small){
+    @media (min-width: $small){
       @include background(linear-gradient(top, transparent, $black));
       position: absolute;
       width: 100%;
@@ -118,7 +118,7 @@ table {
     }
     .headline {
       font-size: 1em;
-      @include breakpoint($small){
+      @media (min-width: $small){
         font-size: 1.2em;
         color: $white;
         text-shadow: 0.15em 0.15em 0.15em $black;

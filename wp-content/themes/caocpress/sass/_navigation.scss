@@ -39,7 +39,7 @@ header[role="banner"] {
       }
       .hidden {
         display: none;
-        @include breakpoint($medium){ display: block; }
+        @media (min-width: $medium){ display: block; }
       }
     }
     .nav-button {
@@ -47,7 +47,7 @@ header[role="banner"] {
       top: 1em; right: 5%;
       padding: 0.75em 1.25em;
       z-index: 200;
-      @include breakpoint($medium){ display: none; }
+      @media (min-width: $medium){ display: none; }
     }
   }
   &.show {
@@ -55,7 +55,7 @@ header[role="banner"] {
     li a { color: $black !important; }
     .home-link svg .wordmark * { fill: $black; }
   }
-  @include breakpoint($medium){
+  @media (min-width: $medium){
     .nav {
       @include display-flex;
       @include align-items(stretch);
@@ -78,7 +78,7 @@ header[role="banner"] {
       .home-link svg { height: 3.5em; }
     }
   }
-  @include breakpoint($large){
+  @media (min-width: $large){
     .nav {
       li {
         align-self: center;

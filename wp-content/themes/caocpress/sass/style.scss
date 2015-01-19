@@ -8,7 +8,6 @@ $browser-minimum-versions: (
 
 @import "compass/reset";
 @import "compass";
-@import "breakpoint";
 @import "vars";
 @import "type";
 @import "mixins";
@@ -45,7 +44,7 @@ body {
   h1 {
     position: absolute;
     width: 66%;
-    @include breakpoint($medium){
+    @media (min-width: $medium){
       width: 33%;
     }
     top: 45%;
@@ -71,13 +70,13 @@ body {
     font-size: 1.5em;
     line-height: 1.6em;
   }
-  @include breakpoint($medium){
+  @media (min-width: $medium){
     .container-fluid {
       max-width: 685px;
       width: 66%;
     }
   }
-  @include breakpoint($large){
+  @media (min-width: $large){
     font-size: 1.5em;
   }
 }
@@ -87,7 +86,7 @@ body {
   @include flex-direction(row);
   @include flex-wrap(wrap);
   padding: 1em 0 4em;
-  @include breakpoint($medium){
+ @media (min-width: $medium){
     @include justify-content(space-between);
   }
 }
@@ -96,7 +95,7 @@ body {
   font-family: $secondary-font;
   width: 100%;
   padding: 1em;
-  @include breakpoint($medium){
+  @media (min-width: $medium){
     text-align: center;
   }
   h2 {
@@ -114,7 +113,7 @@ body {
       @include transform(scale(1.125));
     }
   }
-  @include breakpoint($medium){
+  @media (min-width: $medium){
     padding: 0;
     width: 33.333333%;
     .text {
@@ -134,12 +133,12 @@ body {
   & > .container-fluid > .row {
     @include display-flex;
     @include flex-direction(column);
-    @include breakpoint($medium){
+    @media (min-width: $medium){
       @include flex-direction(row);
     }
   }
   article {
-    @include breakpoint($medium){ width: 75%; }
+    @media (min-width: $medium){ width: 75%; }
     background: $white;
     padding: 2em 0 0;
     border-bottom: 1px solid $lightgray;
@@ -154,12 +153,15 @@ body {
       font-family: $secondary-font;
       line-height: 1.4em;
       font-size: 1.4em;
-      @include breakpoint($medium) { font-size: 1.6em; }
-      @include breakpoint($large) { font-size: 1.8em; }
+      @media (min-width: $medium) { font-size: 1.6em; }
+      @media (min-width: $large) { font-size: 1.8em; }
     }
     .related-pages {
       margin-top: 3em;
-      .subheading { font-size: 1.5em; }
+      .subheading {
+      	font-size: 1.5em;
+      	font-family: $secondary-font;
+      }
     }
     footer {
       padding: 1em;
@@ -170,7 +172,7 @@ body {
     padding: 2em 0;
     width: 90%;
     margin: 0 auto;
-    @include breakpoint($medium){
+    @media (min-width: $medium){
       width: 25%;
       padding: 5.375em 0 0 0;
     }
@@ -180,7 +182,7 @@ body {
     margin-bottom: 3em;
     h3, h4 { border-bottom: 1px solid $midgray; }
     .btn { padding: 0.5em 1.5em; }
-    @include breakpoint($medium){
+    @media (min-width: $medium){
       margin-bottom: 4em;
       padding: 0.5em 4% 0.5em 8%;
     }
@@ -190,13 +192,13 @@ body {
     .section {
       padding: 0.5em 6%;
       margin-bottom: 0;
-      @include breakpoint($medium){
+      @media (min-width: $medium){
         padding: 0.5em 4% 0.5em 8%;
       }
     }
     .section:last-child {
       margin-bottom: 3em;
-      @include breakpoint($medium){ margin-bottom: 4em; }
+      @media (min-width: $medium){ margin-bottom: 4em; }
     }
   }
 }
@@ -215,8 +217,8 @@ body {
       font-family: $primary-font;
       line-height: 1em;
       font-size: 1em;
-      @include breakpoint($medium) { font-size: 1em; }
-      @include breakpoint($large) { font-size: 1em; }
+      @media (min-width: $medium) { font-size: 1em; }
+      @media (min-width: $large) { font-size: 1em; }
     }
   }
 }
@@ -232,7 +234,7 @@ body {
       padding-top: 0.6em;
       margin: 0 0 0.25em
     }
-    @include breakpoint($medium){ width: 50%; }
+    @media (min-width: $medium){ width: 50%; }
   }
 }
 
@@ -251,7 +253,7 @@ body {
     hr { display: none; }
   }
   .related-pages & {
-    @include breakpoint($medium){ padding: 1%; }
+    @media (min-width: $medium){ padding: 1%; }
   }
 }
 
@@ -281,7 +283,7 @@ footer[role=banner] {
     font-size: 0.8em;
     padding-top: 3em;
     width: 100%;
-    @include breakpoint($large){
+    @media (min-width: $large){
       width: 33.33333%;
       padding: 3em 1.5% 0;
     }
