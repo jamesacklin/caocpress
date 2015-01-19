@@ -20,16 +20,20 @@ header[role="banner"] {
     margin-top: 0;
     text-align: center;
     font-family: $secondary-font;
-    font-weight: bold;
     padding: 1em 0.5em;
     display: block;
     text-transform: uppercase;
     &.home-link svg { height: 3em; }
     .home &.home-link svg { height: 5em; }
     a {
+      @include transition(all 300ms ease);
       color: $black;
-      .home & { color: $white; }
-      &:hover { color: $orange; }
+      .home & {
+        color: $white;
+      }
+      &:hover {
+        color: $orange;
+      }
     }
   }
   .js & {
