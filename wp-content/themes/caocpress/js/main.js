@@ -1,5 +1,7 @@
 jQuery(document).ready(function($){
 
+  var Modernizr;
+
   $('.nav li:not(:first)').addClass('hidden');
 
   // Insert hamburger menu into nav. Draws with SVG if Modernizr detects support; falls back to the old icon font thing if no SVG support.
@@ -37,16 +39,16 @@ jQuery(document).ready(function($){
 
   });
 
+  if (!Modernizr.touch){
+    var s;
+    $(window).scroll(function(){
+      s = $(window).scrollTop();
+      if (s > 16){
+        $('header[role=banner]').addClass('fixed');
+      } else {
+        $('header[role=banner]').removeClass('fixed');
+      }
+    });
+  }
 
 });
-
-if (!Modernizr.touch){
-  $(window).scroll(function(){
-    s = $(window).scrollTop();
-    if (s > 16){
-      $('header[role=banner]').addClass('fixed');
-    } else {
-      $('header[role=banner]').removeClass('fixed');
-    }
-  });
-};
