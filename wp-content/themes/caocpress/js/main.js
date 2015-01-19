@@ -1,7 +1,5 @@
 jQuery(document).ready(function($){
 
-  var Modernizr;
-
   $('.nav li:not(:first)').addClass('hidden');
 
   // Insert hamburger menu into nav. Draws with SVG if Modernizr detects support; falls back to the old icon font thing if no SVG support.
