@@ -93,5 +93,6 @@
 <li>The JavaScript dependencies are included in the compiled <code>main.min.js</code> file, but their source files are not included in this repository. They must be installed with Bower (with the help of the <code>bower.json</code> file).</li>
 <li>The project is also set up with <a href="https://incident57.com/codekit/">CodeKit</a> to compile SASS on the fly and concatenate / minify JavaScript.</li>
 <li>The home page content is managed almost entirely with Advanced Custom Fields. Pages and Posts use ACF to handle the &ldquo;related links&rdquo; sections and the sidebar contents.</li>
+<li>Be warned: a lot of the page layout uses the <a href="http://caniuse.com/#search=flexbox">relatively young</a> wonder that is the <a href="http://www.w3.org/TR/css3-flexbox/">Flexible Box</a>. Some preliminary research determined that most of the site&rsquo;s visitors will be using higher-end hardware (Macs or iDevices) with modern browsers (mobile Safari / Firefox / Chrome), so this decision was not made arbitrarily. The benefits of using a modern layout engine greatly outweighed the need to support every browsing environment, everywhere. This might come back to bite us, but who knows. There are SASS mixins to help with this, and Compass is configured (via CodeKit settings) to compile Flexbox back to IE10.</li>
 </ul>
 
