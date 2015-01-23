@@ -29,46 +29,46 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/bower_components\/BigVideo.js\/css\/bigvideo.css": {
+	"\/bower_components\/bigvideo.js\/css\/bigvideo.css": {
 		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/BigVideo.js\/css\/bigvideo.css",
+		"inputAbbreviatedPath": "\/bower_components\/bigvideo.js\/css\/bigvideo.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/bower_components\/BigVideo.js\/css\/bigvideo.png": {
+	"\/bower_components\/bigvideo.js\/css\/bigvideo.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 1075,
-		"inputAbbreviatedPath": "\/bower_components\/BigVideo.js\/css\/bigvideo.png",
-		"outputAbbreviatedPath": "\/bower_components\/BigVideo.js\/css\/bigvideo.png",
+		"inputAbbreviatedPath": "\/bower_components\/bigvideo.js\/css\/bigvideo.png",
+		"outputAbbreviatedPath": "\/bower_components\/bigvideo.js\/css\/bigvideo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 1
+		"processed": 0
 		},
-	"\/bower_components\/BigVideo.js\/lib\/bigvideo.js": {
+	"\/bower_components\/bigvideo.js\/lib\/bigvideo.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/BigVideo.js\/lib\/bigvideo.js",
-		"outputAbbreviatedPath": "\/bower_components\/BigVideo.js\/lib\/min\/bigvideo-min.js",
+		"inputAbbreviatedPath": "\/bower_components\/bigvideo.js\/lib\/bigvideo.js",
+		"outputAbbreviatedPath": "\/bower_components\/bigvideo.js\/lib\/min\/bigvideo-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/bower_components\/BigVideo.js\/README.md": {
+	"\/bower_components\/bigvideo.js\/README.md": {
 		"enableFootnoteSupport": 0,
 		"enableSmartyPants": 1,
 		"expandTabs": 1,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/BigVideo.js\/README.md",
-		"outputAbbreviatedPath": "\/bower_components\/BigVideo.js\/README.html",
+		"inputAbbreviatedPath": "\/bower_components\/bigvideo.js\/README.md",
+		"outputAbbreviatedPath": "\/bower_components\/bigvideo.js\/README.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -129,55 +129,46 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/bower_components\/eventie\/test.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/eventie\/test.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/bower_components\/FitVids\/CONTRIBUTING.md": {
+	"\/bower_components\/fitvids\/CONTRIBUTING.md": {
 		"enableFootnoteSupport": 0,
 		"enableSmartyPants": 1,
 		"expandTabs": 1,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/FitVids\/CONTRIBUTING.md",
-		"outputAbbreviatedPath": "\/bower_components\/FitVids\/CONTRIBUTING.html",
+		"inputAbbreviatedPath": "\/bower_components\/fitvids\/CONTRIBUTING.md",
+		"outputAbbreviatedPath": "\/bower_components\/fitvids\/CONTRIBUTING.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/bower_components\/FitVids\/jquery.fitvids.js": {
+	"\/bower_components\/fitvids\/jquery.fitvids.js": {
 		"fileType": 64,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/FitVids\/jquery.fitvids.js",
-		"outputAbbreviatedPath": "\/bower_components\/FitVids\/min\/jquery.fitvids-min.js",
+		"inputAbbreviatedPath": "\/bower_components\/fitvids\/jquery.fitvids.js",
+		"outputAbbreviatedPath": "\/bower_components\/fitvids\/min\/jquery.fitvids-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/bower_components\/FitVids\/README.md": {
+	"\/bower_components\/fitvids\/README.md": {
 		"enableFootnoteSupport": 0,
 		"enableSmartyPants": 1,
 		"expandTabs": 1,
 		"fileType": 4096,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/FitVids\/README.md",
-		"outputAbbreviatedPath": "\/bower_components\/FitVids\/README.html",
+		"inputAbbreviatedPath": "\/bower_components\/fitvids\/README.md",
+		"outputAbbreviatedPath": "\/bower_components\/fitvids\/README.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/bower_components\/FitVids\/tests.html": {
+	"\/bower_components\/fitvids\/tests.html": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bower_components\/FitVids\/tests.html",
+		"inputAbbreviatedPath": "\/bower_components\/fitvids\/tests.html",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -11471,6 +11462,15 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 1
 		},
+	"\/index.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/index.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/js\/main.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -11571,6 +11571,18 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/parts\/tags-posts.php",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/README.md": {
+		"enableFootnoteSupport": 0,
+		"enableSmartyPants": 1,
+		"expandTabs": 1,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/README.md",
+		"outputAbbreviatedPath": "\/README.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
@@ -11702,6 +11714,17 @@
 		"shouldRunBless": 1,
 		"useLibsass": 0
 		},
+	"\/screenshot.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 46244,
+		"inputAbbreviatedPath": "\/screenshot.png",
+		"outputAbbreviatedPath": "\/screenshot.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/search.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -11741,7 +11764,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "james",
+"lastSavedByUser": "James Acklin",
 "manualImportLinks": {
 	"\/js\/main.js": [
 		{
@@ -11788,13 +11811,13 @@
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/BigVideo.js\/lib\/bigvideo.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/bigvideo.js\/lib\/bigvideo.js",
 			"position": 7,
 			"type": 0
 			},
 		{
 			"followForSyntaxChecking": 1,
-			"linkedFileAbbreviatedPath": "\/bower_components\/FitVids\/jquery.fitvids.js",
+			"linkedFileAbbreviatedPath": "\/bower_components\/fitvids\/jquery.fitvids.js",
 			"position": 8,
 			"type": 0
 			}
