@@ -275,8 +275,11 @@ footer[role=banner] {
   }
   .container-fluid {
     @include display-flex;
-    @include flex-direction(row);
+    @include flex-direction(column);
     @include justify-content(space-between);
+    @media (min-width: $medium){
+      @include flex-direction(row);
+    }
   }
   .section {
     color: $midgray;
