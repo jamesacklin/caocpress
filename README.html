@@ -1,0 +1,97 @@
+<h1>City as Our Campus</h1>
+
+<p><img src="http://dev2.cityasourcampus.org/wp-content/themes/caocpress/screenshot.png" alt="CAOC Screenshot" /></p>
+
+<p>A Custom WordPress Theme</p>
+
+<p>Author: James Acklin, <a href="http://www.acklindesign.com">Acklin Design</a></p>
+
+<h2>About City as Our Campus</h2>
+
+<p>City as Our Campus is a resource for the <a href="http://www.winchesterthurston.org">Winchester Thurston School</a> in Pittsburgh, PA to extend and deepen students’ learning by utilizing and partnering with community co-educators. To learn more about the program, visit <a href="http://www.cityasourcampus.org/about">the CAOC website</a>.</p>
+
+<h2>Requirements</h2>
+
+<p>The theme requires the <a href="http://www.advancedcustomfields.com/">Advanced Custom Fields plugin</a>, as well as the <a href="http://www.advancedcustomfields.com/add-ons/repeater-field/">ACF Repeater add-on</a> and the <a href="https://wordpress.org/plugins/tag-pages/">Tag Pages</a> plugin.</p>
+
+<h2>Installation</h2>
+
+<ol>
+<li>In your admin panel, go to Appearance -> Themes and click the Add New button.</li>
+<li>Click Upload and Choose File, then select the theme&rsquo;s ZIP file. Click Install Now.</li>
+<li>Click Activate to use the theme right away.</li>
+</ol>
+
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>How do I change the main navigation?</h3>
+
+<ol>
+<li>In your admin panel, go to Appearance -> Menus.</li>
+<li>Drag the pages under &ldquo;Menu Structure&rdquo; to rearrange them.</li>
+<li>To add a menu item, click the &ldquo;View All&rdquo; tab under &ldquo;Pages,&rdquo; click the checkbox next to the page you want to add, and click the &ldquo;Add to Menu&rdquo; button.</li>
+<li>To remove a menu item, click the down arrow in the menu item title and click &ldquo;Remove.&rdquo;</li>
+<li>To rename a menu item, click the down arrow in the menu item title and type your name into the &ldquo;Navigation Label&rdquo; field.</li>
+<li>Click &ldquo;Save Menu&rdquo; when you are done.</li>
+</ol>
+
+
+<h3>How do I change the footer?</h3>
+
+<p>Instructions coming soon.</p>
+
+<h3>How do I change sidebar items on a page or a post?</h3>
+
+<p>Instructions coming soon.</p>
+
+<h3>How do I change links to related pages on a page?</h3>
+
+<p>Instructions coming soon.</p>
+
+<h2>Quick Specs</h2>
+
+<ul>
+<li>Images should be cropped to 16:9.</li>
+<li>Use appropriate heading tags (<code>&lt;H3 /&gt;</code> through <code>&lt;H6 /&gt;</code>) in article copy, rather than styled paragraphs.</li>
+<li>The homepage video is stored in the theme directory and is hard-coded into the page. It is not managed with the WordPress Media Library.</li>
+<li>Pages have their own tags, and Posts have <em>their</em> own tags. Both show up in the tag archive page.</li>
+<li>Try to maintain page heirarchy using parent and child relationships between pages. For example, when adding a Portfolio item, set the pages' parent to &ldquo;Portfolio.&rdquo; When adding a page to the About section, set that page&rsquo;s parent to &ldquo;About.&rdquo; The <a href="https://wordpress.org/plugins/cms-tree-page-view/">CMS Tree View</a> plugin helps with visualizing and sorting pages in a heirarchy.</li>
+</ul>
+
+
+<h2>Administrative Notes</h2>
+
+<h3>Backing up the WordPress Database</h3>
+
+<p>I use <a href="http://www.sequelpro.com/">Sequel Pro</a> on my Mac for most MySQL operations, which simplifies things greatly with intuitive commands like &ldquo;Export&rdquo; and &ldquo;Import.&rdquo; However, the command line interface for MySQL is pretty easy once you get the hang of it. I assume you&rsquo;ll be doing this on the Windows box, or via RDP.</p>
+
+<ol>
+<li>Open the Windows PowerShell application. This command prompt acts similarly to *NIX, so if you&rsquo;re familiar with that filesystem, all your favorite commands will work.</li>
+<li>Enter the following command: <code>mysqldump -u [username] -p [database] &gt; backup.sql</code></li>
+<li>Enter the password for the specified user.</li>
+<li>This will dump the file <code>backup.sql</code> into the working directory.</li>
+<li>Periodically, zip up the <code>/wp-content/uploads</code> directory and stash that somewhere, too.</li>
+<li>Alternately, use the <a href="https://wordpress.org/plugins/better-wp-security/">iThemes Security</a> plugin to manage database backups.</li>
+</ol>
+
+
+<h3>Restoring the WordPress Database</h3>
+
+<ol>
+<li>Fire up the PowerShell and navigate to whatever directory you&rsquo;re storing backup.sql.</li>
+<li>Run the following command: <code>mysql -u [username] -p [database] &lt; backup.sql</code></li>
+<li>Enter the password for the specified user.</li>
+<li>You will over-write all the tables in the specified database with those in the <code>backup.sql</code> file.</li>
+</ol>
+
+
+<h2>Development Notes</h2>
+
+<ul>
+<li>The theme uses <a href="http://sass-lang.com/">SASS</a> + <a href="http://compass-style.org/">Compass</a> for styling and <a href="http://www.bower.io">Bower</a> for dependency management.</li>
+<li>The JavaScript dependencies are included in the compiled <code>main.min.js</code> file, but their source files are not included in this repository. They must be installed with Bower (with the help of the <code>bower.json</code> file).</li>
+<li>The project is also set up with <a href="https://incident57.com/codekit/">CodeKit</a> to compile SASS on the fly and concatenate / minify JavaScript.</li>
+<li>The home page content is managed almost entirely with Advanced Custom Fields. Pages and Posts use ACF to handle the &ldquo;related links&rdquo; sections and the sidebar contents.</li>
+</ul>
+

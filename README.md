@@ -12,7 +12,7 @@ City as Our Campus is a resource for the [Winchester Thurston School](http://www
 
 ## Requirements
 
-The theme requires the [Advanced Custom Fields plugin](http://www.advancedcustomfields.com/), as well as the [ACF Repeater add-on](http://www.advancedcustomfields.com/add-ons/repeater-field/).
+The theme requires the [Advanced Custom Fields plugin](http://www.advancedcustomfields.com/), as well as the [ACF Repeater add-on](http://www.advancedcustomfields.com/add-ons/repeater-field/) and the [Tag Pages](https://wordpress.org/plugins/tag-pages/) plugin.
 
 ## Installation
 
@@ -42,5 +42,32 @@ Instructions coming soon.
 
 ## Quick Specs
 - Images should be cropped to 16:9.
-- Use appropriate heading tags (`<H3>` through `<H6>`) in article copy, rather than styled paragraphs.
+- Use appropriate heading tags (`<H3 />` through `<H6 />`) in article copy, rather than styled paragraphs.
 - The homepage video is stored in the theme directory and is hard-coded into the page. It is not managed with the WordPress Media Library.
+- Pages have their own tags, and Posts have *their* own tags. Both show up in the tag archive page.
+- Try to maintain page heirarchy using parent and child relationships between pages. For example, when adding a Portfolio item, set the pages' parent to "Portfolio." When adding a page to the About section, set that page's parent to "About." The [CMS Tree View](https://wordpress.org/plugins/cms-tree-page-view/) plugin helps with visualizing and sorting pages in a heirarchy.
+
+## Administrative Notes
+
+### Backing up the WordPress Database
+I use [Sequel Pro](http://www.sequelpro.com/) on my Mac for most MySQL operations, which simplifies things greatly with intuitive commands like "Export" and "Import." However, the command line interface for MySQL is pretty easy once you get the hang of it. I assume you'll be doing this on the Windows box, or via RDP.
+
+1. Open the Windows PowerShell application. This command prompt acts similarly to *NIX, so if you're familiar with that filesystem, all your favorite commands will work.
+2. Enter the following command: `mysqldump -u [username] -p [database] > backup.sql`
+3. Enter the password for the specified user.
+4. This will dump the file `backup.sql` into the working directory.
+5. Periodically, zip up the `/wp-content/uploads` directory and stash that somewhere, too.
+6. Alternately, use the [iThemes Security](https://wordpress.org/plugins/better-wp-security/) plugin to manage database backups.
+
+### Restoring the WordPress Database
+
+1. Fire up the PowerShell and navigate to whatever directory you're storing backup.sql.
+2. Run the following command: `mysql -u [username] -p [database] < backup.sql`
+3. Enter the password for the specified user.
+4. You will over-write all the tables in the specified database with those in the `backup.sql` file.
+
+## Development Notes
+- The theme uses [SASS](http://sass-lang.com/) + [Compass](http://compass-style.org/) for styling and [Bower](http://www.bower.io) for dependency management.
+- The JavaScript dependencies are included in the compiled `main.min.js` file, but their source files are not included in this repository. They must be installed with Bower (with the help of the `bower.json` file).
+- The project is also set up with [CodeKit](https://incident57.com/codekit/) to compile SASS on the fly and concatenate / minify JavaScript.
+- The home page content is managed almost entirely with Advanced Custom Fields. Pages and Posts use ACF to handle the "related links" sections and the sidebar contents.
