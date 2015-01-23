@@ -32,18 +32,34 @@ The theme requires the [Advanced Custom Fields plugin](http://www.advancedcustom
 6. Click "Save Menu" when you are done.
 
 ### How do I change the footer?
-Instructions coming soon.
+
+1. In your admin panel, go to Appearance -> Widgets.
+2. Drag widgets to the "Global Footer" object to the right.
+3. To edit a footer item, click the down arrow in the title of each widget. As of January 2015, there are three Text widgets: one for the Winchester Thurston information, a blank placeholder widget, and the contact information. These all use raw HTML, so edit with care.
+4. Click "Save" on the widget edit panel to save.
 
 ### How do I change sidebar items on a page or a post?
-Instructions coming soon.
+
+1. Edit a page or a post.
+2. Scroll all the way to the bottom of the edit page, below the main content editor. To add a sidebar item for that page, click the "Add Sidebar Block" button.
+3. Fill in the form. Provide some header text for the section, and use the rich-text editor to compose the text, images, or video you want in this area.
+4. To remove an item from the sidebar, hover over the gray space immediately to the right of the rich-text editor and click the minus sign ("-") button that appears.
+5. Click "Update" in the Publish section at the top of the editor page to save your changes.
 
 ### How do I change links to related pages on a page?
-Instructions coming soon.
 
-## Quick Specs
+1. Edit a page or a post.
+2. Scroll below the main content editor on the edit page. Click "Add Link Section."
+3. This will create a group of related pages. Name the group something like, "Additional Resources," or "Learn More," or something that tells the user that there are more articles to read on the particular subject matter. You can create multiple page groups to link to pages across multiple subjects (check out the "Toolkit" page for an example).
+4. Click "Add Page" under "Pages to Include" to add a link to a related page.
+5. Select the page you want to link to in the drop-down that appears.
+6. Similar to deleting sidebar items, you can delete groups or pages within a group by hovering over the right margin next to the row and hitting the minus symbol.
+7. Click "Update" in the Publish section at the top of the editor page to save your changes.
+
+## Editorial Notes
 - Images should be cropped to 16:9.
 - Use appropriate heading tags (`<H3 />` through `<H6 />`) in article copy, rather than styled paragraphs.
-- The homepage video is stored in the theme directory and is hard-coded into the page. It is not managed with the WordPress Media Library.
+- The homepage video is stored in the theme directory and is hard-coded into the page. It is not managed with the WordPress Media Library. If or when it comes time to change the video, contact your friendly Web development freelancer.
 - Pages have their own tags, and Posts have *their* own tags. Both show up in the tag archive page.
 - Try to maintain page heirarchy using parent and child relationships between pages. For example, when adding a Portfolio item, set the pages' parent to "Portfolio." When adding a page to the About section, set that page's parent to "About." The [CMS Tree View](https://wordpress.org/plugins/cms-tree-page-view/) plugin helps with visualizing and sorting pages in a heirarchy.
 
