@@ -26,11 +26,11 @@ jQuery(document).ready(function($){
     });
     BV.init();
     if (Modernizr.touch) {
-      BV.show('http://localhost/~james/caocpress/wp-content/themes/caocpress/images/video-poster.jpg');
+      BV.show('http://dev2.cityasourcampus.org/wp-content/themes/caocpress/images/video-poster.jpg');
     } else {
       BV.show([
-        { type: "video/mp4",  src: "http://localhost/~james/caocpress/wp-content/themes/caocpress/video/wt.mp4" },
-        { type: "video/webm", src: "http://localhost/~james/caocpress/wp-content/themes/caocpress/video/wt.webm" },
+        { type: "video/mp4",  src: "http://dev2.cityasourcampus.org/wp-content/themes/caocpress/video/wt.mp4" },
+        { type: "video/webm", src: "http://dev2.cityasourcampus.org/wp-content/themes/caocpress/video/wt.webm" },
         { ambient: true }
       ]);
     }
