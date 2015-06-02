@@ -20,18 +20,18 @@
     <div class="row">
       <article>
         <div class="col-xs-12">
-          <ul class="breadcrumbs"><li><a href="/">Home</a></li><li><strong> <? the_title(); ?></strong></li></ul>
+          <ul class="breadcrumbs"><li><a href="/">Home</a></li><li><strong> Blog</strong></li></ul>
         </div>
-        <div class="crop">
         <?
-          $page_id = get_option('page_for_posts');
-          if (has_post_thumbnail($page_id)){
-          echo get_the_post_thumbnail($page_id);
-          }
+			$page_id = get_option('page_for_posts');
+			if (has_post_thumbnail($page_id)){
+				echo "<div class='crop'>";
+				echo get_the_post_thumbnail($page_id);
+				echo "</div>";
+			}
         ?>
-        </div>
         <div class="content">
-          <h2 class="subheading"><? the_title(); ?></h2>
+          <h2 class="subheading">Blog</h2>
           <?php
             if ( 'page' == get_option('show_on_front') && get_option('page_for_posts') && is_home() ) : the_post();
               $page_for_posts_id = get_option('page_for_posts');
@@ -42,9 +42,9 @@
           ?>
           <?php if ( have_posts() ): ?>
             <div class="article-list">
-            <?php while ( have_posts() ) : the_post(); ?>
               <article>
-                <div class="content">
+
+                <div class="content col-sm-8">
                   <h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
                   <p><? the_excerpt(); ?></p>
                   <p class="meta"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?></time></p>

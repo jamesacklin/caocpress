@@ -1,6 +1,6 @@
 <?// A list of all post tags. ?>
 <div class="section">
-  <h4 class="subheading">News Tags</h4>
+  <h4 class="subheading">Blog Tags</h4>
   <ul class="tag-list">
     <?php
       // WOOOOOOF. Query all posts for a post type, get the tags,
