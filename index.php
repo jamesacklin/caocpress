@@ -71,6 +71,10 @@
               </div>
             </article>
           <?php endif; ?>
+		  <div class="row pagination">
+			<div class="col-sm-6 prev-posts"><?php next_posts_link( '&larr; Older Posts' ); ?></strong></div>
+			<div class="col-sm-6 next-posts"><?php previous_posts_link( 'Newer Posts &rarr;' ); ?></div>
+			</div>
         </div>
       </article>
 

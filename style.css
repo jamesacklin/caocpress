@@ -20,10 +20,27 @@ sup {
 }
 
 /* More post-launch hacks */
-.article-list article {
-	padding: 2em 0 0;
+.article-list article { padding: 2em 0 0; }
+
+.article-list article h2 { margin-top: 0; }
+
+.pagination { 
+	font-size: 0.75em;
+	margin: 2em -15px;
 }
 
-.article-list article h2 {
-	margin-top: 0;
+
+.pagination .btn { font-weight: bold; }
+
+
+@media (max-width: 31.25em) {
+	.pagination .next-posts .btn,
+	.pagination .prev-posts .btn { 
+		display: block;
+		margin: 1em auto;
+	}
+}
+
+@media (min-width: 31.25em){
+	.pagination .next-posts { text-align: right; }
 }
