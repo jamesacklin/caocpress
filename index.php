@@ -42,9 +42,9 @@
           ?>
           <?php if ( have_posts() ): ?>
             <div class="article-list">
-              <article>
-
-                <div class="content col-sm-8">
+			  <?php while ( have_posts() ) : the_post(); ?>
+				<article>
+                <div class="content">
                   <h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
                   <p><? the_excerpt(); ?></p>
                   <p class="meta"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?></time></p>
