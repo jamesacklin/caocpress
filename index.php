@@ -20,7 +20,7 @@
     <div class="row">
       <article>
         <div class="col-xs-12">
-          <ul class="breadcrumbs"><li><a href="/">Home</a></li><li><strong> News</strong></li></ul>
+          <ul class="breadcrumbs"><li><a href="/">Home</a></li><li><strong> <? the_title(); ?></strong></li></ul>
         </div>
         <div class="crop">
         <?
@@ -31,7 +31,7 @@
         ?>
         </div>
         <div class="content">
-          <h2 class="subheading">News</h2>
+          <h2 class="subheading"><? the_title(); ?></h2>
           <?php
             if ( 'page' == get_option('show_on_front') && get_option('page_for_posts') && is_home() ) : the_post();
               $page_for_posts_id = get_option('page_for_posts');
