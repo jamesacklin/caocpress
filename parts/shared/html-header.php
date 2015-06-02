@@ -14,7 +14,7 @@
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
 		<script type="text/javascript" src="//use.typekit.net/pzy2tsu.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
+		<script src="<?= get_template_directory_uri().'/js/min/main-min.js' ?>"></script>
 
 		<?php wp_head(); ?>
 	</head>
