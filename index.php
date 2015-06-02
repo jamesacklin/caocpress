@@ -43,8 +43,19 @@
           <?php if ( have_posts() ): ?>
             <div class="article-list">
 			  <?php while ( have_posts() ) : the_post(); ?>
-				<article>
-                <div class="content">
+				<article class="row">
+				<div class="thumbnail col-sm-4">
+					<? if(has_post_thumbnail()): ?>
+						<div class="crop">
+							<? the_post_thumbnail('medium'); ?>
+						</div>
+					<?php else: ?>
+						<div class="crop">
+							<img src="<?= get_template_directory_uri().'/images/no-thumbnail.png' ?>" alt="">
+						</div>
+					<?php endif; ?>
+				</div>
+                <div class="content col-sm-8">
                   <h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
                   <p><? the_excerpt(); ?></p>
                   <p class="meta"><time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?></time></p>

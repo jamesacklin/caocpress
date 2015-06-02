@@ -1,4 +1,4 @@
-/*
+﻿/*
 Theme Name: City as Our Campus
 Theme URI: http://www.cityasourcampus.org/
 Author: James Acklin / Acklin Design
@@ -15,5 +15,15 @@ License URI: http://www.apache.org/licenses/LICENSE-2.0.txt
 sup { 
 	font-family: "Georgia";
 	font-size: 0.5em;
-	top:-0.5em
+	top:-0.5em;
+	text-transform: uppercase;
+}
+
+/* More post-launch hacks */
+.article-list article {
+	padding: 2em 0 0;
+}
+
+.article-list article h2 {
+	margin-top: 0;
 }
