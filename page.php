@@ -79,9 +79,6 @@
             <?php endwhile; ?>
           <?php endif; ?>
         </div>
-        <? if(is_page(42)): ?>
-          <?php Starkers_Utilities::get_template_parts(array('parts/tags-pages')); ?>
-        <?php endif; ?>
         <div class="section">
           <?php Starkers_Utilities::get_template_parts( array( 'parts/share-article' ) ); ?>
         </div>
