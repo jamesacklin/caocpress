@@ -12,7 +12,7 @@
         </li>
         <?php
           $menuargs = array(
-            'menu' => '6',
+			      'theme_location' => 'primary',
             'container' => false,
             'items_wrap' => '%3$s',
           );
